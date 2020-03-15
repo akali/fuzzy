@@ -1,0 +1,2 @@
+class IncorrectBoundException(Exception):
+    pass
