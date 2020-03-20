@@ -25,3 +25,10 @@ class FuzzySet(Bounds, Callable):
             if mf.includes(x):
                 return mf(x)
         return 0
+
+    def extract_ranges(self, alpha_cut) -> List[(int, int)]:
+        result: List[(int, int)] = []
+        for mf in self.mfs:
+            rng = mf.extract_range(alpha_cut)
+            result.append(rng)
+        return result

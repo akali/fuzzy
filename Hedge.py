@@ -1,8 +1,7 @@
+import copy
 import math
 from dataclasses import dataclass
 from typing import Callable, List
-
-from MembershipFunction import MembershipFunction
 
 
 def default_modifier(x):
@@ -14,11 +13,6 @@ class Hedge:
     name: str = ''
     modifier: Callable = lambda _: _
 
-    def apply(self, mf: MembershipFunction = None) -> MembershipFunction:
-        if mf is None:
-            mf = MembershipFunction(func=lambda _: _)
-        return MembershipFunction(lambda x: self.modifier(mf(x)))
-
     def __and__(self, other):
         return Hedge(f"{self.name} and {other.name}", modifier=lambda x: min(self.modifier(x), other.modifier(x)))
 
@@ -26,7 +20,9 @@ class Hedge:
         return Hedge(f"{self.name} and {other.name}", modifier=lambda x: max(self.modifier(x), other.modifier(x)))
 
     def __call__(self, other):
-        return Hedge(f"{self.name} {other.name}", modifier=lambda x: self.modifier(other.modifier(x)))
+        if isinstance(other, Hedge):
+            return Hedge(f"{self.name} {other.name}", modifier=lambda x: self.modifier(other.modifier(x)))
+        return self.modifier(other)
 
     def __init__(self, name, modifier: Callable = None):
         self.name = name
