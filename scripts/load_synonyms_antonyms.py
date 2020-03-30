@@ -5,11 +5,10 @@ import time
 from os import path
 from urllib import request
 
-URL = "https://tuna.thesaurus.com/relatedWords/{}?limit=100"
+URL = "https://tuna.thesaurus.com/pageData/{}"
 
 
 def main(args):
-
     dir = "thesaurus"
 
     if not path.exists(dir):
@@ -18,7 +17,12 @@ def main(args):
         assert path.isdir(dir), f'not dir {dir} already exists'
 
     for word in args:
-        url = URL.format(word)
+        url_word = word
+        url_word = url_word.replace('_', '%20')
+
+        url = URL.format(url_word)
+
+        print(url)
 
         response = request.urlopen(url)
         data = json.loads(response.read())
