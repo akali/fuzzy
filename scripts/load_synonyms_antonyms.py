@@ -4,12 +4,25 @@ import sys
 import time
 from os import path
 from urllib import request
+import settings
 
 URL = "https://tuna.thesaurus.com/pageData/{}"
 
 
+def get_thesaurus_data(word):
+    url_word = word
+    url_word = url_word.replace('_', '%20')
+
+    url = URL.format(url_word)
+
+    response = request.urlopen(url)
+    return json.loads(response.read())
+
+
 def main(args):
     dir = "thesaurus"
+
+    print(dir)
 
     if not path.exists(dir):
         os.mkdir(dir)
@@ -17,16 +30,7 @@ def main(args):
         assert path.isdir(dir), f'not dir {dir} already exists'
 
     for word in args:
-        url_word = word
-        url_word = url_word.replace('_', '%20')
-
-        url = URL.format(url_word)
-
-        print(url)
-
-        response = request.urlopen(url)
-        data = json.loads(response.read())
-
+        data = get_thesaurus_data(word)
         output = open(f"{dir}/{word}.json", "w")
         json.dump(data, output)
         output.close()
