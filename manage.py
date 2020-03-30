@@ -17,7 +17,7 @@ def load_thesaurus():
 
     for word in words:
         data = get_thesaurus_data(word)
-        dir = settings.BASE_DIR + '/' + settings.STATIC_DIR + '/thesaurus'
+        dir = f"{settings.BASE_DIR}/{settings.STATIC_DIR}/thesaurus"
 
         output = open(f"{dir}/{word}.json", "w")
         json.dump(data, output)
