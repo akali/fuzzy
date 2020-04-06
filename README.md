@@ -7,4 +7,4 @@
 *   ~~expressive database summary (upcoming)~~
 
 ## Requirements
-* Python (3.8+) ameanis we are using dataclasses in project
+* Python (3.8+) as we are using dataclasses in project
