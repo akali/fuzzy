@@ -73,6 +73,7 @@ class TriangularMembershipFunction(MembershipFunction):
         return self.hedge(_(X))
 
     def extract_range(self, alpha_cut) -> (float, float):
+        # TODO: refactor to O(1)
         return self._extract_left(alpha_cut), self._extract_right(alpha_cut)
 
     def _extract_left(self, alpha_cut):

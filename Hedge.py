@@ -17,7 +17,7 @@ class Hedge:
         return Hedge(f"{self.name} and {other.name}", modifier=lambda x: min(self.modifier(x), other.modifier(x)))
 
     def __or__(self, other):
-        return Hedge(f"{self.name} and {other.name}", modifier=lambda x: max(self.modifier(x), other.modifier(x)))
+        return Hedge(f"{self.name} or {other.name}", modifier=lambda x: max(self.modifier(x), other.modifier(x)))
 
     def __call__(self, other):
         if isinstance(other, Hedge):

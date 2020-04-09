@@ -6,6 +6,8 @@ from Hedge import dict_hedges
 from MembershipFunction import MembershipFunction
 
 
+# TODO: generate pydoc
+
 def get_synonyms(word):
     """
     :param word:
@@ -57,7 +59,34 @@ class SyntaxException(BaseException):
     pass
 
 
-def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
+def summary():
+    # Ages: 15 29 40 35 50 70 90
+    # Most of the beer is bought by not very young clients
+    # [Most] (of the) <beer> is bought by [not very young] clients
+    #
+    # Quantifiers
+    # Almost all, None, All, Almost none, Majority, Some, Any
+    #
+    # 90: not very young : very very old : just old => pick the closest: (very very old)
+    # https://en.wikipedia.org/wiki/Ronald_R._Yager
+    #
+    # >= k
+    #
+    pass
+
+
+def to_sql(fuzzy_clause: str, fields, limit=100, alpha_cut=0.5):
+    # Middle aged high salary
+    # Middle aged with high salary
+    # Not very young and not very old
+    # Not very old and not very young
+    # l <= age <= r
+    # young: age < 30, alpha_cut = 0.5
+    # very young: age < 30, alpha_cut = 0.5 => young: (alpha_cut: 0.7)
+    # not very young, alpha_cut = 0.5 => not young -> alpha_cut: 0.3
+    # Not very young and not very old
+    # Not very young: (alpha_cut: 0.3, age >= 37); not very old
+
     """
     TODO: Implement query parse
     Converts fuzzy where clause query to sql where clause query.
@@ -67,7 +96,7 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector] ...
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field]
 
-    :param fuzzy_query: fuzzy query
+    :param fuzzy_clause: fuzzy where clause
     :param fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
     :param limit: similarity limit for synonyms
     :param alpha_cut:
@@ -75,11 +104,11 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
     :raises: SyntaxException: syntax error
     """
 
-    if fuzzy_query == "":
+    if fuzzy_clause == "":
         raise SyntaxException("Empty query")
 
-    tokens = fuzzy_query.split(' ')
-    crisp_query = ""
+    tokens = fuzzy_clause.split(' ')
+    crisp_clause = ""
 
     hedges_synonyms = get_hedges_synonyms(limit)
     hedges = dict_hedges()
@@ -125,8 +154,8 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
                 expression.pop(0)
 
             l, r = mf.extract_range(alpha_cut)
-            crisp_query += f" {l} <= {field} and {field} <= r {token} "
+            crisp_clause += f" {l} <= {field} and {field} <= r {token} "
         else:
             expression.append(token)
 
-    return crisp_query
+    return crisp_clause
