@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import json
 import time
 
@@ -13,7 +15,7 @@ def load_thesaurus():
              "indeed",
              "highly",
              "slightly",
-             "sort_of", ]
+             "sort_of", "more_or_less", "not"]
 
     for word in words:
         data = get_thesaurus_data(word)

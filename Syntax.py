@@ -12,17 +12,22 @@ def get_synonyms(word):
     :return: list of objects containing term and similarity from -100 to 100
     :raises: IOException: when not found, you should load words first
     """
+
+    word = word.replace('-', '_')
+
     data_file = f"{settings.BASE_DIR}/{settings.STATIC_DIR}/thesaurus/{word}.json"
 
     result = []
 
     with open(data_file) as f:
         thesaurus_data = json.load(f)
-        for entry in thesaurus_data["data"]["definitionData"]["definitions"]["synonyms"]:
-            result.append({
-                'term': entry['term'],
-                'similarity': int(entry['similarity']),
-            })
+        # print(thesaurus_data['data']['definitionData']['definitions'])
+        for entry in thesaurus_data["data"]["definitionData"]["definitions"]:
+            for synonym in entry["synonyms"]:
+                result.append({
+                    'term': synonym['term'],
+                    'similarity': int(synonym['similarity']),
+                })
         f.close()
 
     return result
@@ -32,7 +37,11 @@ def get_hedges():
     """
     :return: list of hedges(names only)
     """
-    return dict_hedges().keys()
+    hedges = set(dict_hedges().keys())
+    hedges.remove("x")
+    hedges.remove("plus")
+    hedges.remove("minus")
+    return hedges
 
 
 def get_hedges_synonyms(limit=100):
@@ -59,13 +68,17 @@ class SyntaxException(BaseException):
 
 def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
     """
-    TODO: Implement query parse
     Converts fuzzy where clause query to sql where clause query.
     Fuzzy expression structure:
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector]
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector]
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector] ...
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field]
+
+    example fuzzy_query: middle age very high salary
+
+    [connector] = {and, or, (empty), but}
+    remark: empty and but connectors are considered as AND
 
     :param fuzzy_query: fuzzy query
     :param fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
@@ -75,16 +88,29 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
     :raises: SyntaxException: syntax error
     """
 
+    EOQ_TOKEN = "~~~END_TOKEN~~~"
+
     if fuzzy_query == "":
         raise SyntaxException("Empty query")
 
     tokens = fuzzy_query.split(' ')
+
+    tokens.append(EOQ_TOKEN)
+
     crisp_query = ""
 
     hedges_synonyms = get_hedges_synonyms(limit)
     hedges = dict_hedges()
 
-    connectors = ["and", "or"]
+    connectors = ["and", "or", "", "but", EOQ_TOKEN]
+    connector_sql = {
+        "and": "and",
+        "or": "or",
+        "": "and",
+        "but": "and",
+        EOQ_TOKEN: "and",
+    }
+
     default_mfs = {
         "low": {},
         "middle": {},
@@ -95,6 +121,7 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
 
     for token in tokens:
         if token in connectors:
+            token = connector_sql[token]
             if len(expression) < 2:
                 raise SyntaxException(f"Empty or incorrect expression {expression}")
             original_expression = expression
@@ -125,7 +152,7 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
                 expression.pop(0)
 
             l, r = mf.extract_range(alpha_cut)
-            crisp_query += f" {l} <= {field} and {field} <= r {token} "
+            crisp_query += f" {l} <= {field} and {field} <= {r} {token} "
         else:
             expression.append(token)
 
