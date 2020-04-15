@@ -1,7 +1,7 @@
 from typing import Callable
 
-from fuzzy.Exception import IncorrectBoundException
-from fuzzy.Hedge import Hedge
+from fuzzy_lib.Exception import IncorrectBoundException
+from fuzzy_lib.Hedge import Hedge
 
 _EPS = 1E-9
 

@@ -1,1 +1,1 @@
-from fuzzy import *
+from fuzzy_lib import *

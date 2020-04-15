@@ -1,9 +1,9 @@
 import json
 from copy import deepcopy
 
-from fuzzy import settings
-from fuzzy.Hedge import dict_hedges
-from fuzzy.MembershipFunction import MembershipFunction
+from fuzzy_lib import settings
+from fuzzy_lib.Hedge import dict_hedges
+from fuzzy_lib.MembershipFunction import MembershipFunction
 
 
 def get_synonyms(word):
@@ -68,7 +68,7 @@ class SyntaxException(BaseException):
 
 def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
     """
-    Converts fuzzy where clause query to sql where clause query.
+    Converts fuzzy_lib where clause query to sql where clause query.
     Fuzzy expression structure:
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector]
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector]
@@ -79,7 +79,7 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
 
     [connector] = {and, or, but}
 
-    :param fuzzy_query: fuzzy query
+    :param fuzzy_query: fuzzy_lib query
     :param fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
     :param limit: similarity limit for synonyms
     :param alpha_cut:

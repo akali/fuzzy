@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Callable
 
-from fuzzy.Exception import IncorrectBoundException
-from fuzzy.MembershipFunction import MembershipFunction
+from fuzzy_lib.Exception import IncorrectBoundException
+from fuzzy_lib.MembershipFunction import MembershipFunction
 
 
 @dataclass
