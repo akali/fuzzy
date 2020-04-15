@@ -1,6 +1,6 @@
 import unittest
-import MembershipFunction as mf
-from Hedge import dict_hedges
+from fuzzy import MembershipFunction as mf
+from fuzzy.Hedge import dict_hedges
 
 
 class TestRangeExtraction(unittest.TestCase):

@@ -1,8 +1,8 @@
 import math
 import unittest
 
-from Hedge import dict_hedges
-from MembershipFunction import MembershipFunction
+from fuzzy.Hedge import dict_hedges
+from fuzzy.MembershipFunction import MembershipFunction
 
 
 def func(u):

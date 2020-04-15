@@ -1,9 +1,9 @@
 import json
 from copy import deepcopy
 
-import settings
-from Hedge import dict_hedges
-from MembershipFunction import MembershipFunction
+from fuzzy import settings
+from fuzzy.Hedge import dict_hedges
+from fuzzy.MembershipFunction import MembershipFunction
 
 
 def get_synonyms(word):

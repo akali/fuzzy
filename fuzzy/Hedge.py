@@ -48,8 +48,7 @@ def list_hedges():
     very = Hedge("very", modifier=lambda x: x * x)
     extremely = Hedge("extremely", modifier=lambda x: x * x * x)
 
-    # wrong hedges
-    quite = Hedge("quite", modifier=lambda x: math.sqrt(x))
+    quite = Hedge("quite", modifier=lambda x: pow(x, 1.7))
     fairly = Hedge("fairly", modifier=lambda x: math.sqrt(x))
 
     indeed = Hedge("indeed", modifier=lambda x: 2 * x * x if x <= 0.5 else 1 - 2 * (1 - x) ** 2)

@@ -1,9 +1,7 @@
-import functools
-from dataclasses import dataclass, field
 from typing import Callable
 
-from Exception import IncorrectBoundException
-from Hedge import Hedge
+from fuzzy.Exception import IncorrectBoundException
+from fuzzy.Hedge import Hedge
 
 _EPS = 1E-9
 

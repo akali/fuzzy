@@ -1,0 +1,24 @@
+// Cool Class Diagram
+// ------------------
+
+// Chain elements like this
+// [Customer]<>-orders*>[Order]++-0..*>[LineItem]
+
+// Add notes
+// [Order]-[note: Aggregate Root ala DDD{bg:wheat}]
+
+[Hedge|+name: string; +modifier: Callable;]
+
+----------------------------------------------------------------------------------------------------
+// Cool Class Diagram
+// ------------------
+
+[Hedge|+name: string; +modifier: Callable;]
+
+[TriangularMembershipFunction|+a,b,c: double]
+[TrapezoidMembershipFunction|+a,b,c,d: double]
+[MembershipFunction|+hedge: Hedge;+__call__(x: double): double; +extract_range(alpha_cut: double)]
+
+[MembershipFunction]++->[Hedge]
+[MembershipFunction]^[TriangularMembershipFunction]
+[MembershipFunction]^[TrapezoidMembershipFunction]

@@ -4,7 +4,6 @@ import sys
 import time
 from os import path
 from urllib import request
-import settings
 
 URL = "https://tuna.thesaurus.com/pageData/{}"
 

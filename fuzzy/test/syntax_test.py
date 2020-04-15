@@ -1,7 +1,7 @@
 import unittest
 
-from MembershipFunction import MembershipFunction, TrapezoidMembershipFunction, TriangularMembershipFunction
-from Syntax import to_sql
+from fuzzy.MembershipFunction import TrapezoidMembershipFunction, TriangularMembershipFunction
+from fuzzy.Syntax import to_sql
 
 
 class SyntaxTest(unittest.TestCase):
