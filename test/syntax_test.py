@@ -6,7 +6,7 @@ from Syntax import to_sql
 
 class SyntaxTest(unittest.TestCase):
     def test_to_sql(self):
-        query = "very very young age and very high salary"
+        query = "very very young age but very high salary"
         fields = {
             "age": {
                 "young": TriangularMembershipFunction(10, 20, 30),

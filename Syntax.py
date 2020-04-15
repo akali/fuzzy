@@ -75,10 +75,9 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector] ...
     [hedge] [hedge] [hedge] ... [hedge] [membership function] [field]
 
-    example fuzzy_query: middle age very high salary
+    example fuzzy_query: middle age and very high salary
 
-    [connector] = {and, or, (empty), but}
-    remark: empty and but connectors are considered as AND
+    [connector] = {and, or, but}
 
     :param fuzzy_query: fuzzy query
     :param fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
@@ -108,7 +107,7 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
         "or": "or",
         "": "and",
         "but": "and",
-        EOQ_TOKEN: "and",
+        EOQ_TOKEN: "",
     }
 
     default_mfs = {
