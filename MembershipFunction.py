@@ -40,6 +40,9 @@ class MembershipFunction(Callable):
     def extract_range(self, alpha_cut) -> (float, float):
         raise Exception('Can\'t extract range for an arbitrary function')
 
+    def set_hedge(self, hedge):
+        self.hedge = hedge
+
 
 class TriangularMembershipFunction(MembershipFunction):
     a: float
@@ -96,6 +99,11 @@ class TriangularMembershipFunction(MembershipFunction):
 
         return right
 
+    def set_hedge(self, hedge):
+        if hedge is None:
+            hedge = Hedge('', lambda x: x)
+        self.hedge = hedge
+
 
 class TrapezoidMembershipFunction(MembershipFunction):
     a: float
@@ -116,6 +124,13 @@ class TrapezoidMembershipFunction(MembershipFunction):
             raise IncorrectBoundException('Expected a <= b <= c <= d')
         self.left = TriangularMembershipFunction(a=self.a, b=self.b, c=self.b)
         self.right = TriangularMembershipFunction(a=self.c, b=self.c, c=self.d)
+
+    def set_hedge(self, hedge):
+        if hedge is None:
+            hedge = Hedge('', lambda x: x)
+        self.hedge = hedge
+        self.left.set_hedge(hedge)
+        self.right.set_hedge(hedge)
 
     def includes(self, x) -> bool:
         return self.a <= x <= self.d
