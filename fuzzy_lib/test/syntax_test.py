@@ -20,7 +20,7 @@ class SyntaxTest(unittest.TestCase):
             },
         }
 
-        print(to_sql(query, fields))
+        print(to_sql(query, fields, alpha_cut=0.5))
 
         pass
 

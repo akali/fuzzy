@@ -110,12 +110,6 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
         EOQ_TOKEN: "",
     }
 
-    default_mfs = {
-        "low": {},
-        "middle": {},
-        "high": {},
-    }
-
     expression = []
 
     for token in tokens:
@@ -131,13 +125,10 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
 
             mf_name = expression[0]
 
-            if mf_name not in default_mfs.keys() and mf_name not in fields[field].keys():
+            if mf_name not in fields[field].keys():
                 raise SyntaxException(f"Unknown membership function {mf_name} in expression {original_expression}")
 
-            if mf_name in fields[field].keys():
-                mf: MembershipFunction = deepcopy(fields[field][mf_name])
-            else:
-                mf: MembershipFunction = deepcopy(default_mfs[field])
+            mf: MembershipFunction = deepcopy(fields[field][mf_name])
             expression.pop(0)
 
             while len(expression) > 0:
@@ -151,7 +142,7 @@ def to_sql(fuzzy_query: str, fields, limit=100, alpha_cut=0.5):
                 expression.pop(0)
 
             l, r = mf.extract_range(alpha_cut)
-            crisp_query += f" {l} <= {field} and {field} <= {r} {token} "
+            crisp_query += f" {int(l)} <= {field} and {field} <= {int(r)} {token} "
         else:
             expression.append(token)
 
