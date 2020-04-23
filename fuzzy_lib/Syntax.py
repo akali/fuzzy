@@ -41,9 +41,6 @@ def get_hedges():
     :return: list of hedges(names only)
     """
     hedges = set(dict_hedges().keys())
-    hedges.remove("x")
-    hedges.remove("plus")
-    hedges.remove("minus")
     return hedges
 
 
@@ -70,16 +67,22 @@ class SyntaxException(BaseException):
 
 
 class FuzzyQuery:
-    def __init__(self, fuzzy_query, fields, limit=100, alpha_cut=0.5, round_values=False):
+    def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None, hedges_included=None, round_values=None):
+        if limit is None:
+            limit = 100
+        if alpha_cut is None:
+            alpha_cut = 0.5
+        if hedges_included is None:
+            hedges_included = True
+        if round_values is None:
+            round_values = False
+
         self.fuzzy_query = fuzzy_query
         self.fields = fields
         self.limit = limit
         self.alpha_cut = alpha_cut
         self.round_values = round_values
-
-    @staticmethod
-    def from_formal(self):
-        pass
+        self.hedges_included = hedges_included
 
     def extract_crisp_parameters(self):
         """
@@ -108,7 +111,7 @@ class FuzzyQuery:
         if fuzzy_query == "":
             raise SyntaxException("Empty query")
 
-        tokens = fuzzy_query.split(' ')
+        tokens = list(filter(lambda x: len(x) > 0, fuzzy_query.split(' ')))
 
         tokens.append(EOQ_TOKEN)
 
@@ -130,7 +133,7 @@ class FuzzyQuery:
         for token in tokens:
             if token in connectors:
                 token = connector_sql[token]
-                if len(expression) < 2:
+                if self.hedges_included and len(expression) < 2:
                     raise SyntaxException(f"Empty or incorrect expression {expression}")
                 original_expression = expression
                 expression.reverse()

@@ -21,7 +21,7 @@ class FuzzyPartition:
         self.points = points
 
     def get_membership_functions(self):
-        result = []
+        result = {}
         start, end, points = self.start, self.end, self.points
         n = len(points)
 
@@ -33,7 +33,7 @@ class FuzzyPartition:
             else:
                 cur = mf.TriangularMembershipFunction(points[i - 1], points[i], points[i + 1])
 
-            result.append(cur)
+            result[self.aliases[i]] = cur
 
         return result
 

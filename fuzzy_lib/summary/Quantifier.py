@@ -32,3 +32,12 @@ class QuantifierSet:
 
     def get_quantifiers(self):
         return [self.almost_none(), self.few(), self.some(), self.many(), self.most()]
+
+    def dict_quantifiers(self):
+        result = {}
+        result['almost_none'] = self.almost_none()
+        result['few'] = self.few()
+        result['some'] = self.some()
+        result['many'] = self.many()
+        result['most'] = self.most()
+        return result

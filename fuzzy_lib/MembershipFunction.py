@@ -1,5 +1,7 @@
 from typing import Callable
 
+import pandas as pd
+
 from fuzzy_lib.Exception import IncorrectBoundException
 from fuzzy_lib.Hedge import Hedge
 

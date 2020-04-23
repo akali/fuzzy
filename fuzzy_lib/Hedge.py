@@ -57,5 +57,4 @@ def list_hedges():
     slightly = Hedge("slightly", modifier=(x and not_h(very)).modifier)
     sort_of = Hedge("sort_of", modifier=(more_or_less and not_h(very)).modifier)
 
-    return [x, very, not_h, more_or_less, extremely, quite, fairly, highly, slightly, sort_of, indeed, somewhat,
-            plus, minus]
+    return [very, not_h, more_or_less, extremely, quite, fairly, highly, slightly, sort_of, indeed, somewhat]
