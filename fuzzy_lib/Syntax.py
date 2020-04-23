@@ -176,10 +176,10 @@ class FuzzyQuery:
 
         return crisp_query
 
-    def matching(self, df: pd.DataFrame):
+    def matching(self, df: pd.DataFrame) -> pd.Series:
         """
         :param df: pandas DataFrame
-        :return: pandas DataFrame matching fuzzy_query
+        :return: Series matching fuzzy_query
         """
 
         params = self.extract_crisp_parameters()
