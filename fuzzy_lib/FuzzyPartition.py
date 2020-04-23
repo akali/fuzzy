@@ -1,3 +1,6 @@
+import fuzzy_lib.MembershipFunction as mf
+
+
 class FuzzyPartition:
     def __init__(self, start, end, points, aliases):
         self.start = start
@@ -5,7 +8,36 @@ class FuzzyPartition:
         self.points = points
         self.aliases = aliases
 
-    def getPoints(self):
+    def set_division(self, count):
+        points = []
+        step = float(self.end - self.start) / (count + 1)
+
+        cur = self.start + step
+
+        while cur < self.end:
+            points.append(cur)
+            cur += step
+
+        self.points = points
+
+    def get_membership_functions(self):
+        result = []
+        start, end, points = self.start, self.end, self.points
+        n = len(points)
+
+        for i in range(n):
+            if i == 0:
+                cur = mf.TrapezoidMembershipFunction(start, start, points[0], points[1])
+            elif i + 1 == n:
+                cur = mf.TrapezoidMembershipFunction(points[i - 1], points[i], end, end)
+            else:
+                cur = mf.TriangularMembershipFunction(points[i - 1], points[i], points[i + 1])
+
+            result.append(cur)
+
+        return result
+
+    def get_points(self):
         result = []
         start, end, points = self.start, self.end, self.points
         n = len(points)
