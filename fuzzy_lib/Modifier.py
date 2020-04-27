@@ -17,11 +17,14 @@ class Modifier:
         return Modifier(f"{self.name} and {other.name}", modifier=lambda x: min(self.modifier(x), other.modifier(x)))
 
     def __or__(self, other):
-        return Modifier(f"{self.name} and {other.name}", modifier=lambda x: max(self.modifier(x), other.modifier(x)))
+        return Modifier(f"{self.name} or {other.name}", modifier=lambda x: max(self.modifier(x), other.modifier(x)))
 
     def __call__(self, other):
         if isinstance(other, Modifier):
-            return Modifier(f"{self.name} {other.name}", modifier=lambda x: self.modifier(other.modifier(x)))
+            name = f'{self.name} {other.name}'
+            if self.name is None or len(self.name) == 0:
+                name = f'{other.name}'
+            return Modifier(f"{name}", modifier=lambda x: self.modifier(other.modifier(x)))
         return self.modifier(other)
 
     def __init__(self, name, modifier: Callable = None):

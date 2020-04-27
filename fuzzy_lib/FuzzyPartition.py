@@ -33,6 +33,8 @@ class FuzzyPartition:
             else:
                 cur = mf.TriangularMembershipFunction(points[i - 1], points[i], points[i + 1])
 
+            cur.name = self.aliases[i]
+
             result[self.aliases[i]] = cur
 
         return result

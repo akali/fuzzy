@@ -9,16 +9,20 @@ _EPS = 1E-9
 
 
 class MembershipFunction(Callable):
+    name: str
     func: Callable
     modifier: Modifier
 
-    def __init__(self, func=None, modifier=None):
+    def __init__(self, func=None, modifier=None, name=None):
         if func is None:
             func = lambda x: x
         if modifier is None:
             modifier = Modifier('', lambda x: x)
+        if name is None:
+            name = ''
         self.func = func
         self.modifier = modifier
+        self.name = name
 
     def __call__(self, X):
         def _(x):
