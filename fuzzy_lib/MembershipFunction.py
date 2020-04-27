@@ -77,29 +77,45 @@ class TriangularMembershipFunction(MembershipFunction):
         return self.modifier(_(X))
 
     def extract_range(self, alpha_cut) -> (float, float):
-        return self._extract_left(alpha_cut), self._extract_right(alpha_cut)
+        if self(self.a) != 0 or self(self.b) != 1 or self(self.c) != 0:
+            normal = False
+        else:
+            normal = True
+        return self._extract_left(alpha_cut, normal), self._extract_right(alpha_cut, normal)
 
-    def _extract_left(self, alpha_cut):
+    def _extract_left(self, alpha_cut, normal=True):
         left = self.a
         right = self.b
         for _ in range(100):
             m = (left + right) / 2
-            if self(m) + _EPS <= alpha_cut:
-                left = m
+            if normal:
+                if self(m) + _EPS <= alpha_cut:
+                    left = m
+                else:
+                    right = m
             else:
-                right = m
+                if self(m) + _EPS >= alpha_cut:
+                    left = m
+                else:
+                    right = m
 
         return left
 
-    def _extract_right(self, alpha_cut):
+    def _extract_right(self, alpha_cut, normal=True):
         left = self.b
         right = self.c
         for _ in range(100):
             m = (left + right) / 2
-            if self(m) + _EPS <= alpha_cut:
-                right = m
+            if normal:
+                if self(m) + _EPS <= alpha_cut:
+                    right = m
+                else:
+                    left = m
             else:
-                left = m
+                if self(m) + _EPS >= alpha_cut:
+                    right = m
+                else:
+                    left = m
 
         return right
 
