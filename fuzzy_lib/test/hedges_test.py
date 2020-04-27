@@ -1,7 +1,7 @@
 import math
 import unittest
 
-from fuzzy_lib.Hedge import dict_hedges
+from fuzzy_lib.Modifier import dict_modifiers
 from fuzzy_lib.MembershipFunction import MembershipFunction
 
 
@@ -11,23 +11,23 @@ def func(u):
 
 class MyTestCase(unittest.TestCase):
     mf = MembershipFunction(func)
-    hedges = dict_hedges()
+    modifiers = dict_modifiers()
 
     def test_not(self):
-        not_h = self.hedges["not"]
-        self.mf.hedge = not_h
+        not_h = self.modifiers["not"]
+        self.mf.modifier = not_h
         for i in range(0, 30):
             self.assertAlmostEqual(1.0 - round(func(i), 2), round(self.mf(i), 2))
 
     def test_very(self):
-        very = self.hedges["very"]
-        self.mf.hedge = very
+        very = self.modifiers["very"]
+        self.mf.modifier = very
         for i in range(0, 30):
             self.assertAlmostEqual(math.pow(func(i), 2), self.mf(i))
 
     def test_highly(self):
-        highly = self.hedges["highly"]
-        self.mf.hedge = highly
+        highly = self.modifiers["highly"]
+        self.mf.modifier = highly
         for i in range(0, 30):
             self.assertAlmostEqual(math.pow(math.pow(func(i), 2), 1.25), self.mf(i))
 

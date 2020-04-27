@@ -1,6 +1,6 @@
 import unittest
 from fuzzy_lib import MembershipFunction as mf
-from fuzzy_lib.Hedge import dict_hedges
+from fuzzy_lib.Modifier import dict_modifiers
 
 
 class TestRangeExtraction(unittest.TestCase):
@@ -18,14 +18,14 @@ class TestRangeExtraction(unittest.TestCase):
         self.assertAlmostEqual(25, r)
 
     def test_trapezoid_with_very(self):
-        hedges = dict_hedges()
-        very = hedges['very']
-        self.trap_mf.set_hedge(very)
+        modifiers = dict_modifiers()
+        very = modifiers['very']
+        self.trap_mf.set_modifier(very)
         l, r = self.trap_mf.extract_range(0.5)
         print('very', l, r)
         self.assertAlmostEqual(7.071067804794407, l)
         self.assertAlmostEqual(22.928932195205594, r)
-        self.trap_mf.set_hedge(None)
+        self.trap_mf.set_modifier(None)
 
 
 if __name__ == '__main__':

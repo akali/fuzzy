@@ -7,18 +7,18 @@
 // Add notes
 // [Order]-[note: Aggregate Root ala DDD{bg:wheat}]
 
-[Hedge|+name: string; +modifier: Callable;]
+[Modifier|+name: string; +modifier: Callable;]
 
 ----------------------------------------------------------------------------------------------------
 // Cool Class Diagram
 // ------------------
 
-[Hedge|+name: string; +modifier: Callable;]
+[Modifier|+name: string; +modifier: Callable;]
 
 [TriangularMembershipFunction|+a,b,c: double]
 [TrapezoidMembershipFunction|+a,b,c,d: double]
-[MembershipFunction|+hedge: Hedge;+__call__(x: double): double; +extract_range(alpha_cut: double)]
+[MembershipFunction|+Modifier: Modifier;+__call__(x: double): double; +extract_range(alpha_cut: double)]
 
-[MembershipFunction]++->[Hedge]
+[MembershipFunction]++->[Modifier]
 [MembershipFunction]^[TriangularMembershipFunction]
 [MembershipFunction]^[TrapezoidMembershipFunction]
