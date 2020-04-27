@@ -4,34 +4,39 @@ from dataclasses import dataclass
 from typing import Callable, List
 
 
-def default_modifier(x):
+def default_modifier_func(x):
     return x
 
 
-@dataclass
 class Modifier:
-    name: str = ''
-    modifier: Callable = lambda _: _
+    name: str
+    func: Callable
+    parent_modifier: 'Modifier'
 
+    # Lose parent modifier
     def __and__(self, other):
-        return Modifier(f"{self.name} and {other.name}", modifier=lambda x: min(self.modifier(x), other.modifier(x)))
+        return Modifier(f"{self.name} and {other.name}", func=lambda x: min(self.func(x), other.modifier(x)))
 
+    # Lose parent modifier
     def __or__(self, other):
-        return Modifier(f"{self.name} or {other.name}", modifier=lambda x: max(self.modifier(x), other.modifier(x)))
+        return Modifier(f"{self.name} or {other.name}", func=lambda x: max(self.func(x), other.modifier(x)))
 
     def __call__(self, other):
         if isinstance(other, Modifier):
             name = f'{self.name} {other.name}'
             if self.name is None or len(self.name) == 0:
                 name = f'{other.name}'
-            return Modifier(f"{name}", modifier=lambda x: self.modifier(other.modifier(x)))
-        return self.modifier(other)
+            return Modifier(f"{name}", func=other.func, parent_modifier=self)
+        if self.parent_modifier is None:
+            return self.func(other)
+        return self.parent_modifier(self.func(other))
 
-    def __init__(self, name, modifier: Callable = None):
+    def __init__(self, name, func: Callable = None, parent_modifier: 'Modifier' = None):
         self.name = name
-        if modifier is None:
-            modifier = default_modifier
-        self.modifier = modifier
+        if func is None:
+            func = default_modifier_func
+        self.func = func
+        self.parent_modifier = parent_modifier
 
 
 def dict_modifiers():
@@ -39,25 +44,28 @@ def dict_modifiers():
 
 
 def list_modifiers():
-    x = Modifier("x", modifier=lambda x: x)
-    plus = Modifier("plus", modifier=lambda x: math.pow(x, 1.25))
-    minus = Modifier("minus", modifier=lambda x: math.pow(x, 0.75))
+    x = Modifier("x", func=lambda x: x)
+    plus = Modifier("plus", func=lambda x: math.pow(x, 1.25))
+    minus = Modifier("minus", func=lambda x: math.pow(x, 0.75))
 
-    not_h = Modifier("not", modifier=lambda x: 1.0 - x)
+    not_h = Modifier("not", func=lambda x: 1.0 - x)
 
-    more_or_less = Modifier("more-or-less", modifier=lambda x: math.sqrt(x))
-    somewhat = Modifier("somewhat", modifier=lambda x: math.sqrt(x))
+    more_or_less = Modifier("more-or-less", func=lambda x: math.sqrt(x))
+    somewhat = Modifier("somewhat", func=lambda x: math.sqrt(x))
 
-    very = Modifier("very", modifier=lambda x: x * x)
-    extremely = Modifier("extremely", modifier=lambda x: x * x * x)
+    very = Modifier("very", func=lambda x: x * x)
+    extremely = Modifier("extremely", func=lambda x: x * x * x)
 
-    quite = Modifier("quite", modifier=lambda x: pow(x, 1.7))
-    fairly = Modifier("fairly", modifier=lambda x: math.sqrt(x))
+    quite = Modifier("quite", func=lambda x: pow(x, 1.7))
+    fairly = Modifier("fairly", func=lambda x: math.sqrt(x))
 
-    indeed = Modifier("indeed", modifier=lambda x: 2 * x * x if x <= 0.5 else 1 - 2 * (1 - x) ** 2)
+    indeed = Modifier("indeed", func=lambda x: 2 * x * x if x <= 0.5 else 1 - 2 * (1 - x) ** 2)
 
-    highly = Modifier("highly", modifier=(plus(very(x))).modifier)
-    slightly = Modifier("slightly", modifier=(x and not_h(very)).modifier)
-    sort_of = Modifier("sort_of", modifier=(more_or_less and not_h(very)).modifier)
+    highly = Modifier("highly", func=(plus(very(x))).func)
+    slightly = Modifier("slightly", func=(x and not_h(very)).func)
+    sort_of = Modifier("sort_of", func=(more_or_less and not_h(very)).func)
 
     return [very, not_h, more_or_less, extremely, quite, fairly, highly, slightly, sort_of, indeed, somewhat]
+
+
+DEFAULT_MODIFIER = Modifier('', func=default_modifier_func)

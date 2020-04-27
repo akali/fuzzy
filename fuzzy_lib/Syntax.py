@@ -5,8 +5,9 @@ from copy import deepcopy
 import pandas as pd
 
 from fuzzy_lib import settings
-from fuzzy_lib.Modifier import dict_modifiers
+from fuzzy_lib.Modifier import dict_modifiers, DEFAULT_MODIFIER
 from fuzzy_lib.MembershipFunction import MembershipFunction
+from fuzzy_lib.Summarizer import Summarizer
 
 
 def get_synonyms(word):
@@ -141,17 +142,19 @@ class FuzzyQuery:
                 mf: MembershipFunction = deepcopy(fields[field][mf_name])
                 expression.pop(0)
 
+                modifier = DEFAULT_MODIFIER
+
                 while len(expression) > 0:
                     if expression[0] not in modifiers and expression[0] not in modifiers_synonyms:
                         raise SyntaxException(f"Unknown modifier {expression[0]} in expression {original_expression}")
 
                     if expression[0] in modifiers.keys():
-                        mf.set_modifier(modifiers[expression[0]](mf.modifier))
+                        modifier = modifiers[expression[0]](modifier)
                     else:
-                        mf.set_modifier(modifiers_synonyms[expression[0]][0](mf.modifier))
+                        modifier = modifiers_synonyms[expression[0]][0](modifier)
                     expression.pop(0)
 
-                l, r = mf.extract_range(alpha_cut)
+                l, r = mf.extract_range(alpha_cut, modifier)
                 result.append([field, l, r, token])
             else:
                 expression.append(token)

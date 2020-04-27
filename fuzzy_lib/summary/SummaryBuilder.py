@@ -1,28 +1,11 @@
-from dataclasses import dataclass, field
-from functools import reduce
-from typing import Dict, Any, Union, List
+from typing import List
 
 import pandas as pd
-import numpy as np
-from pandas import DataFrame, Series
 
-from fuzzy_lib.Modifier import dict_modifiers, Modifier, default_modifier
+from fuzzy_lib.Modifier import dict_modifiers, Modifier, default_modifier_func
 from fuzzy_lib.MembershipFunction import MembershipFunction
-from fuzzy_lib.Syntax import FuzzyQuery
-from fuzzy_lib.summary.Quantifier import QuantifierSetOnParams, QuantifierSet
-
-
-@dataclass
-class Summarizer:
-    membership_function: MembershipFunction
-    modifier: Modifier
-    attribute: str
-
-    def name(self):
-        return f'{self.modifier.name} {self.membership_function.name} {self.attribute}'
-
-    def __call__(self, x):
-        return self.modifier(self.membership_function(x))
+from fuzzy_lib.Summarizer import Summarizer
+from fuzzy_lib.summary.Quantifier import QuantifierSet
 
 
 class Summary:
@@ -92,7 +75,7 @@ class SummaryBuilder:
                 self.current_modifier = self.current_modifier(modifier)
                 yield from self.generate(iterations_left - 1)
                 self.current_modifier = tmp
-            if self.current_modifier.modifier != default_modifier:
+            if self.current_modifier.func != default_modifier_func:
                 yield self.current_modifier
 
     def list_summarizers(self, attribute, modifier_size=1):
@@ -100,7 +83,6 @@ class SummaryBuilder:
             for membership_function_name in self.fuzzy_sets[attribute].keys():
                 summarizer = Summarizer(self.fuzzy_sets[attribute][membership_function_name], combined_modifier,
                                         attribute)
-
                 yield summarizer
 
     def get_summary_attr(self, attributes: List[str]) -> SummarySet:

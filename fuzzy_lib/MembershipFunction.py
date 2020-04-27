@@ -3,7 +3,7 @@ from typing import Callable
 import pandas as pd
 
 from fuzzy_lib.Exception import IncorrectBoundException
-from fuzzy_lib.Modifier import Modifier
+from fuzzy_lib.Modifier import Modifier, DEFAULT_MODIFIER
 
 _EPS = 1E-9
 
@@ -41,11 +41,8 @@ class MembershipFunction(Callable):
     def includes(self, x):
         return True
 
-    def extract_range(self, alpha_cut) -> (float, float):
+    def extract_range(self, alpha_cut, modifier=None) -> (float, float):
         raise Exception('Can\'t extract range for an arbitrary function')
-
-    def set_modifier(self, modifier):
-        self.modifier = modifier
 
 
 class TriangularMembershipFunction(MembershipFunction):
@@ -64,7 +61,10 @@ class TriangularMembershipFunction(MembershipFunction):
     def includes(self, x) -> bool:
         return self.a <= x <= self.c
 
-    def __call__(self, X):
+    def __call__(self, X, modifier=None):
+        if modifier is None:
+            modifier = DEFAULT_MODIFIER
+
         def _(x):
             if abs(self.b - x) < _EPS:
                 return 1
@@ -74,39 +74,40 @@ class TriangularMembershipFunction(MembershipFunction):
                 return (self.c - x) / float(self.c - self.b)
             return 0
 
-        return self.modifier(_(X))
+        return modifier(_(X))
 
-    def extract_range(self, alpha_cut) -> (float, float):
-        return self._extract_left(alpha_cut), self._extract_right(alpha_cut)
+    def extract_range(self, alpha_cut, modifier=None) -> (float, float):
+        if modifier is None:
+            modifier = DEFAULT_MODIFIER
+        return self._extract_left(alpha_cut, modifier), self._extract_right(alpha_cut, modifier)
 
-    def _extract_left(self, alpha_cut):
+    def _extract_left(self, alpha_cut, modifier=None):
+        if modifier is None:
+            modifier = DEFAULT_MODIFIER
         left = self.a
         right = self.b
         for _ in range(100):
             m = (left + right) / 2
-            if self(m) + _EPS <= alpha_cut:
+            if self(m, modifier) + _EPS <= alpha_cut:
                 left = m
             else:
                 right = m
 
         return left
 
-    def _extract_right(self, alpha_cut):
+    def _extract_right(self, alpha_cut, modifier=None):
+        if modifier is None:
+            modifier = DEFAULT_MODIFIER
         left = self.b
         right = self.c
         for _ in range(100):
             m = (left + right) / 2
-            if self(m) + _EPS <= alpha_cut:
+            if self(m, modifier) + _EPS <= alpha_cut:
                 right = m
             else:
                 left = m
 
         return right
-
-    def set_modifier(self, modifier):
-        if modifier is None:
-            modifier = Modifier('', lambda x: x)
-        self.modifier = modifier
 
 
 class TrapezoidMembershipFunction(MembershipFunction):
@@ -129,27 +130,23 @@ class TrapezoidMembershipFunction(MembershipFunction):
         self.left = TriangularMembershipFunction(a=self.a, b=self.b, c=self.b)
         self.right = TriangularMembershipFunction(a=self.c, b=self.c, c=self.d)
 
-    def set_modifier(self, modifier):
-        if modifier is None:
-            modifier = Modifier('', lambda x: x)
-        self.modifier = modifier
-        self.left.set_modifier(modifier)
-        self.right.set_modifier(modifier)
-
     def includes(self, x) -> bool:
         return self.a <= x <= self.d
 
-    def __call__(self, x):
-        h = self.modifier
+    def __call__(self, x, modifier=None):
+        if modifier is None:
+            modifier = DEFAULT_MODIFIER
         if self.b <= x <= self.c:
-            return h(1)
+            return modifier(1)
         if self.left.includes(x):
-            return self.left(x)
+            return self.left(x, modifier)
         if self.right.includes(x):
-            return self.right(x)
-        return h(0)
+            return self.right(x, modifier)
+        return modifier(0)
 
-    def extract_range(self, alpha_cut) -> (float, float):
-        l, _ = self.left.extract_range(alpha_cut)
-        _, r = self.right.extract_range(alpha_cut)
+    def extract_range(self, alpha_cut, modifier=None) -> (float, float):
+        if modifier is None:
+            modifier = DEFAULT_MODIFIER
+        l, _ = self.left.extract_range(alpha_cut, modifier)
+        _, r = self.right.extract_range(alpha_cut, modifier)
         return l, r
