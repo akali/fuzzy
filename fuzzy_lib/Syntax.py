@@ -5,7 +5,7 @@ from copy import deepcopy
 import pandas as pd
 
 from fuzzy_lib import settings
-from fuzzy_lib.Hedge import dict_hedges
+from fuzzy_lib.Modifier import dict_modifiers
 from fuzzy_lib.MembershipFunction import MembershipFunction
 
 
@@ -36,29 +36,21 @@ def get_synonyms(word):
     return result
 
 
-def get_hedges():
-    """
-    :return: list of hedges(names only)
-    """
-    hedges = set(dict_hedges().keys())
-    return hedges
-
-
-def get_hedges_synonyms(limit=100):
+def get_modifiers_synonyms(limit=100):
     """
 
     :param limit: similarity limit
-    :return: dict of synonym hedges: {synonym: hedge}
+    :return: dict of synonym modifiers: {synonym: modifier}
     """
     result = {}
-    for hedge in get_hedges():
-        for synonym in get_synonyms(hedge):
+    for modifier in dict_modifiers().keys():
+        for synonym in get_synonyms(modifier):
             if synonym['similarity'] < limit:
                 continue
             term = synonym['term']
             if term not in result:
                 result[term] = set()
-            result[term].add(hedge)
+            result[term].add(modifier)
     return result
 
 
@@ -67,13 +59,13 @@ class SyntaxException(BaseException):
 
 
 class FuzzyQuery:
-    def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None, hedges_included=None, round_values=None):
+    def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None, modifiers_included=None, round_values=None):
         if limit is None:
             limit = 100
         if alpha_cut is None:
             alpha_cut = 0.5
-        if hedges_included is None:
-            hedges_included = True
+        if modifiers_included is None:
+            modifiers_included = True
         if round_values is None:
             round_values = False
 
@@ -82,16 +74,16 @@ class FuzzyQuery:
         self.limit = limit
         self.alpha_cut = alpha_cut
         self.round_values = round_values
-        self.hedges_included = hedges_included
+        self.modifiers_included = modifiers_included
 
     def extract_crisp_parameters(self):
         """
         Converts fuzzy_query to crisp query parameters.
         Fuzzy expression structure:
-        [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector]
-        [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector]
-        [hedge] [hedge] [hedge] ... [hedge] [membership function] [field] [connector] ...
-        [hedge] [hedge] [hedge] ... [hedge] [membership function] [field]
+        [composite modifier] [summarizer] [field] [connector]
+        [composite modifier] [summarizer] [field] [connector]
+        [composite modifier] [summarizer] [field] [connector] ...
+        [composite modifier] [summarizer] [field]
 
         example fuzzy_query: middle age and very high salary
 
@@ -115,8 +107,8 @@ class FuzzyQuery:
 
         tokens.append(EOQ_TOKEN)
 
-        hedges_synonyms = get_hedges_synonyms(limit)
-        hedges = dict_hedges()
+        modifiers_synonyms = get_modifiers_synonyms(limit)
+        modifiers = dict_modifiers()
 
         connectors = ["and", "or", "", "but", EOQ_TOKEN]
         connector_sql = {
@@ -133,7 +125,7 @@ class FuzzyQuery:
         for token in tokens:
             if token in connectors:
                 token = connector_sql[token]
-                if self.hedges_included and len(expression) < 2:
+                if self.modifiers_included and len(expression) < 2:
                     raise SyntaxException(f"Empty or incorrect expression {expression}")
                 original_expression = expression
                 expression.reverse()
@@ -150,13 +142,13 @@ class FuzzyQuery:
                 expression.pop(0)
 
                 while len(expression) > 0:
-                    if expression[0] not in hedges and expression[0] not in hedges_synonyms:
-                        raise SyntaxException(f"Unknown hedge {expression[0]} in expression {original_expression}")
+                    if expression[0] not in modifiers and expression[0] not in modifiers_synonyms:
+                        raise SyntaxException(f"Unknown modifier {expression[0]} in expression {original_expression}")
 
-                    if expression[0] in hedges.keys():
-                        mf.set_hedge(hedges[expression[0]](mf.hedge))
+                    if expression[0] in modifiers.keys():
+                        mf.set_modifier(modifiers[expression[0]](mf.modifier))
                     else:
-                        mf.set_hedge(hedges_synonyms[expression[0]][0](mf.hedge))
+                        mf.set_modifier(modifiers_synonyms[expression[0]][0](mf.modifier))
                     expression.pop(0)
 
                 l, r = mf.extract_range(alpha_cut)

@@ -3,22 +3,22 @@ from typing import Callable
 import pandas as pd
 
 from fuzzy_lib.Exception import IncorrectBoundException
-from fuzzy_lib.Hedge import Hedge
+from fuzzy_lib.Modifier import Modifier
 
 _EPS = 1E-9
 
 
 class MembershipFunction(Callable):
     func: Callable
-    hedge: Hedge
+    modifier: Modifier
 
-    def __init__(self, func=None, hedge=None):
+    def __init__(self, func=None, modifier=None):
         if func is None:
             func = lambda x: x
-        if hedge is None:
-            hedge = Hedge('', lambda x: x)
+        if modifier is None:
+            modifier = Modifier('', lambda x: x)
         self.func = func
-        self.hedge = hedge
+        self.modifier = modifier
 
     def __call__(self, X):
         def _(x):
@@ -26,7 +26,7 @@ class MembershipFunction(Callable):
                 return x
             return self.func(x)
 
-        return self.hedge(_(X))
+        return self.modifier(_(X))
 
     def __and__(self, other):
         return MembershipFunction(func=lambda x: min(self(x), other(x)))
@@ -40,8 +40,8 @@ class MembershipFunction(Callable):
     def extract_range(self, alpha_cut) -> (float, float):
         raise Exception('Can\'t extract range for an arbitrary function')
 
-    def set_hedge(self, hedge):
-        self.hedge = hedge
+    def set_modifier(self, modifier):
+        self.modifier = modifier
 
 
 class TriangularMembershipFunction(MembershipFunction):
@@ -49,8 +49,8 @@ class TriangularMembershipFunction(MembershipFunction):
     b: float
     c: float
 
-    def __init__(self, a, b, c, hedge=None):
-        super().__init__(hedge=hedge)
+    def __init__(self, a, b, c, modifier=None):
+        super().__init__(modifier=modifier)
         self.a = a
         self.b = b
         self.c = c
@@ -70,7 +70,7 @@ class TriangularMembershipFunction(MembershipFunction):
                 return (self.c - x) / float(self.c - self.b)
             return 0
 
-        return self.hedge(_(X))
+        return self.modifier(_(X))
 
     def extract_range(self, alpha_cut) -> (float, float):
         return self._extract_left(alpha_cut), self._extract_right(alpha_cut)
@@ -99,10 +99,10 @@ class TriangularMembershipFunction(MembershipFunction):
 
         return right
 
-    def set_hedge(self, hedge):
-        if hedge is None:
-            hedge = Hedge('', lambda x: x)
-        self.hedge = hedge
+    def set_modifier(self, modifier):
+        if modifier is None:
+            modifier = Modifier('', lambda x: x)
+        self.modifier = modifier
 
 
 class TrapezoidMembershipFunction(MembershipFunction):
@@ -114,8 +114,8 @@ class TrapezoidMembershipFunction(MembershipFunction):
     left: TriangularMembershipFunction
     right: TriangularMembershipFunction
 
-    def __init__(self, a, b, c, d, hedge=None):
-        super().__init__(hedge=hedge)
+    def __init__(self, a, b, c, d, modifier=None):
+        super().__init__(modifier=modifier)
         self.a = a
         self.b = b
         self.c = c
@@ -125,18 +125,18 @@ class TrapezoidMembershipFunction(MembershipFunction):
         self.left = TriangularMembershipFunction(a=self.a, b=self.b, c=self.b)
         self.right = TriangularMembershipFunction(a=self.c, b=self.c, c=self.d)
 
-    def set_hedge(self, hedge):
-        if hedge is None:
-            hedge = Hedge('', lambda x: x)
-        self.hedge = hedge
-        self.left.set_hedge(hedge)
-        self.right.set_hedge(hedge)
+    def set_modifier(self, modifier):
+        if modifier is None:
+            modifier = Modifier('', lambda x: x)
+        self.modifier = modifier
+        self.left.set_modifier(modifier)
+        self.right.set_modifier(modifier)
 
     def includes(self, x) -> bool:
         return self.a <= x <= self.d
 
     def __call__(self, x):
-        h = self.hedge
+        h = self.modifier
         if self.b <= x <= self.c:
             return h(1)
         if self.left.includes(x):
