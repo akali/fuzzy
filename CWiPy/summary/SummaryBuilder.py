@@ -1,15 +1,11 @@
-from dataclasses import dataclass, field
-from functools import reduce
-from typing import Dict, Any, Union, List
+from dataclasses import dataclass
+from typing import List
 
 import pandas as pd
-import numpy as np
-from pandas import DataFrame, Series
 
 from CWiPy.Modifier import dict_modifiers, Modifier, default_modifier
 from CWiPy.MembershipFunction import MembershipFunction
-from CWiPy.Syntax import FuzzyQuery
-from CWiPy.summary.Quantifier import QuantifierSetOnParams, QuantifierSet
+from CWiPy.summary.Quantifier import QuantifierSet
 
 
 @dataclass

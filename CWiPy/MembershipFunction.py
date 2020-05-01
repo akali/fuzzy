@@ -1,7 +1,5 @@
 from typing import Callable
 
-import pandas as pd
-
 from CWiPy.Exception import IncorrectBoundException
 from CWiPy.Modifier import Modifier
 
