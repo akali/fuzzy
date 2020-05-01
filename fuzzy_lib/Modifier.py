@@ -1,7 +1,6 @@
-import copy
 import math
 from dataclasses import dataclass
-from typing import Callable, List
+from typing import Callable
 
 
 def default_modifier(x):
