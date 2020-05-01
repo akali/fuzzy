@@ -1,8 +1,8 @@
 import math
 import unittest
 
-from fuzzy_lib.Modifier import dict_modifiers
-from fuzzy_lib.MembershipFunction import MembershipFunction
+from CWiPy.Modifier import dict_modifiers
+from CWiPy.MembershipFunction import MembershipFunction
 
 
 def func(u):

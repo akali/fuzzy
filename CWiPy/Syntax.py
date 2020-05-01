@@ -4,9 +4,9 @@ from copy import deepcopy
 
 import pandas as pd
 
-from fuzzy_lib import settings
-from fuzzy_lib.Modifier import dict_modifiers
-from fuzzy_lib.MembershipFunction import MembershipFunction
+from CWiPy import settings
+from CWiPy.Modifier import dict_modifiers
+from CWiPy.MembershipFunction import MembershipFunction
 
 
 def get_synonyms(word):

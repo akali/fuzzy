@@ -3,8 +3,8 @@
 import json
 import time
 
-from fuzzy_lib import settings
-from fuzzy_lib.scripts.load_synonyms_antonyms import get_thesaurus_data
+from CWiPy import settings
+from CWiPy.scripts.load_synonyms_antonyms import get_thesaurus_data
 
 
 def load_thesaurus():

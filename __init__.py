@@ -1,1 +1,1 @@
-from fuzzy_lib import *
+from CWiPy import *

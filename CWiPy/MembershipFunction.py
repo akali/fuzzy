@@ -2,8 +2,8 @@ from typing import Callable
 
 import pandas as pd
 
-from fuzzy_lib.Exception import IncorrectBoundException
-from fuzzy_lib.Modifier import Modifier
+from CWiPy.Exception import IncorrectBoundException
+from CWiPy.Modifier import Modifier
 
 _EPS = 1E-9
 

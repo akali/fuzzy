@@ -1,6 +1,6 @@
 import unittest
-from fuzzy_lib import MembershipFunction as mf
-from fuzzy_lib.Modifier import dict_modifiers
+from CWiPy import MembershipFunction as mf
+from CWiPy.Modifier import dict_modifiers
 
 
 class TestRangeExtraction(unittest.TestCase):

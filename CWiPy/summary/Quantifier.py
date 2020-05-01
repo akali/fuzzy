@@ -1,4 +1,4 @@
-import fuzzy_lib.MembershipFunction as mf
+import CWiPy.MembershipFunction as mf
 
 
 class QuantifierSet:

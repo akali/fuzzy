@@ -6,10 +6,10 @@ import pandas as pd
 import numpy as np
 from pandas import DataFrame, Series
 
-from fuzzy_lib.Modifier import dict_modifiers, Modifier, default_modifier
-from fuzzy_lib.MembershipFunction import MembershipFunction
-from fuzzy_lib.Syntax import FuzzyQuery
-from fuzzy_lib.summary.Quantifier import QuantifierSetOnParams, QuantifierSet
+from CWiPy.Modifier import dict_modifiers, Modifier, default_modifier
+from CWiPy.MembershipFunction import MembershipFunction
+from CWiPy.Syntax import FuzzyQuery
+from CWiPy.summary.Quantifier import QuantifierSetOnParams, QuantifierSet
 
 
 @dataclass
