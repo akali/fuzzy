@@ -75,10 +75,16 @@ class TriangularMembershipFunction(MembershipFunction):
         return self.modifier(_(X))
 
     def extract_range(self, alpha_cut) -> (float, float):
-        if self(self.a) != 0 or self(self.b) != 1 or self(self.c) != 0:
-            normal = False
-        else:
-            normal = True
+
+        # defines normal triangular function self(a) <= self(b) >= self(c)
+        normal = (self.a == self.b or self(self.a) == 0) \
+                 and (self.b == self.c or self(self.c) == 0) \
+                 and self(self.b) == 1
+
+        # if self(self.a) != 0 or self(self.b) != 1 or self(self.c) != 0:
+        #     normal = False
+        # else:
+        #     normal = True
         return self._extract_left(alpha_cut, normal), self._extract_right(alpha_cut, normal)
 
     def _extract_left(self, alpha_cut, normal=True):

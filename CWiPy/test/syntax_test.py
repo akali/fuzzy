@@ -1,17 +1,17 @@
 import unittest
 
 from CWiPy.MembershipFunction import TrapezoidMembershipFunction, TriangularMembershipFunction
-from CWiPy.Syntax import to_sql
+from CWiPy.Syntax import FuzzyQuery
 
 
 class SyntaxTest(unittest.TestCase):
     def test_to_sql(self):
-        query = "very very young age but very high salary"
+        query = "young age but very high salary"
         fields = {
             "age": {
-                "young": TriangularMembershipFunction(10, 20, 30),
-                "middle": TriangularMembershipFunction(25, 35, 45),
-                "old": TriangularMembershipFunction(50, 100, 20000),
+                "young": TrapezoidMembershipFunction(10, 10, 18, 30),
+                "middle": TriangularMembershipFunction(18, 30, 45),
+                "old": TrapezoidMembershipFunction(30, 45, 100, 100),
             },
             "salary": {
                 "low": TrapezoidMembershipFunction(0, 0, 20000, 50000),
@@ -20,9 +20,7 @@ class SyntaxTest(unittest.TestCase):
             },
         }
 
-        print(to_sql(query, fields, alpha_cut=0.5))
-
-        pass
+        print(FuzzyQuery(query, fields, alpha_cut=0.5, round_values=True).to_sql())
 
 
 if __name__ == '__main__':
