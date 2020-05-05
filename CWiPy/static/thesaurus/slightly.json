@@ -1,1 +1,327 @@
-{"data": {"definitionData": {"_id": "5c9e52812e7841c8bd571fcd", "entry": "slightly", "type": "normal", "definitions": [{"isInformal": null, "isVulgar": "0", "definition": "a little", "thesRid": "16876", "pos": "adverb", "synonyms": [{"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "kind of", "targetTerm": "kind of", "targetSlug": "kind%20of"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "somewhat", "targetTerm": "somewhat", "targetSlug": "somewhat"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "lightly", "targetTerm": "lightly", "targetSlug": "lightly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "hardly", "targetTerm": "hardly", "targetSlug": "hardly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "imperceptibly", "targetTerm": "imperceptibly", "targetSlug": "imperceptibly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "more or less", "targetTerm": "more or less", "targetSlug": "more%20or%20less"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "pretty", "targetTerm": "pretty", "targetSlug": "pretty"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "marginally", "targetTerm": "marginally", "targetSlug": "marginally"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "hardly at all", "targetTerm": "hardly at all", "targetSlug": "hardly%20at%20all"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "hardly noticeable", "targetTerm": "hardly noticeable", "targetSlug": "hardly%20noticeable"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "inappreciably", "targetTerm": "inappreciably", "targetSlug": "inappreciably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "inconsiderably", "targetTerm": "inconsiderably", "targetSlug": "inconsiderably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "insignificantly", "targetTerm": "insignificantly", "targetSlug": "insignificantly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "on a small scale", "targetTerm": "on a small scale", "targetSlug": "on%20a%20small%20scale"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "scarcely any", "targetTerm": "scarcely any", "targetSlug": "scarcely%20any"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "to some degree", "targetTerm": "to some degree", "targetSlug": "to%20some%20degree"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "to some extent", "targetTerm": "to some extent", "targetSlug": "to%20some%20extent"}], "antonyms": [{"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "a lot", "targetTerm": "a lot", "targetSlug": "a%20lot"}, {"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "greatly", "targetTerm": "greatly", "targetSlug": "greatly"}, {"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "considerably", "targetTerm": "considerably", "targetSlug": "considerably"}]}], "slug": "slightly"}, "pronunciation": {"audio": {"audio/ogg": "https://static.sfdict.com/audio/lunawav/S06/S0621300.ogg", "audio/mpeg": "https://static.sfdict.com/audio/S06/S0621300.mp3"}, "spell": "slahyt", "ipa": "sla\u026at"}, "confusables": [], "supplementaryNotes": [], "etymology": [], "exampleSentences": [{"sentence": "The old man completed this anecdote in tones that were slightly inflamed.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "393e5e027bcb48a89738f989428133ba17a2a5b7"}, {"sentence": "Grace had eaten little and drunk nothing; but Howe was slightly stimulated.", "profanity": 0, "source": {"title": "K", "type": "const", "url": "http://www.gutenberg.org/files/9931/9931-h/9931-h.htm", "author": "Mary Roberts Rinehart", "publication_date": null, "abbreviation": "gbg"}, "id": "cec8888dae1a0d370d0c5b9a1aac4319dd847bb4"}, {"sentence": "Her comely face was slightly flushed, doubtless with the exercise of walking.", "profanity": 0, "source": {"title": "In the Midst of Alarms", "type": "const", "url": "http://www.gutenberg.org/files/9263/9263-h/9263-h.htm", "author": "Robert Barr", "publication_date": null, "abbreviation": "gbg"}, "id": "8a9744f5902ee82b5c07762b3b77575ae2f2dcd0"}, {"sentence": "She was slightly disappointed, on reaching home, to find that Eileen was not there.", "profanity": 0, "source": {"title": "Her Father's Daughter", "type": "const", "url": "http://www.gutenberg.org/files/904/904-h/904-h.htm", "author": "Gene Stratton-Porter", "publication_date": null, "abbreviation": "gbg"}, "id": "0a9536b4653373d047e25f75baaba425c878fabb"}, {"sentence": "We left it slightly ajar to create a draft; the night was warm.", "profanity": 0, "source": {"title": "Her Father's Daughter", "type": "const", "url": "http://www.gutenberg.org/files/904/904-h/904-h.htm", "author": "Gene Stratton-Porter", "publication_date": null, "abbreviation": "gbg"}, "id": "525363e73219d0193c3d925a614de31a479fe7a8"}, {"sentence": "For an instant she stood still, and, slightly trembling, looked at him.", "profanity": 0, "source": {"title": "The Dream", "type": "const", "url": "http://www.gutenberg.org/files/9499/9499-h/9499-h.htm", "author": "Emile Zola", "publication_date": null, "abbreviation": "gbg"}, "id": "e5953966593c87bd1ea6e0009cd95c269119a5d4"}, {"sentence": "She stooped ever so slightly and touched the upstanding mop of his wavy hair.", "profanity": 0, "source": {"title": "The Leopard Woman", "type": "const", "url": "http://www.gutenberg.org/files/9401/9401-h/9401-h.htm", "author": "Stewart Edward White", "publication_date": null, "abbreviation": "gbg"}, "id": "eb703e5afae20194b355bd9b464f3042b189c9ff"}, {"sentence": "His fingers encountered a flame, and were slightly scorched.", "profanity": 0, "source": {"title": "The Leopard Woman", "type": "const", "url": "http://www.gutenberg.org/files/9401/9401-h/9401-h.htm", "author": "Stewart Edward White", "publication_date": null, "abbreviation": "gbg"}, "id": "2c9153a4472fda0a861b89b6c7f3ccaa94e8cc62"}, {"sentence": "My father I slightly remember; but of my mother I retain no distinct impressions.", "profanity": 0, "source": {"title": "Ned Myers", "type": "const", "url": "http://www.gutenberg.org/files/9788/9788-h/9788-h.htm", "author": "James Fenimore Cooper", "publication_date": null, "abbreviation": "gbg"}, "id": "7e69ea1125196c2d575134b99ee036c08ed2ea45"}, {"sentence": "They will bake in a few minutes, and should be but slightly coloured.", "profanity": 0, "source": {"title": "Directions for Cookery, in its Various Branches", "type": "const", "url": "http://www.gutenberg.org/files/9624/9624-h/9624-h.htm", "author": "Eliza Leslie", "publication_date": null, "abbreviation": "gbg"}, "id": "d3aa6228b3d19c56beb810dda518d454753b2f7c"}], "slugLuna": "slightly"}}
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e52812e7841c8bd571fcd",
+      "entry": "slightly",
+      "type": "normal",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "a little",
+          "thesRid": "16876",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "kind of",
+              "targetTerm": "kind of",
+              "targetSlug": "kind%20of"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "somewhat",
+              "targetTerm": "somewhat",
+              "targetSlug": "somewhat"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "lightly",
+              "targetTerm": "lightly",
+              "targetSlug": "lightly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "hardly",
+              "targetTerm": "hardly",
+              "targetSlug": "hardly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "imperceptibly",
+              "targetTerm": "imperceptibly",
+              "targetSlug": "imperceptibly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "more or less",
+              "targetTerm": "more or less",
+              "targetSlug": "more%20or%20less"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "pretty",
+              "targetTerm": "pretty",
+              "targetSlug": "pretty"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "marginally",
+              "targetTerm": "marginally",
+              "targetSlug": "marginally"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "hardly at all",
+              "targetTerm": "hardly at all",
+              "targetSlug": "hardly%20at%20all"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "hardly noticeable",
+              "targetTerm": "hardly noticeable",
+              "targetSlug": "hardly%20noticeable"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "inappreciably",
+              "targetTerm": "inappreciably",
+              "targetSlug": "inappreciably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "inconsiderably",
+              "targetTerm": "inconsiderably",
+              "targetSlug": "inconsiderably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "insignificantly",
+              "targetTerm": "insignificantly",
+              "targetSlug": "insignificantly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "on a small scale",
+              "targetTerm": "on a small scale",
+              "targetSlug": "on%20a%20small%20scale"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "scarcely any",
+              "targetTerm": "scarcely any",
+              "targetSlug": "scarcely%20any"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "to some degree",
+              "targetTerm": "to some degree",
+              "targetSlug": "to%20some%20degree"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "to some extent",
+              "targetTerm": "to some extent",
+              "targetSlug": "to%20some%20extent"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "a lot",
+              "targetTerm": "a lot",
+              "targetSlug": "a%20lot"
+            },
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "greatly",
+              "targetTerm": "greatly",
+              "targetSlug": "greatly"
+            },
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "considerably",
+              "targetTerm": "considerably",
+              "targetSlug": "considerably"
+            }
+          ]
+        }
+      ],
+      "slug": "slightly"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/S06/S0621300.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/S06/S0621300.mp3"
+      },
+      "spell": "slahyt",
+      "ipa": "sla\u026at"
+    },
+    "confusables": [],
+    "supplementaryNotes": [],
+    "etymology": [],
+    "exampleSentences": [
+      {
+        "sentence": "The old man completed this anecdote in tones that were slightly inflamed.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "393e5e027bcb48a89738f989428133ba17a2a5b7"
+      },
+      {
+        "sentence": "Grace had eaten little and drunk nothing; but Howe was slightly stimulated.",
+        "profanity": 0,
+        "source": {
+          "title": "K",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9931/9931-h/9931-h.htm",
+          "author": "Mary Roberts Rinehart",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "cec8888dae1a0d370d0c5b9a1aac4319dd847bb4"
+      },
+      {
+        "sentence": "Her comely face was slightly flushed, doubtless with the exercise of walking.",
+        "profanity": 0,
+        "source": {
+          "title": "In the Midst of Alarms",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9263/9263-h/9263-h.htm",
+          "author": "Robert Barr",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "8a9744f5902ee82b5c07762b3b77575ae2f2dcd0"
+      },
+      {
+        "sentence": "She was slightly disappointed, on reaching home, to find that Eileen was not there.",
+        "profanity": 0,
+        "source": {
+          "title": "Her Father's Daughter",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/904/904-h/904-h.htm",
+          "author": "Gene Stratton-Porter",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "0a9536b4653373d047e25f75baaba425c878fabb"
+      },
+      {
+        "sentence": "We left it slightly ajar to create a draft; the night was warm.",
+        "profanity": 0,
+        "source": {
+          "title": "Her Father's Daughter",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/904/904-h/904-h.htm",
+          "author": "Gene Stratton-Porter",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "525363e73219d0193c3d925a614de31a479fe7a8"
+      },
+      {
+        "sentence": "For an instant she stood still, and, slightly trembling, looked at him.",
+        "profanity": 0,
+        "source": {
+          "title": "The Dream",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9499/9499-h/9499-h.htm",
+          "author": "Emile Zola",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "e5953966593c87bd1ea6e0009cd95c269119a5d4"
+      },
+      {
+        "sentence": "She stooped ever so slightly and touched the upstanding mop of his wavy hair.",
+        "profanity": 0,
+        "source": {
+          "title": "The Leopard Woman",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9401/9401-h/9401-h.htm",
+          "author": "Stewart Edward White",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "eb703e5afae20194b355bd9b464f3042b189c9ff"
+      },
+      {
+        "sentence": "His fingers encountered a flame, and were slightly scorched.",
+        "profanity": 0,
+        "source": {
+          "title": "The Leopard Woman",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9401/9401-h/9401-h.htm",
+          "author": "Stewart Edward White",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "2c9153a4472fda0a861b89b6c7f3ccaa94e8cc62"
+      },
+      {
+        "sentence": "My father I slightly remember; but of my mother I retain no distinct impressions.",
+        "profanity": 0,
+        "source": {
+          "title": "Ned Myers",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9788/9788-h/9788-h.htm",
+          "author": "James Fenimore Cooper",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "7e69ea1125196c2d575134b99ee036c08ed2ea45"
+      },
+      {
+        "sentence": "They will bake in a few minutes, and should be but slightly coloured.",
+        "profanity": 0,
+        "source": {
+          "title": "Directions for Cookery, in its Various Branches",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9624/9624-h/9624-h.htm",
+          "author": "Eliza Leslie",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "d3aa6228b3d19c56beb810dda518d454753b2f7c"
+      }
+    ],
+    "slugLuna": "slightly"
+  }
+}

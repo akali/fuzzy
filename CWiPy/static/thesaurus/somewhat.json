@@ -1,1 +1,391 @@
-{"data": {"definitionData": {"_id": "5c9e52822e7841c8bd5723b3", "entry": "somewhat", "type": "normal", "definitions": [{"isInformal": null, "isVulgar": "0", "definition": "to some extent", "thesRid": "17082", "pos": "adverb", "synonyms": [{"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "considerably", "targetTerm": "considerably", "targetSlug": "considerably"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "fairly", "targetTerm": "fairly", "targetSlug": "fairly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "rather", "targetTerm": "rather", "targetSlug": "rather"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "kind of", "targetTerm": "kind of", "targetSlug": "kind%20of"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "moderately", "targetTerm": "moderately", "targetSlug": "moderately"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "quite", "targetTerm": "quite", "targetSlug": "quite"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "far", "targetTerm": "far", "targetSlug": "far"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "pretty", "targetTerm": "pretty", "targetSlug": "pretty"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "slightly", "targetTerm": "slightly", "targetSlug": "slightly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "partially", "targetTerm": "partially", "targetSlug": "partially"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "adequately", "targetTerm": "adequately", "targetSlug": "adequately"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "incompletely", "targetTerm": "incompletely", "targetSlug": "incompletely"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "more or less", "targetTerm": "more or less", "targetSlug": "more%20or%20less"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "some", "targetTerm": "some", "targetSlug": "some"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "something", "targetTerm": "something", "targetSlug": "something"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "sort of", "targetTerm": "sort of", "targetSlug": "sort%20of"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "well", "targetTerm": "well", "targetSlug": "well"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "significantly", "targetTerm": "significantly", "targetSlug": "significantly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "a little", "targetTerm": "a little", "targetSlug": "a%20little"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "bearably", "targetTerm": "bearably", "targetSlug": "bearably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "in part", "targetTerm": "in part", "targetSlug": "in%20part"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "insignificantly", "targetTerm": "insignificantly", "targetSlug": "insignificantly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "not much", "targetTerm": "not much", "targetSlug": "not%20much"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "ratherish", "targetTerm": "ratherish", "targetSlug": "ratherish"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "to a degree", "targetTerm": "to a degree", "targetSlug": "to%20a%20degree"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "tolerably", "targetTerm": "tolerably", "targetSlug": "tolerably"}], "antonyms": [{"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "not at all", "targetTerm": "not at all", "targetSlug": "not%20at%20all"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "little", "targetTerm": "little", "targetSlug": "little"}]}], "slug": "somewhat"}, "pronunciation": {"audio": {"audio/ogg": "https://static.sfdict.com/audio/lunawav/S07/S0715600.ogg", "audio/mpeg": "https://static.sfdict.com/audio/S07/S0715600.mp3"}, "spell": "<span class=\"bold\">suhm</span>-hwuht, -hwot, -hw<span class=\"italic\">uh</span>\u2009t, -wuht, -wot, -w<span class=\"italic\">uh</span>\u2009t", "ipa": "\u02c8s\u028cm\u02cc\u02b0w\u028ct, -\u02cc\u02b0w\u0252t, -\u02b0w\u0259t, -\u02ccw\u028ct, -\u02ccw\u0252t, -w\u0259t"}, "confusables": [], "supplementaryNotes": [], "etymology": [], "exampleSentences": [{"sentence": "Decent, unpretentious folks, somewhat new, but with loads of money.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "6193d71d328cec66715c9bcce5d7ea7db4ac8c4d"}, {"sentence": "He was by no means what is termed a sportsman, yet he was somewhat fond of shooting.", "profanity": 0, "source": {"title": "The Grand Old Man", "type": "const", "url": "http://www.gutenberg.org/files/9900/9900-h/9900-h.htm", "author": "Richard B. Cook", "publication_date": null, "abbreviation": "gbg"}, "id": "3d758dbf2d34b241a6be51583822ca61a6168354"}, {"sentence": "It is somewhat in the vein of \"Sourdough\" Service, the Yukon bard.", "profanity": 0, "source": {"title": "Ballads of a Bohemian", "type": "const", "url": "http://www.gutenberg.org/files/995/995-h/995-h.htm", "author": "Robert W. Service", "publication_date": null, "abbreviation": "gbg"}, "id": "0f56e790eefc38adb6291126e0e725423e3e79b0"}, {"sentence": "Sallie Calkins was somewhat flurried by this unexpected call.", "profanity": 0, "source": {"title": "Ester Ried Yet Speaking", "type": "const", "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm", "author": "Isabella Alden", "publication_date": null, "abbreviation": "gbg"}, "id": "312d31f7ec79fa2fd7a134da02d88cdfad0604d3"}, {"sentence": "The horrible stiffness was somewhat broken, and all were seated.", "profanity": 0, "source": {"title": "Ester Ried Yet Speaking", "type": "const", "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm", "author": "Isabella Alden", "publication_date": null, "abbreviation": "gbg"}, "id": "d54d5e621cc77a27080f3556075e34bcd87e971f"}, {"sentence": "These were the somewhat startling words which broke his silence.", "profanity": 0, "source": {"title": "Ester Ried Yet Speaking", "type": "const", "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm", "author": "Isabella Alden", "publication_date": null, "abbreviation": "gbg"}, "id": "6447043aff25f4dde47fe7ccb23283b4c48b42ff"}, {"sentence": "Gilder stared at her for a few seconds, somewhat indignantly.", "profanity": 0, "source": {"title": "Within the Law", "type": "const", "url": "http://www.gutenberg.org/files/905/905-h/905-h.htm", "author": "Marvin Dana", "publication_date": null, "abbreviation": "gbg"}, "id": "dae4bc99f4f14c1674aacb6a5bf7e5537245626e"}, {"sentence": "It has eased my joints, which were somewhat stiff from these years of peace.", "profanity": 0, "source": {"title": "The White Company", "type": "const", "url": "http://www.gutenberg.org/files/903/903-h/903-h.htm", "author": "Arthur Conan Doyle", "publication_date": null, "abbreviation": "gbg"}, "id": "51bca0df812c8530f6b661fe0c6913d7d8ac987c"}, {"sentence": "As will be observed, these are somewhat broad and not very tall.", "profanity": 0, "source": {"title": "Woman's Institute Library of Cookery, Vol. 5", "type": "const", "url": "http://www.gutenberg.org/files/9939/9939-h/9939-h.htm", "author": "Woman's Institute of Domestic Arts and Sciences", "publication_date": null, "abbreviation": "gbg"}, "id": "72f856181f962425b07c92ea509877768fbbf619"}, {"sentence": "Chip saw and interpreted the glance, somewhat contemptuously.", "profanity": 0, "source": {"title": "Chip, of the Flying U", "type": "const", "url": "http://www.gutenberg.org/files/9267/9267-h/9267-h.htm", "author": "B. M. Bower", "publication_date": null, "abbreviation": "gbg"}, "id": "6b1eeec98ef3c7edef5f6fa53ae585d796129aae"}], "slugLuna": "somewhat"}}
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e52822e7841c8bd5723b3",
+      "entry": "somewhat",
+      "type": "normal",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "to some extent",
+          "thesRid": "17082",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "considerably",
+              "targetTerm": "considerably",
+              "targetSlug": "considerably"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "fairly",
+              "targetTerm": "fairly",
+              "targetSlug": "fairly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "rather",
+              "targetTerm": "rather",
+              "targetSlug": "rather"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "kind of",
+              "targetTerm": "kind of",
+              "targetSlug": "kind%20of"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "moderately",
+              "targetTerm": "moderately",
+              "targetSlug": "moderately"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "quite",
+              "targetTerm": "quite",
+              "targetSlug": "quite"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "far",
+              "targetTerm": "far",
+              "targetSlug": "far"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "pretty",
+              "targetTerm": "pretty",
+              "targetSlug": "pretty"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "slightly",
+              "targetTerm": "slightly",
+              "targetSlug": "slightly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "partially",
+              "targetTerm": "partially",
+              "targetSlug": "partially"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "adequately",
+              "targetTerm": "adequately",
+              "targetSlug": "adequately"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "incompletely",
+              "targetTerm": "incompletely",
+              "targetSlug": "incompletely"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "more or less",
+              "targetTerm": "more or less",
+              "targetSlug": "more%20or%20less"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "some",
+              "targetTerm": "some",
+              "targetSlug": "some"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "something",
+              "targetTerm": "something",
+              "targetSlug": "something"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "sort of",
+              "targetTerm": "sort of",
+              "targetSlug": "sort%20of"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "well",
+              "targetTerm": "well",
+              "targetSlug": "well"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "significantly",
+              "targetTerm": "significantly",
+              "targetSlug": "significantly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "a little",
+              "targetTerm": "a little",
+              "targetSlug": "a%20little"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "bearably",
+              "targetTerm": "bearably",
+              "targetSlug": "bearably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "in part",
+              "targetTerm": "in part",
+              "targetSlug": "in%20part"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "insignificantly",
+              "targetTerm": "insignificantly",
+              "targetSlug": "insignificantly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "not much",
+              "targetTerm": "not much",
+              "targetSlug": "not%20much"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "ratherish",
+              "targetTerm": "ratherish",
+              "targetSlug": "ratherish"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "to a degree",
+              "targetTerm": "to a degree",
+              "targetSlug": "to%20a%20degree"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "tolerably",
+              "targetTerm": "tolerably",
+              "targetSlug": "tolerably"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "not at all",
+              "targetTerm": "not at all",
+              "targetSlug": "not%20at%20all"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "little",
+              "targetTerm": "little",
+              "targetSlug": "little"
+            }
+          ]
+        }
+      ],
+      "slug": "somewhat"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/S07/S0715600.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/S07/S0715600.mp3"
+      },
+      "spell": "<span class=\"bold\">suhm</span>-hwuht, -hwot, -hw<span class=\"italic\">uh</span>\u2009t, -wuht, -wot, -w<span class=\"italic\">uh</span>\u2009t",
+      "ipa": "\u02c8s\u028cm\u02cc\u02b0w\u028ct, -\u02cc\u02b0w\u0252t, -\u02b0w\u0259t, -\u02ccw\u028ct, -\u02ccw\u0252t, -w\u0259t"
+    },
+    "confusables": [],
+    "supplementaryNotes": [],
+    "etymology": [],
+    "exampleSentences": [
+      {
+        "sentence": "Decent, unpretentious folks, somewhat new, but with loads of money.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "6193d71d328cec66715c9bcce5d7ea7db4ac8c4d"
+      },
+      {
+        "sentence": "He was by no means what is termed a sportsman, yet he was somewhat fond of shooting.",
+        "profanity": 0,
+        "source": {
+          "title": "The Grand Old Man",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9900/9900-h/9900-h.htm",
+          "author": "Richard B. Cook",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "3d758dbf2d34b241a6be51583822ca61a6168354"
+      },
+      {
+        "sentence": "It is somewhat in the vein of \"Sourdough\" Service, the Yukon bard.",
+        "profanity": 0,
+        "source": {
+          "title": "Ballads of a Bohemian",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/995/995-h/995-h.htm",
+          "author": "Robert W. Service",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "0f56e790eefc38adb6291126e0e725423e3e79b0"
+      },
+      {
+        "sentence": "Sallie Calkins was somewhat flurried by this unexpected call.",
+        "profanity": 0,
+        "source": {
+          "title": "Ester Ried Yet Speaking",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm",
+          "author": "Isabella Alden",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "312d31f7ec79fa2fd7a134da02d88cdfad0604d3"
+      },
+      {
+        "sentence": "The horrible stiffness was somewhat broken, and all were seated.",
+        "profanity": 0,
+        "source": {
+          "title": "Ester Ried Yet Speaking",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm",
+          "author": "Isabella Alden",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "d54d5e621cc77a27080f3556075e34bcd87e971f"
+      },
+      {
+        "sentence": "These were the somewhat startling words which broke his silence.",
+        "profanity": 0,
+        "source": {
+          "title": "Ester Ried Yet Speaking",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm",
+          "author": "Isabella Alden",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "6447043aff25f4dde47fe7ccb23283b4c48b42ff"
+      },
+      {
+        "sentence": "Gilder stared at her for a few seconds, somewhat indignantly.",
+        "profanity": 0,
+        "source": {
+          "title": "Within the Law",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/905/905-h/905-h.htm",
+          "author": "Marvin Dana",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "dae4bc99f4f14c1674aacb6a5bf7e5537245626e"
+      },
+      {
+        "sentence": "It has eased my joints, which were somewhat stiff from these years of peace.",
+        "profanity": 0,
+        "source": {
+          "title": "The White Company",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/903/903-h/903-h.htm",
+          "author": "Arthur Conan Doyle",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "51bca0df812c8530f6b661fe0c6913d7d8ac987c"
+      },
+      {
+        "sentence": "As will be observed, these are somewhat broad and not very tall.",
+        "profanity": 0,
+        "source": {
+          "title": "Woman's Institute Library of Cookery, Vol. 5",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9939/9939-h/9939-h.htm",
+          "author": "Woman's Institute of Domestic Arts and Sciences",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "72f856181f962425b07c92ea509877768fbbf619"
+      },
+      {
+        "sentence": "Chip saw and interpreted the glance, somewhat contemptuously.",
+        "profanity": 0,
+        "source": {
+          "title": "Chip, of the Flying U",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9267/9267-h/9267-h.htm",
+          "author": "B. M. Bower",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "6b1eeec98ef3c7edef5f6fa53ae585d796129aae"
+      }
+    ],
+    "slugLuna": "somewhat"
+  }
+}

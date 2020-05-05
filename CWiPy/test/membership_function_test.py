@@ -1,4 +1,5 @@
 import unittest
+
 from CWiPy import MembershipFunction as mf
 from CWiPy.Modifier import dict_modifiers
 

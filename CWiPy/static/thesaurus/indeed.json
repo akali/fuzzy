@@ -1,1 +1,407 @@
-{"data": {"definitionData": {"_id": "5c9e525f2e7841c8bd56878c", "entry": "indeed", "type": "normal", "definitions": [{"isInformal": null, "isVulgar": "0", "definition": "actually", "thesRid": "10146", "pos": "adverb", "synonyms": [{"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "easily", "targetTerm": "easily", "targetSlug": "easily"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "certainly", "targetTerm": "certainly", "targetSlug": "certainly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "very", "targetTerm": "very", "targetSlug": "very"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "truly", "targetTerm": "truly", "targetSlug": "truly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "absolutely", "targetTerm": "absolutely", "targetSlug": "absolutely"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "surely", "targetTerm": "surely", "targetSlug": "surely"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "naturally", "targetTerm": "naturally", "targetSlug": "naturally"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "undoubtedly", "targetTerm": "undoubtedly", "targetSlug": "undoubtedly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "really", "targetTerm": "really", "targetSlug": "really"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "amen", "targetTerm": "amen", "targetSlug": "amen"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "even", "targetTerm": "even", "targetSlug": "even"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "much", "targetTerm": "much", "targetSlug": "much"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "of course", "targetTerm": "of course", "targetSlug": "of%20course"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "positively", "targetTerm": "positively", "targetSlug": "positively"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "strictly", "targetTerm": "strictly", "targetSlug": "strictly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "sure thing", "targetTerm": "sure thing", "targetSlug": "sure%20thing"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "well", "targetTerm": "well", "targetSlug": "well"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "doubtlessly", "targetTerm": "doubtlessly", "targetSlug": "doubtlessly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "verily", "targetTerm": "verily", "targetSlug": "verily"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "very much", "targetTerm": "very much", "targetSlug": "very%20much"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "undeniably", "targetTerm": "undeniably", "targetSlug": "undeniably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "for real", "targetTerm": "for real", "targetSlug": "for%20real"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "in point of fact", "targetTerm": "in point of fact", "targetSlug": "in%20point%20of%20fact"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "in truth", "targetTerm": "in truth", "targetSlug": "in%20truth"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "to be sure", "targetTerm": "to be sure", "targetSlug": "to%20be%20sure"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "veritably", "targetTerm": "veritably", "targetSlug": "veritably"}], "antonyms": [{"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "indefinite", "targetTerm": "indefinite", "targetSlug": "indefinite"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "questionably", "targetTerm": "questionably", "targetSlug": "questionably"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "dubiously", "targetTerm": "dubiously", "targetSlug": "dubiously"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "doubtfully", "targetTerm": "doubtfully", "targetSlug": "doubtfully"}]}], "slug": "indeed"}, "pronunciation": {"audio": {"audio/ogg": "https://static.sfdict.com/audio/lunawav/I01/I0123600.ogg", "audio/mpeg": "https://static.sfdict.com/audio/I01/I0123600.mp3"}, "spell": "in-<span class=\"bold\">deed</span>", "ipa": "\u026an\u02c8did"}, "confusables": [], "supplementaryNotes": [], "etymology": [], "exampleSentences": [{"sentence": "Yet his voice was unbroken and he was, indeed, unconscious of the tears.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "aa7559a45726520ddb03c7c2de27af5cc455dffd"}, {"sentence": "\"Marvellous, indeed, is the mystery of our being,\" exclaimed Anaxagoras.", "profanity": 0, "source": {"title": "Philothea", "type": "const", "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm", "author": "Lydia Maria Child", "publication_date": null, "abbreviation": "gbg"}, "id": "d5bd8d9601079b1f2854fc747a43628c45aaf508"}, {"sentence": "\"If it be as you have said, Anaxagoras is indeed happier than princes,\" he replied.", "profanity": 0, "source": {"title": "Philothea", "type": "const", "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm", "author": "Lydia Maria Child", "publication_date": null, "abbreviation": "gbg"}, "id": "d23c3d992cc9e74fc4815bbde80ea84672401dae"}, {"sentence": "On the contrary, indeed, he appeared to joy immensely in Percival's way of life.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "60dd7454871abcc40c0479a01006db59c9eed436"}, {"sentence": "He walked, indeed, with a step of amazing springiness for a man of his years.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "c15448644eb2076ba631d4806d167de55ea9f175"}, {"sentence": "You are, indeed, fortunate in having escaped from the snare he laid for you.", "profanity": 0, "source": {"title": "Brave and Bold", "type": "const", "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm", "author": "Horatio Alger", "publication_date": null, "abbreviation": "gbg"}, "id": "4f2528e7798758b14fdc24d5d1ad98d17804a043"}, {"sentence": "Sir, I did not know fully\u2014but indeed I should never have been so happy as I am now.", "profanity": 0, "source": {"title": "The Armourer's Prentices", "type": "const", "url": "http://www.gutenberg.org/files/9959/9959-h/9959-h.htm", "author": "Charlotte M. Yonge", "publication_date": null, "abbreviation": "gbg"}, "id": "e6ad72ec038bfeccc88c725a05eb6762a7511553"}, {"sentence": "I am indeed pleased to get this rain at last, as the country is very dry.", "profanity": 0, "source": {"title": "Explorations in Australia", "type": "const", "url": "http://www.gutenberg.org/files/9958/9958-h/9958-h.htm", "author": "John Forrest", "publication_date": null, "abbreviation": "gbg"}, "id": "ea92b39b25475d20a45f1a7a6ca14d76b0be526e"}, {"sentence": "We have been most fortunate in finding water, and I am indeed very thankful for it.", "profanity": 0, "source": {"title": "Explorations in Australia", "type": "const", "url": "http://www.gutenberg.org/files/9958/9958-h/9958-h.htm", "author": "John Forrest", "publication_date": null, "abbreviation": "gbg"}, "id": "31a0d2971f33d180e0ecb93f076ade92c1f38e5b"}, {"sentence": "Then, indeed, she had burst upon him with an impetuous despair that had alarmed him.", "profanity": 0, "source": {"title": "Malbone", "type": "const", "url": "http://www.gutenberg.org/files/993/993-h/993-h.htm", "author": "Thomas Wentworth Higginson", "publication_date": null, "abbreviation": "gbg"}, "id": "a368c8e64f15a4fd44057e78be01436550ecad55"}], "slugLuna": "indeed"}}
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e525f2e7841c8bd56878c",
+      "entry": "indeed",
+      "type": "normal",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "actually",
+          "thesRid": "10146",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "easily",
+              "targetTerm": "easily",
+              "targetSlug": "easily"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "certainly",
+              "targetTerm": "certainly",
+              "targetSlug": "certainly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "very",
+              "targetTerm": "very",
+              "targetSlug": "very"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "truly",
+              "targetTerm": "truly",
+              "targetSlug": "truly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "absolutely",
+              "targetTerm": "absolutely",
+              "targetSlug": "absolutely"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "surely",
+              "targetTerm": "surely",
+              "targetSlug": "surely"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "naturally",
+              "targetTerm": "naturally",
+              "targetSlug": "naturally"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "undoubtedly",
+              "targetTerm": "undoubtedly",
+              "targetSlug": "undoubtedly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "really",
+              "targetTerm": "really",
+              "targetSlug": "really"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "amen",
+              "targetTerm": "amen",
+              "targetSlug": "amen"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "even",
+              "targetTerm": "even",
+              "targetSlug": "even"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "much",
+              "targetTerm": "much",
+              "targetSlug": "much"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "of course",
+              "targetTerm": "of course",
+              "targetSlug": "of%20course"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "positively",
+              "targetTerm": "positively",
+              "targetSlug": "positively"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "strictly",
+              "targetTerm": "strictly",
+              "targetSlug": "strictly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "sure thing",
+              "targetTerm": "sure thing",
+              "targetSlug": "sure%20thing"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "well",
+              "targetTerm": "well",
+              "targetSlug": "well"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "doubtlessly",
+              "targetTerm": "doubtlessly",
+              "targetSlug": "doubtlessly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "verily",
+              "targetTerm": "verily",
+              "targetSlug": "verily"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "very much",
+              "targetTerm": "very much",
+              "targetSlug": "very%20much"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "undeniably",
+              "targetTerm": "undeniably",
+              "targetSlug": "undeniably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "for real",
+              "targetTerm": "for real",
+              "targetSlug": "for%20real"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "in point of fact",
+              "targetTerm": "in point of fact",
+              "targetSlug": "in%20point%20of%20fact"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "in truth",
+              "targetTerm": "in truth",
+              "targetSlug": "in%20truth"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "to be sure",
+              "targetTerm": "to be sure",
+              "targetSlug": "to%20be%20sure"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "veritably",
+              "targetTerm": "veritably",
+              "targetSlug": "veritably"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "indefinite",
+              "targetTerm": "indefinite",
+              "targetSlug": "indefinite"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "questionably",
+              "targetTerm": "questionably",
+              "targetSlug": "questionably"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "dubiously",
+              "targetTerm": "dubiously",
+              "targetSlug": "dubiously"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "doubtfully",
+              "targetTerm": "doubtfully",
+              "targetSlug": "doubtfully"
+            }
+          ]
+        }
+      ],
+      "slug": "indeed"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/I01/I0123600.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/I01/I0123600.mp3"
+      },
+      "spell": "in-<span class=\"bold\">deed</span>",
+      "ipa": "\u026an\u02c8did"
+    },
+    "confusables": [],
+    "supplementaryNotes": [],
+    "etymology": [],
+    "exampleSentences": [
+      {
+        "sentence": "Yet his voice was unbroken and he was, indeed, unconscious of the tears.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "aa7559a45726520ddb03c7c2de27af5cc455dffd"
+      },
+      {
+        "sentence": "\"Marvellous, indeed, is the mystery of our being,\" exclaimed Anaxagoras.",
+        "profanity": 0,
+        "source": {
+          "title": "Philothea",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm",
+          "author": "Lydia Maria Child",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "d5bd8d9601079b1f2854fc747a43628c45aaf508"
+      },
+      {
+        "sentence": "\"If it be as you have said, Anaxagoras is indeed happier than princes,\" he replied.",
+        "profanity": 0,
+        "source": {
+          "title": "Philothea",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm",
+          "author": "Lydia Maria Child",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "d23c3d992cc9e74fc4815bbde80ea84672401dae"
+      },
+      {
+        "sentence": "On the contrary, indeed, he appeared to joy immensely in Percival's way of life.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "60dd7454871abcc40c0479a01006db59c9eed436"
+      },
+      {
+        "sentence": "He walked, indeed, with a step of amazing springiness for a man of his years.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "c15448644eb2076ba631d4806d167de55ea9f175"
+      },
+      {
+        "sentence": "You are, indeed, fortunate in having escaped from the snare he laid for you.",
+        "profanity": 0,
+        "source": {
+          "title": "Brave and Bold",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm",
+          "author": "Horatio Alger",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "4f2528e7798758b14fdc24d5d1ad98d17804a043"
+      },
+      {
+        "sentence": "Sir, I did not know fully\u2014but indeed I should never have been so happy as I am now.",
+        "profanity": 0,
+        "source": {
+          "title": "The Armourer's Prentices",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9959/9959-h/9959-h.htm",
+          "author": "Charlotte M. Yonge",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "e6ad72ec038bfeccc88c725a05eb6762a7511553"
+      },
+      {
+        "sentence": "I am indeed pleased to get this rain at last, as the country is very dry.",
+        "profanity": 0,
+        "source": {
+          "title": "Explorations in Australia",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9958/9958-h/9958-h.htm",
+          "author": "John Forrest",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "ea92b39b25475d20a45f1a7a6ca14d76b0be526e"
+      },
+      {
+        "sentence": "We have been most fortunate in finding water, and I am indeed very thankful for it.",
+        "profanity": 0,
+        "source": {
+          "title": "Explorations in Australia",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9958/9958-h/9958-h.htm",
+          "author": "John Forrest",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "31a0d2971f33d180e0ecb93f076ade92c1f38e5b"
+      },
+      {
+        "sentence": "Then, indeed, she had burst upon him with an impetuous despair that had alarmed him.",
+        "profanity": 0,
+        "source": {
+          "title": "Malbone",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/993/993-h/993-h.htm",
+          "author": "Thomas Wentworth Higginson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "a368c8e64f15a4fd44057e78be01436550ecad55"
+      }
+    ],
+    "slugLuna": "indeed"
+  }
+}

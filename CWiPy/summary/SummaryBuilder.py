@@ -3,8 +3,8 @@ from typing import List
 
 import pandas as pd
 
-from CWiPy.Modifier import dict_modifiers, Modifier, default_modifier
 from CWiPy.MembershipFunction import MembershipFunction
+from CWiPy.Modifier import dict_modifiers, Modifier, default_modifier
 from CWiPy.summary.Quantifier import QuantifierSet
 
 
@@ -15,7 +15,8 @@ class Summarizer:
     attribute: str
 
     def name(self):
-        return f'{self.modifier.name} {self.membership_function.name} {self.attribute}'
+        return f'{self.modifier.name} {self.membership_function.name} ' \
+               f'{self.attribute}'
 
     def __call__(self, x):
         return self.modifier(self.membership_function(x))
@@ -33,7 +34,36 @@ class Summary:
         self.summarizer = summarizer
 
     def get_statement(self):
-        return f'{self.quantifier.name} of the records are {self.summarizer.name()} with truth value = {self.truth}. '
+        """Fetches rows from a Bigtable.
+
+        Retrieves rows pertaining to the given keys from the Table instance
+        represented by big_table.  Silly things may happen if
+        other_silly_variable is not None.
+
+        Args:
+            big_table: An open Bigtable Table instance.
+            keys: A sequence of strings representing the key of each table row
+                to fetch.
+            other_silly_variable: Another optional variable, that has a much
+                longer name than the other args, and which does nothing.
+
+        Returns:
+            A dict mapping keys to the corresponding table row data
+            fetched. Each row is represented as a tuple of strings. For
+            example:
+
+            ```{'Serak': ('Rigel VII', 'Preparer'),
+             'Zim': ('Irk', 'Invader'),
+             'Lrrr': ('Omicron Persei 8', 'Emperor')}```
+
+            If a key from the keys argument is missing from the dictionary,
+            then that row was not found in the table.
+
+        Raises:
+            IOError: An error occurred accessing the bigtable.Table object.
+        """
+        return f'{self.quantifier.name} of the records are ' \
+               f'{self.summarizer.name()} with truth value = {self.truth}. '
 
 
 class SummarySet:
@@ -92,10 +122,13 @@ class SummaryBuilder:
                 yield self.current_modifier
 
     def list_summarizers(self, attribute, modifier_size=1):
-        for combined_modifier in self.ModifierGenerator().generate(modifier_size):
+        for combined_modifier in self.ModifierGenerator().generate(
+                modifier_size):
             for membership_function_name in self.fuzzy_sets[attribute].keys():
-                summarizer = Summarizer(self.fuzzy_sets[attribute][membership_function_name], combined_modifier,
-                                        attribute)
+                summarizer = Summarizer(
+                    self.fuzzy_sets[attribute][membership_function_name],
+                    combined_modifier,
+                    attribute)
 
                 yield summarizer
 
@@ -114,7 +147,8 @@ class SummaryBuilder:
                 for quantifier in qs:
                     quantifier_mf = qs[quantifier]
 
-                    truth = quantifier_mf(self.df[attribute].map(lambda x: summarizer(x)).sum() * 1.0 / len(self.df))
+                    truth = quantifier_mf(self.df[attribute].map(
+                        lambda x: summarizer(x)).sum() * 1.0 / len(self.df))
                     summary = Summary(truth, quantifier_mf, summarizer)
 
                     summary_set.add_summary(summary)

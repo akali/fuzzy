@@ -1,1 +1,426 @@
-{"data": {"definitionData": {"_id": "5c9e523c2e7841c8bd5631a4", "entry": "fairly", "type": "normal", "definitions": [{"isInformal": null, "isVulgar": "0", "definition": "somewhat", "thesRid": "7420", "pos": "adverb", "synonyms": [{"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "rather", "targetTerm": "rather", "targetSlug": "rather"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "reasonably", "targetTerm": "reasonably", "targetSlug": "reasonably"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "moderately", "targetTerm": "moderately", "targetSlug": "moderately"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "adequately", "targetTerm": "adequately", "targetSlug": "adequately"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "quite", "targetTerm": "quite", "targetSlug": "quite"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "kind of", "targetTerm": "kind of", "targetSlug": "kind%20of"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "enough", "targetTerm": "enough", "targetSlug": "enough"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "more or less", "targetTerm": "more or less", "targetSlug": "more%20or%20less"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "so-so", "targetTerm": "so-so", "targetSlug": "so-so"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "some", "targetTerm": "some", "targetSlug": "some"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "something", "targetTerm": "something", "targetSlug": "something"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "sort of", "targetTerm": "sort of", "targetSlug": "sort%20of"}, {"similarity": "50", "isInformal": "0", "isVulgar": null, "term": "passably", "targetTerm": "passably", "targetSlug": "passably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "averagely", "targetTerm": "averagely", "targetSlug": "averagely"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "pretty well", "targetTerm": "pretty well", "targetSlug": "pretty%20well"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "ratherish", "targetTerm": "ratherish", "targetSlug": "ratherish"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "tolerably", "targetTerm": "tolerably", "targetSlug": "tolerably"}], "antonyms": [{"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "unjustly", "targetTerm": "unjustly", "targetSlug": "unjustly"}, {"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "unfairly", "targetTerm": "unfairly", "targetSlug": "unfairly"}]}, {"isInformal": null, "isVulgar": "0", "definition": "justly", "thesRid": "7421", "pos": "adverb", "synonyms": [{"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "reasonably", "targetTerm": "reasonably", "targetSlug": "reasonably"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "objectively", "targetTerm": "objectively", "targetSlug": "objectively"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "properly", "targetTerm": "properly", "targetSlug": "properly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "honestly", "targetTerm": "honestly", "targetSlug": "honestly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "honorably", "targetTerm": "honorably", "targetSlug": "honorably"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "equitably", "targetTerm": "equitably", "targetSlug": "equitably"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "impartially", "targetTerm": "impartially", "targetSlug": "impartially"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "deservedly", "targetTerm": "deservedly", "targetSlug": "deservedly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "without favor", "targetTerm": "without favor", "targetSlug": "without%20favor"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "without fear", "targetTerm": "without fear", "targetSlug": "without%20fear"}], "antonyms": [{"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "unjustly", "targetTerm": "unjustly", "targetSlug": "unjustly"}, {"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "unfairly", "targetTerm": "unfairly", "targetSlug": "unfairly"}]}], "slug": "fairly"}, "pronunciation": {"audio": {"audio/ogg": "https://static.sfdict.com/audio/lunawav/F00/F0017200.ogg", "audio/mpeg": "https://static.sfdict.com/audio/F00/F0017200.mp3"}, "spell": "<span class=\"bold\">fair</span>-lee", "ipa": "\u02c8f\u025b\u0259r\u2009li"}, "confusables": [], "supplementaryNotes": [], "etymology": [], "exampleSentences": [{"sentence": "And there was the wench too\u2014he had fairly forgotten her name.", "profanity": 0, "source": {"title": "The Armourer's Prentices", "type": "const", "url": "http://www.gutenberg.org/files/9959/9959-h/9959-h.htm", "author": "Charlotte M. Yonge", "publication_date": null, "abbreviation": "gbg"}, "id": "10b161b7921f49ee62b5c674556ccffe75842e92"}, {"sentence": "It was trusted often, was in attendance on the Emperor, and was fairly well paid.", "profanity": 0, "source": {"title": "The Armourer's Prentices", "type": "const", "url": "http://www.gutenberg.org/files/9959/9959-h/9959-h.htm", "author": "Charlotte M. Yonge", "publication_date": null, "abbreviation": "gbg"}, "id": "8d56bc17164d3d2dfc234ea8cf7f2448b66296c0"}, {"sentence": "There is no height to which you may not fairly rise in this country.", "profanity": 0, "source": {"title": "The Grand Old Man", "type": "const", "url": "http://www.gutenberg.org/files/9900/9900-h/9900-h.htm", "author": "Richard B. Cook", "publication_date": null, "abbreviation": "gbg"}, "id": "7549ae3f30a76aec90f5cb16382a11ecccdd404c"}, {"sentence": "And yet in the end Pop was able to muster a fairly good imitation of a frown.", "profanity": 0, "source": {"title": "Way of the Lawless", "type": "const", "url": "http://www.gutenberg.org/files/9903/9903-h/9903-h.htm", "author": "Max Brand", "publication_date": null, "abbreviation": "gbg"}, "id": "ff996ffaee20675c162a3296f440f13939b9651d"}, {"sentence": "He could not go until he saw Mark fairly started on the way of recovery.", "profanity": 0, "source": {"title": "Weighed and Wanting", "type": "const", "url": "http://www.gutenberg.org/files/9096/9096-h/9096-h.htm", "author": "George MacDonald", "publication_date": null, "abbreviation": "gbg"}, "id": "22e36b5d89485d5ac83c211670a4b2effd5531c3"}, {"sentence": "Now that he was fairly away from home again, he had no idea what to do with himself.", "profanity": 0, "source": {"title": "Ester Ried Yet Speaking", "type": "const", "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm", "author": "Isabella Alden", "publication_date": null, "abbreviation": "gbg"}, "id": "6b47d17810538409e1fdccd62b598e2071f72c49"}, {"sentence": "But Mr. Thomson's contributions may fairly be said to have exhausted the \"romance\" of the road.", "profanity": 0, "source": {"title": "De Libris: Prose and Verse", "type": "const", "url": "http://www.gutenberg.org/files/9979/9979-h/9979-h.htm", "author": "Austin Dobson", "publication_date": null, "abbreviation": "gbg"}, "id": "6522422460ab0f3a7df50aed13988deb92a79860"}, {"sentence": "His blood was fairly aflame, however, and he needed no such challenge.", "profanity": 0, "source": {"title": "The White Company", "type": "const", "url": "http://www.gutenberg.org/files/903/903-h/903-h.htm", "author": "Arthur Conan Doyle", "publication_date": null, "abbreviation": "gbg"}, "id": "589550fbac174ef67d56d8d00d9d8c3756f81dec"}, {"sentence": "Burke was fairly gasping over this outrage against his authority.", "profanity": 0, "source": {"title": "Within the Law", "type": "const", "url": "http://www.gutenberg.org/files/905/905-h/905-h.htm", "author": "Marvin Dana", "publication_date": null, "abbreviation": "gbg"}, "id": "343f1730a86e1faaa390e4aed2dad2e7c5e96b0f"}, {"sentence": "No sooner were we fairly on our way to St. Chly than the weather changed.", "profanity": 0, "source": {"title": "The Roof of France", "type": "const", "url": "http://www.gutenberg.org/files/9073/9073-h/9073-h.htm", "author": "Matilda Betham-Edwards", "publication_date": null, "abbreviation": "gbg"}, "id": "e2acf5c0c9de5fed07bbfb06f4985c7d3c305546"}], "slugLuna": "fairly"}}
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e523c2e7841c8bd5631a4",
+      "entry": "fairly",
+      "type": "normal",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "somewhat",
+          "thesRid": "7420",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "rather",
+              "targetTerm": "rather",
+              "targetSlug": "rather"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "reasonably",
+              "targetTerm": "reasonably",
+              "targetSlug": "reasonably"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "moderately",
+              "targetTerm": "moderately",
+              "targetSlug": "moderately"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "adequately",
+              "targetTerm": "adequately",
+              "targetSlug": "adequately"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "quite",
+              "targetTerm": "quite",
+              "targetSlug": "quite"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "kind of",
+              "targetTerm": "kind of",
+              "targetSlug": "kind%20of"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "enough",
+              "targetTerm": "enough",
+              "targetSlug": "enough"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "more or less",
+              "targetTerm": "more or less",
+              "targetSlug": "more%20or%20less"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "so-so",
+              "targetTerm": "so-so",
+              "targetSlug": "so-so"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "some",
+              "targetTerm": "some",
+              "targetSlug": "some"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "something",
+              "targetTerm": "something",
+              "targetSlug": "something"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "sort of",
+              "targetTerm": "sort of",
+              "targetSlug": "sort%20of"
+            },
+            {
+              "similarity": "50",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "passably",
+              "targetTerm": "passably",
+              "targetSlug": "passably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "averagely",
+              "targetTerm": "averagely",
+              "targetSlug": "averagely"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "pretty well",
+              "targetTerm": "pretty well",
+              "targetSlug": "pretty%20well"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "ratherish",
+              "targetTerm": "ratherish",
+              "targetSlug": "ratherish"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "tolerably",
+              "targetTerm": "tolerably",
+              "targetSlug": "tolerably"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unjustly",
+              "targetTerm": "unjustly",
+              "targetSlug": "unjustly"
+            },
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unfairly",
+              "targetTerm": "unfairly",
+              "targetSlug": "unfairly"
+            }
+          ]
+        },
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "justly",
+          "thesRid": "7421",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "reasonably",
+              "targetTerm": "reasonably",
+              "targetSlug": "reasonably"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "objectively",
+              "targetTerm": "objectively",
+              "targetSlug": "objectively"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "properly",
+              "targetTerm": "properly",
+              "targetSlug": "properly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "honestly",
+              "targetTerm": "honestly",
+              "targetSlug": "honestly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "honorably",
+              "targetTerm": "honorably",
+              "targetSlug": "honorably"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "equitably",
+              "targetTerm": "equitably",
+              "targetSlug": "equitably"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "impartially",
+              "targetTerm": "impartially",
+              "targetSlug": "impartially"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "deservedly",
+              "targetTerm": "deservedly",
+              "targetSlug": "deservedly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "without favor",
+              "targetTerm": "without favor",
+              "targetSlug": "without%20favor"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "without fear",
+              "targetTerm": "without fear",
+              "targetSlug": "without%20fear"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unjustly",
+              "targetTerm": "unjustly",
+              "targetSlug": "unjustly"
+            },
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unfairly",
+              "targetTerm": "unfairly",
+              "targetSlug": "unfairly"
+            }
+          ]
+        }
+      ],
+      "slug": "fairly"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/F00/F0017200.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/F00/F0017200.mp3"
+      },
+      "spell": "<span class=\"bold\">fair</span>-lee",
+      "ipa": "\u02c8f\u025b\u0259r\u2009li"
+    },
+    "confusables": [],
+    "supplementaryNotes": [],
+    "etymology": [],
+    "exampleSentences": [
+      {
+        "sentence": "And there was the wench too\u2014he had fairly forgotten her name.",
+        "profanity": 0,
+        "source": {
+          "title": "The Armourer's Prentices",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9959/9959-h/9959-h.htm",
+          "author": "Charlotte M. Yonge",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "10b161b7921f49ee62b5c674556ccffe75842e92"
+      },
+      {
+        "sentence": "It was trusted often, was in attendance on the Emperor, and was fairly well paid.",
+        "profanity": 0,
+        "source": {
+          "title": "The Armourer's Prentices",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9959/9959-h/9959-h.htm",
+          "author": "Charlotte M. Yonge",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "8d56bc17164d3d2dfc234ea8cf7f2448b66296c0"
+      },
+      {
+        "sentence": "There is no height to which you may not fairly rise in this country.",
+        "profanity": 0,
+        "source": {
+          "title": "The Grand Old Man",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9900/9900-h/9900-h.htm",
+          "author": "Richard B. Cook",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "7549ae3f30a76aec90f5cb16382a11ecccdd404c"
+      },
+      {
+        "sentence": "And yet in the end Pop was able to muster a fairly good imitation of a frown.",
+        "profanity": 0,
+        "source": {
+          "title": "Way of the Lawless",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9903/9903-h/9903-h.htm",
+          "author": "Max Brand",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "ff996ffaee20675c162a3296f440f13939b9651d"
+      },
+      {
+        "sentence": "He could not go until he saw Mark fairly started on the way of recovery.",
+        "profanity": 0,
+        "source": {
+          "title": "Weighed and Wanting",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9096/9096-h/9096-h.htm",
+          "author": "George MacDonald",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "22e36b5d89485d5ac83c211670a4b2effd5531c3"
+      },
+      {
+        "sentence": "Now that he was fairly away from home again, he had no idea what to do with himself.",
+        "profanity": 0,
+        "source": {
+          "title": "Ester Ried Yet Speaking",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9091/9091-h/9091-h.htm",
+          "author": "Isabella Alden",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "6b47d17810538409e1fdccd62b598e2071f72c49"
+      },
+      {
+        "sentence": "But Mr. Thomson's contributions may fairly be said to have exhausted the \"romance\" of the road.",
+        "profanity": 0,
+        "source": {
+          "title": "De Libris: Prose and Verse",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9979/9979-h/9979-h.htm",
+          "author": "Austin Dobson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "6522422460ab0f3a7df50aed13988deb92a79860"
+      },
+      {
+        "sentence": "His blood was fairly aflame, however, and he needed no such challenge.",
+        "profanity": 0,
+        "source": {
+          "title": "The White Company",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/903/903-h/903-h.htm",
+          "author": "Arthur Conan Doyle",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "589550fbac174ef67d56d8d00d9d8c3756f81dec"
+      },
+      {
+        "sentence": "Burke was fairly gasping over this outrage against his authority.",
+        "profanity": 0,
+        "source": {
+          "title": "Within the Law",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/905/905-h/905-h.htm",
+          "author": "Marvin Dana",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "343f1730a86e1faaa390e4aed2dad2e7c5e96b0f"
+      },
+      {
+        "sentence": "No sooner were we fairly on our way to St. Chly than the weather changed.",
+        "profanity": 0,
+        "source": {
+          "title": "The Roof of France",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9073/9073-h/9073-h.htm",
+          "author": "Matilda Betham-Edwards",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "e2acf5c0c9de5fed07bbfb06f4985c7d3c305546"
+      }
+    ],
+    "slugLuna": "fairly"
+  }
+}

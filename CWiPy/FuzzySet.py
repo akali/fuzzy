@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Callable
+from typing import List, Callable, Tuple
 
 from CWiPy.Exception import IncorrectBoundException
 from CWiPy.MembershipFunction import MembershipFunction
@@ -26,8 +26,8 @@ class FuzzySet(Bounds, Callable):
                 return mf(x)
         return 0
 
-    def extract_ranges(self, alpha_cut) -> List[(int, int)]:
-        result: List[(int, int)] = []
+    def extract_ranges(self, alpha_cut) -> List[Tuple[int, int]]:
+        result: List[Tuple[int, int]] = []
         for mf in self.mfs:
             rng = mf.extract_range(alpha_cut)
             result.append(rng)

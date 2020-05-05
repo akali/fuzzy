@@ -1,8 +1,8 @@
 import math
 import unittest
 
-from CWiPy.Modifier import dict_modifiers
 from CWiPy.MembershipFunction import MembershipFunction
+from CWiPy.Modifier import dict_modifiers
 
 
 def func(u):
@@ -17,7 +17,8 @@ class MyTestCase(unittest.TestCase):
         not_h = self.modifiers["not"]
         self.mf.modifier = not_h
         for i in range(0, 30):
-            self.assertAlmostEqual(1.0 - round(func(i), 2), round(self.mf(i), 2))
+            self.assertAlmostEqual(1.0 - round(func(i), 2),
+                                   round(self.mf(i), 2))
 
     def test_very(self):
         very = self.modifiers["very"]
@@ -29,7 +30,8 @@ class MyTestCase(unittest.TestCase):
         highly = self.modifiers["highly"]
         self.mf.modifier = highly
         for i in range(0, 30):
-            self.assertAlmostEqual(math.pow(math.pow(func(i), 2), 1.25), self.mf(i))
+            self.assertAlmostEqual(math.pow(math.pow(func(i), 2), 1.25),
+                                   self.mf(i))
 
 
 if __name__ == '__main__':

@@ -27,11 +27,14 @@ class FuzzyPartition:
 
         for i in range(n):
             if i == 0:
-                cur = mf.TrapezoidMembershipFunction(start, start, points[0], points[1])
+                cur = mf.TrapezoidMembershipFunction(start, start, points[0],
+                                                     points[1])
             elif i + 1 == n:
-                cur = mf.TrapezoidMembershipFunction(points[i - 1], points[i], end, end)
+                cur = mf.TrapezoidMembershipFunction(points[i - 1], points[i],
+                                                     end, end)
             else:
-                cur = mf.TriangularMembershipFunction(points[i - 1], points[i], points[i + 1])
+                cur = mf.TriangularMembershipFunction(points[i - 1], points[i],
+                                                      points[i + 1])
 
             cur.name = self.aliases[i]
 
@@ -46,7 +49,8 @@ class FuzzyPartition:
 
         for i in range(n):
             if i == 0:
-                cur = [{"x": start, "y": 1, "line_id": -1}, {"x": points[i], "y": 1, "line_id": i}]
+                cur = [{"x": start, "y": 1, "line_id": -1},
+                       {"x": points[i], "y": 1, "line_id": i}]
 
                 for j in range(i + 1, n):
                     cur.append({"x": points[j], "y": 0, "line_id": j}, )

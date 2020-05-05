@@ -1,1 +1,841 @@
-{"data": {"definitionData": {"_id": "5c9e52f12e7841c8bd588274", "entry": "very", "type": "normal", "definitions": [{"isInformal": null, "isVulgar": "0", "definition": "real, exact", "thesRid": "19468", "pos": "adjective", "synonyms": [{"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "actual", "targetTerm": "actual", "targetSlug": "actual"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "appropriate", "targetTerm": "appropriate", "targetSlug": "appropriate"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "authentic", "targetTerm": "authentic", "targetSlug": "authentic"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "bare", "targetTerm": "bare", "targetSlug": "bare"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "bona fide", "targetTerm": "bona fide", "targetSlug": "bona%20fide"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "correct", "targetTerm": "correct", "targetSlug": "correct"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "especial", "targetTerm": "especial", "targetSlug": "especial"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "express", "targetTerm": "express", "targetSlug": "express"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "genuine", "targetTerm": "genuine", "targetSlug": "genuine"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "ideal", "targetTerm": "ideal", "targetSlug": "ideal"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "identical", "targetTerm": "identical", "targetSlug": "identical"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "indubitable", "targetTerm": "indubitable", "targetSlug": "indubitable"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "mere", "targetTerm": "mere", "targetSlug": "mere"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "model", "targetTerm": "model", "targetSlug": "model"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "perfect", "targetTerm": "perfect", "targetSlug": "perfect"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "plain", "targetTerm": "plain", "targetSlug": "plain"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "precise", "targetTerm": "precise", "targetSlug": "precise"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "pure", "targetTerm": "pure", "targetSlug": "pure"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "right", "targetTerm": "right", "targetSlug": "right"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "same", "targetTerm": "same", "targetSlug": "same"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "sheer", "targetTerm": "sheer", "targetSlug": "sheer"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "simple", "targetTerm": "simple", "targetSlug": "simple"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "special", "targetTerm": "special", "targetSlug": "special"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "undoubted", "targetTerm": "undoubted", "targetSlug": "undoubted"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "unqualified", "targetTerm": "unqualified", "targetSlug": "unqualified"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "unquestionable", "targetTerm": "unquestionable", "targetSlug": "unquestionable"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "veritable", "targetTerm": "veritable", "targetSlug": "veritable"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "selfsame", "targetTerm": "selfsame", "targetSlug": "selfsame"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "true", "targetTerm": "true", "targetSlug": "true"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "sure-enough", "targetTerm": "sure-enough", "targetSlug": "sure-enough"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "very same", "targetTerm": "very same", "targetSlug": "very%20same"}], "antonyms": [{"similarity": "-10", "isInformal": "0", "isVulgar": null, "term": "inexact", "targetTerm": "inexact", "targetSlug": "inexact"}]}, {"isInformal": null, "isVulgar": "0", "definition": "much, really; to a high degree", "thesRid": "19469", "pos": "adverb", "synonyms": [{"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "decidedly", "targetTerm": "decidedly", "targetSlug": "decidedly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "particularly", "targetTerm": "particularly", "targetSlug": "particularly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "absolutely", "targetTerm": "absolutely", "targetSlug": "absolutely"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "awfully", "targetTerm": "awfully", "targetSlug": "awfully"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "profoundly", "targetTerm": "profoundly", "targetSlug": "profoundly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "excessively", "targetTerm": "excessively", "targetSlug": "excessively"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "remarkably", "targetTerm": "remarkably", "targetSlug": "remarkably"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "certainly", "targetTerm": "certainly", "targetSlug": "certainly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "deeply", "targetTerm": "deeply", "targetSlug": "deeply"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "wonderfully", "targetTerm": "wonderfully", "targetSlug": "wonderfully"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "pretty", "targetTerm": "pretty", "targetSlug": "pretty"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "incredibly", "targetTerm": "incredibly", "targetSlug": "incredibly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "eminently", "targetTerm": "eminently", "targetSlug": "eminently"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "uncommonly", "targetTerm": "uncommonly", "targetSlug": "uncommonly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "truly", "targetTerm": "truly", "targetSlug": "truly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "highly", "targetTerm": "highly", "targetSlug": "highly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "extremely", "targetTerm": "extremely", "targetSlug": "extremely"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "extraordinarily", "targetTerm": "extraordinarily", "targetSlug": "extraordinarily"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "terribly", "targetTerm": "terribly", "targetSlug": "terribly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "exceedingly", "targetTerm": "exceedingly", "targetSlug": "exceedingly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "greatly", "targetTerm": "greatly", "targetSlug": "greatly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "unusually", "targetTerm": "unusually", "targetSlug": "unusually"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "acutely", "targetTerm": "acutely", "targetSlug": "acutely"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "amply", "targetTerm": "amply", "targetSlug": "amply"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "considerably", "targetTerm": "considerably", "targetSlug": "considerably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "dearly", "targetTerm": "dearly", "targetSlug": "dearly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "emphatically", "targetTerm": "emphatically", "targetSlug": "emphatically"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "extensively", "targetTerm": "extensively", "targetSlug": "extensively"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "largely", "targetTerm": "largely", "targetSlug": "largely"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "notably", "targetTerm": "notably", "targetSlug": "notably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "positively", "targetTerm": "positively", "targetSlug": "positively"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "powerfully", "targetTerm": "powerfully", "targetSlug": "powerfully"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "substantially", "targetTerm": "substantially", "targetSlug": "substantially"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "vastly", "targetTerm": "vastly", "targetSlug": "vastly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "surprisingly", "targetTerm": "surprisingly", "targetSlug": "surprisingly"}, {"similarity": "100", "isInformal": "0", "isVulgar": null, "term": "noticeably", "targetTerm": "noticeably", "targetSlug": "noticeably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "astonishingly", "targetTerm": "astonishingly", "targetSlug": "astonishingly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "exaggeratedly", "targetTerm": "exaggeratedly", "targetSlug": "exaggeratedly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "indispensably", "targetTerm": "indispensably", "targetSlug": "indispensably"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "pressingly", "targetTerm": "pressingly", "targetSlug": "pressingly"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "prodigiously", "targetTerm": "prodigiously", "targetSlug": "prodigiously"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "superlatively", "targetTerm": "superlatively", "targetSlug": "superlatively"}, {"similarity": "10", "isInformal": "0", "isVulgar": null, "term": "surpassingly", "targetTerm": "surpassingly", "targetSlug": "surpassingly"}], "antonyms": [{"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "unremarkably", "targetTerm": null, "targetSlug": null}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "indefinite", "targetTerm": "indefinite", "targetSlug": "indefinite"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "little", "targetTerm": "little", "targetSlug": "little"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "dubiously", "targetTerm": "dubiously", "targetSlug": "dubiously"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "doubtfully", "targetTerm": "doubtfully", "targetSlug": "doubtfully"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "usually", "targetTerm": "usually", "targetSlug": "usually"}, {"similarity": "-100", "isInformal": "0", "isVulgar": null, "term": "commonly", "targetTerm": "commonly", "targetSlug": "commonly"}]}], "slug": "very"}, "pronunciation": {"audio": {"audio/ogg": "https://static.sfdict.com/audio/lunawav/V00/V0098600.ogg", "audio/mpeg": "https://static.sfdict.com/audio/V00/V0098600.mp3"}, "spell": "<span class=\"bold\">ver</span>-ee", "ipa": "\u02c8v\u025br\u2009i"}, "confusables": ["<a href=\"https://www.dictionary.com/browse/much\" class=\"luna-xref\" data-linkid=\"nn1ov4\">much</a> <span class=\"luna-form bold\">very</span> (see usage note at the current entry)"], "supplementaryNotes": [{"type": "Usage note", "content": "Past participles that have become established as adjectives can, like most English adjectives, be modified by the adverb <span class=\"luna-wud small-caps\">very</span> : <span class=\"luna-example italic\">a very driven person; We were very concerned for your safety.</span> <span class=\"luna-wud small-caps\">Very</span> does not modify past participles that are clearly verbal; for example, <span class=\"italic\">The lid was very sealed</span> is not an idiomatic construction, while <span class=\"italic\">The lid was very tightly sealed</span> is. Sometimes confusion arises over whether a given past participle is adjectival and thus able to be modified by <span class=\"luna-wud small-caps\">very</span> without an intervening adverb. However, there is rarely any objection to the use of this intervening adverb, no matter how the past participle is functioning. Such use often occurs in edited writing: <span class=\"luna-example italic\">We were very much relieved to find the children asleep. They were very greatly excited by the news. I feel very badly cheated.</span>"}], "etymology": [], "exampleSentences": [{"sentence": "Those less than the very best frankly esteem it a privilege.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "d6adaf2738f00e0243067965830e68c9f8c3e663"}, {"sentence": "There are quiet and very decent places for those of us that must.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "f23e0e609bdcfe07c9528a22f1a711ab820f904e"}, {"sentence": "My very blood boiled in my veins, that such an one as he could give me pain.", "profanity": 0, "source": {"title": "Philothea", "type": "const", "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm", "author": "Lydia Maria Child", "publication_date": null, "abbreviation": "gbg"}, "id": "de5df260839fa76a3c52332a60356d9a8c6c737c"}, {"sentence": "The very spirit of harmony is embodied in the proportions of the Parthenon.", "profanity": 0, "source": {"title": "Philothea", "type": "const", "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm", "author": "Lydia Maria Child", "publication_date": null, "abbreviation": "gbg"}, "id": "0020d0a5fa31543ecb6ac40f339aa7451ceea2f8"}, {"sentence": "Besides, it is very possible that you are unjust to Hipparete.", "profanity": 0, "source": {"title": "Philothea", "type": "const", "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm", "author": "Lydia Maria Child", "publication_date": null, "abbreviation": "gbg"}, "id": "b257bd4a41f865b6ca96d988b6caa4278c3c4ce9"}, {"sentence": "I've always been taken with the chap; and I'm very glad you read him correctly.", "profanity": 0, "source": {"title": "The Spenders", "type": "const", "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm", "author": "Harry Leon Wilson", "publication_date": null, "abbreviation": "gbg"}, "id": "b2db3364e637e797b1f78dfff9356178e367337c"}, {"sentence": "Very well; bring me what you have at that hour, and we'll strike a trade.", "profanity": 0, "source": {"title": "Brave and Bold", "type": "const", "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm", "author": "Horatio Alger", "publication_date": null, "abbreviation": "gbg"}, "id": "c34b0f639fc1b7413cff03d98f3a280208a09b3b"}, {"sentence": "He was very glad to earn money in this way, since it seemed he was to have no fish to dispose of.", "profanity": 0, "source": {"title": "Brave and Bold", "type": "const", "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm", "author": "Horatio Alger", "publication_date": null, "abbreviation": "gbg"}, "id": "717c11bd822860345bec87d1bee9af4978aa8f19"}, {"sentence": "There was a scar on one cheek, and, altogether, he was not very prepossessing in his appearance.", "profanity": 0, "source": {"title": "Brave and Bold", "type": "const", "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm", "author": "Horatio Alger", "publication_date": null, "abbreviation": "gbg"}, "id": "cf21bddc2ece2695fd4321bab558462f6ae1cd98"}, {"sentence": "It is very honorable in you to make the offer, and I like you the better for having made it.", "profanity": 0, "source": {"title": "Brave and Bold", "type": "const", "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm", "author": "Horatio Alger", "publication_date": null, "abbreviation": "gbg"}, "id": "de35db7d6091faa3123e570ee1d8f7cb28248d6a"}], "slugLuna": "very"}}
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e52f12e7841c8bd588274",
+      "entry": "very",
+      "type": "normal",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "real, exact",
+          "thesRid": "19468",
+          "pos": "adjective",
+          "synonyms": [
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "actual",
+              "targetTerm": "actual",
+              "targetSlug": "actual"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "appropriate",
+              "targetTerm": "appropriate",
+              "targetSlug": "appropriate"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "authentic",
+              "targetTerm": "authentic",
+              "targetSlug": "authentic"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "bare",
+              "targetTerm": "bare",
+              "targetSlug": "bare"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "bona fide",
+              "targetTerm": "bona fide",
+              "targetSlug": "bona%20fide"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "correct",
+              "targetTerm": "correct",
+              "targetSlug": "correct"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "especial",
+              "targetTerm": "especial",
+              "targetSlug": "especial"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "express",
+              "targetTerm": "express",
+              "targetSlug": "express"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "genuine",
+              "targetTerm": "genuine",
+              "targetSlug": "genuine"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "ideal",
+              "targetTerm": "ideal",
+              "targetSlug": "ideal"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "identical",
+              "targetTerm": "identical",
+              "targetSlug": "identical"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "indubitable",
+              "targetTerm": "indubitable",
+              "targetSlug": "indubitable"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "mere",
+              "targetTerm": "mere",
+              "targetSlug": "mere"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "model",
+              "targetTerm": "model",
+              "targetSlug": "model"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "perfect",
+              "targetTerm": "perfect",
+              "targetSlug": "perfect"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "plain",
+              "targetTerm": "plain",
+              "targetSlug": "plain"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "precise",
+              "targetTerm": "precise",
+              "targetSlug": "precise"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "pure",
+              "targetTerm": "pure",
+              "targetSlug": "pure"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "right",
+              "targetTerm": "right",
+              "targetSlug": "right"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "same",
+              "targetTerm": "same",
+              "targetSlug": "same"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "sheer",
+              "targetTerm": "sheer",
+              "targetSlug": "sheer"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "simple",
+              "targetTerm": "simple",
+              "targetSlug": "simple"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "special",
+              "targetTerm": "special",
+              "targetSlug": "special"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "undoubted",
+              "targetTerm": "undoubted",
+              "targetSlug": "undoubted"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unqualified",
+              "targetTerm": "unqualified",
+              "targetSlug": "unqualified"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unquestionable",
+              "targetTerm": "unquestionable",
+              "targetSlug": "unquestionable"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "veritable",
+              "targetTerm": "veritable",
+              "targetSlug": "veritable"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "selfsame",
+              "targetTerm": "selfsame",
+              "targetSlug": "selfsame"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "true",
+              "targetTerm": "true",
+              "targetSlug": "true"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "sure-enough",
+              "targetTerm": "sure-enough",
+              "targetSlug": "sure-enough"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "very same",
+              "targetTerm": "very same",
+              "targetSlug": "very%20same"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "inexact",
+              "targetTerm": "inexact",
+              "targetSlug": "inexact"
+            }
+          ]
+        },
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "much, really; to a high degree",
+          "thesRid": "19469",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "decidedly",
+              "targetTerm": "decidedly",
+              "targetSlug": "decidedly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "particularly",
+              "targetTerm": "particularly",
+              "targetSlug": "particularly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "absolutely",
+              "targetTerm": "absolutely",
+              "targetSlug": "absolutely"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "awfully",
+              "targetTerm": "awfully",
+              "targetSlug": "awfully"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "profoundly",
+              "targetTerm": "profoundly",
+              "targetSlug": "profoundly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "excessively",
+              "targetTerm": "excessively",
+              "targetSlug": "excessively"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "remarkably",
+              "targetTerm": "remarkably",
+              "targetSlug": "remarkably"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "certainly",
+              "targetTerm": "certainly",
+              "targetSlug": "certainly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "deeply",
+              "targetTerm": "deeply",
+              "targetSlug": "deeply"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "wonderfully",
+              "targetTerm": "wonderfully",
+              "targetSlug": "wonderfully"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "pretty",
+              "targetTerm": "pretty",
+              "targetSlug": "pretty"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "incredibly",
+              "targetTerm": "incredibly",
+              "targetSlug": "incredibly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "eminently",
+              "targetTerm": "eminently",
+              "targetSlug": "eminently"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "uncommonly",
+              "targetTerm": "uncommonly",
+              "targetSlug": "uncommonly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "truly",
+              "targetTerm": "truly",
+              "targetSlug": "truly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "highly",
+              "targetTerm": "highly",
+              "targetSlug": "highly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "extremely",
+              "targetTerm": "extremely",
+              "targetSlug": "extremely"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "extraordinarily",
+              "targetTerm": "extraordinarily",
+              "targetSlug": "extraordinarily"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "terribly",
+              "targetTerm": "terribly",
+              "targetSlug": "terribly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "exceedingly",
+              "targetTerm": "exceedingly",
+              "targetSlug": "exceedingly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "greatly",
+              "targetTerm": "greatly",
+              "targetSlug": "greatly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unusually",
+              "targetTerm": "unusually",
+              "targetSlug": "unusually"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "acutely",
+              "targetTerm": "acutely",
+              "targetSlug": "acutely"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "amply",
+              "targetTerm": "amply",
+              "targetSlug": "amply"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "considerably",
+              "targetTerm": "considerably",
+              "targetSlug": "considerably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "dearly",
+              "targetTerm": "dearly",
+              "targetSlug": "dearly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "emphatically",
+              "targetTerm": "emphatically",
+              "targetSlug": "emphatically"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "extensively",
+              "targetTerm": "extensively",
+              "targetSlug": "extensively"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "largely",
+              "targetTerm": "largely",
+              "targetSlug": "largely"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "notably",
+              "targetTerm": "notably",
+              "targetSlug": "notably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "positively",
+              "targetTerm": "positively",
+              "targetSlug": "positively"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "powerfully",
+              "targetTerm": "powerfully",
+              "targetSlug": "powerfully"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "substantially",
+              "targetTerm": "substantially",
+              "targetSlug": "substantially"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "vastly",
+              "targetTerm": "vastly",
+              "targetSlug": "vastly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "surprisingly",
+              "targetTerm": "surprisingly",
+              "targetSlug": "surprisingly"
+            },
+            {
+              "similarity": "100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "noticeably",
+              "targetTerm": "noticeably",
+              "targetSlug": "noticeably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "astonishingly",
+              "targetTerm": "astonishingly",
+              "targetSlug": "astonishingly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "exaggeratedly",
+              "targetTerm": "exaggeratedly",
+              "targetSlug": "exaggeratedly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "indispensably",
+              "targetTerm": "indispensably",
+              "targetSlug": "indispensably"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "pressingly",
+              "targetTerm": "pressingly",
+              "targetSlug": "pressingly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "prodigiously",
+              "targetTerm": "prodigiously",
+              "targetSlug": "prodigiously"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "superlatively",
+              "targetTerm": "superlatively",
+              "targetSlug": "superlatively"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "surpassingly",
+              "targetTerm": "surpassingly",
+              "targetSlug": "surpassingly"
+            }
+          ],
+          "antonyms": [
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "unremarkably",
+              "targetTerm": null,
+              "targetSlug": null
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "indefinite",
+              "targetTerm": "indefinite",
+              "targetSlug": "indefinite"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "little",
+              "targetTerm": "little",
+              "targetSlug": "little"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "dubiously",
+              "targetTerm": "dubiously",
+              "targetSlug": "dubiously"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "doubtfully",
+              "targetTerm": "doubtfully",
+              "targetSlug": "doubtfully"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "usually",
+              "targetTerm": "usually",
+              "targetSlug": "usually"
+            },
+            {
+              "similarity": "-100",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "commonly",
+              "targetTerm": "commonly",
+              "targetSlug": "commonly"
+            }
+          ]
+        }
+      ],
+      "slug": "very"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/V00/V0098600.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/V00/V0098600.mp3"
+      },
+      "spell": "<span class=\"bold\">ver</span>-ee",
+      "ipa": "\u02c8v\u025br\u2009i"
+    },
+    "confusables": [
+      "<a href=\"https://www.dictionary.com/browse/much\" class=\"luna-xref\" data-linkid=\"nn1ov4\">much</a> <span class=\"luna-form bold\">very</span> (see usage note at the current entry)"
+    ],
+    "supplementaryNotes": [
+      {
+        "type": "Usage note",
+        "content": "Past participles that have become established as adjectives can, like most English adjectives, be modified by the adverb <span class=\"luna-wud small-caps\">very</span> : <span class=\"luna-example italic\">a very driven person; We were very concerned for your safety.</span> <span class=\"luna-wud small-caps\">Very</span> does not modify past participles that are clearly verbal; for example, <span class=\"italic\">The lid was very sealed</span> is not an idiomatic construction, while <span class=\"italic\">The lid was very tightly sealed</span> is. Sometimes confusion arises over whether a given past participle is adjectival and thus able to be modified by <span class=\"luna-wud small-caps\">very</span> without an intervening adverb. However, there is rarely any objection to the use of this intervening adverb, no matter how the past participle is functioning. Such use often occurs in edited writing: <span class=\"luna-example italic\">We were very much relieved to find the children asleep. They were very greatly excited by the news. I feel very badly cheated.</span>"
+      }
+    ],
+    "etymology": [],
+    "exampleSentences": [
+      {
+        "sentence": "Those less than the very best frankly esteem it a privilege.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "d6adaf2738f00e0243067965830e68c9f8c3e663"
+      },
+      {
+        "sentence": "There are quiet and very decent places for those of us that must.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "f23e0e609bdcfe07c9528a22f1a711ab820f904e"
+      },
+      {
+        "sentence": "My very blood boiled in my veins, that such an one as he could give me pain.",
+        "profanity": 0,
+        "source": {
+          "title": "Philothea",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm",
+          "author": "Lydia Maria Child",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "de5df260839fa76a3c52332a60356d9a8c6c737c"
+      },
+      {
+        "sentence": "The very spirit of harmony is embodied in the proportions of the Parthenon.",
+        "profanity": 0,
+        "source": {
+          "title": "Philothea",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm",
+          "author": "Lydia Maria Child",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "0020d0a5fa31543ecb6ac40f339aa7451ceea2f8"
+      },
+      {
+        "sentence": "Besides, it is very possible that you are unjust to Hipparete.",
+        "profanity": 0,
+        "source": {
+          "title": "Philothea",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9982/9982-h/9982-h.htm",
+          "author": "Lydia Maria Child",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "b257bd4a41f865b6ca96d988b6caa4278c3c4ce9"
+      },
+      {
+        "sentence": "I've always been taken with the chap; and I'm very glad you read him correctly.",
+        "profanity": 0,
+        "source": {
+          "title": "The Spenders",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9981/9981-h/9981-h.htm",
+          "author": "Harry Leon Wilson",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "b2db3364e637e797b1f78dfff9356178e367337c"
+      },
+      {
+        "sentence": "Very well; bring me what you have at that hour, and we'll strike a trade.",
+        "profanity": 0,
+        "source": {
+          "title": "Brave and Bold",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm",
+          "author": "Horatio Alger",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "c34b0f639fc1b7413cff03d98f3a280208a09b3b"
+      },
+      {
+        "sentence": "He was very glad to earn money in this way, since it seemed he was to have no fish to dispose of.",
+        "profanity": 0,
+        "source": {
+          "title": "Brave and Bold",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm",
+          "author": "Horatio Alger",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "717c11bd822860345bec87d1bee9af4978aa8f19"
+      },
+      {
+        "sentence": "There was a scar on one cheek, and, altogether, he was not very prepossessing in his appearance.",
+        "profanity": 0,
+        "source": {
+          "title": "Brave and Bold",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm",
+          "author": "Horatio Alger",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "cf21bddc2ece2695fd4321bab558462f6ae1cd98"
+      },
+      {
+        "sentence": "It is very honorable in you to make the offer, and I like you the better for having made it.",
+        "profanity": 0,
+        "source": {
+          "title": "Brave and Bold",
+          "type": "const",
+          "url": "http://www.gutenberg.org/files/9990/9990-h/9990-h.htm",
+          "author": "Horatio Alger",
+          "publication_date": null,
+          "abbreviation": "gbg"
+        },
+        "id": "de35db7d6091faa3123e570ee1d8f7cb28248d6a"
+      }
+    ],
+    "slugLuna": "very"
+  }
+}

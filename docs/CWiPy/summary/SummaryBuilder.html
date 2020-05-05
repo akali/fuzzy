@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>CWiPy.summary.SummaryBuilder API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>CWiPy.summary.SummaryBuilder</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from dataclasses import dataclass
+from typing import List
+
+import pandas as pd
+
+from CWiPy.MembershipFunction import MembershipFunction
+from CWiPy.Modifier import dict_modifiers, Modifier, default_modifier
+from CWiPy.summary.Quantifier import QuantifierSet
+
+
+@dataclass
+class Summarizer:
+    membership_function: MembershipFunction
+    modifier: Modifier
+    attribute: str
+
+    def name(self):
+        return f&#39;{self.modifier.name} {self.membership_function.name} &#39; \
+               f&#39;{self.attribute}&#39;
+
+    def __call__(self, x):
+        return self.modifier(self.membership_function(x))
+
+
+class Summary:
+    truth: float
+
+    quantifier: MembershipFunction
+    summarizer: Summarizer
+
+    def __init__(self, truth, quantifier, summarizer):
+        self.truth = truth
+        self.quantifier = quantifier
+        self.summarizer = summarizer
+
+    def get_statement(self):
+        &#34;&#34;&#34;Fetches rows from a Bigtable.
+
+        Retrieves rows pertaining to the given keys from the Table instance
+        represented by big_table.  Silly things may happen if
+        other_silly_variable is not None.
+
+        Args:
+            big_table: An open Bigtable Table instance.
+            keys: A sequence of strings representing the key of each table row
+                to fetch.
+            other_silly_variable: Another optional variable, that has a much
+                longer name than the other args, and which does nothing.
+
+        Returns:
+            A dict mapping keys to the corresponding table row data
+            fetched. Each row is represented as a tuple of strings. For
+            example:
+
+            ```{&#39;Serak&#39;: (&#39;Rigel VII&#39;, &#39;Preparer&#39;),
+             &#39;Zim&#39;: (&#39;Irk&#39;, &#39;Invader&#39;),
+             &#39;Lrrr&#39;: (&#39;Omicron Persei 8&#39;, &#39;Emperor&#39;)}```
+
+            If a key from the keys argument is missing from the dictionary,
+            then that row was not found in the table.
+
+        Raises:
+            IOError: An error occurred accessing the bigtable.Table object.
+        &#34;&#34;&#34;
+        return f&#39;{self.quantifier.name} of the records are &#39; \
+               f&#39;{self.summarizer.name()} with truth value = {self.truth}. &#39;
+
+
+class SummarySet:
+    summaries: List[Summary]
+
+    def __init__(self):
+        self.summaries = []
+
+    def add_summary(self, summary):
+        self.summaries.append(summary)
+
+    def get_statement(self, limit=0):
+        if limit == 0:
+            limit = len(self.summaries)
+        result = &#34;&#34;
+        for summary in sorted(self.summaries, key=lambda x: x.truth)[-limit:]:
+            result += summary.get_statement() + &#34;\n&#34;
+        return result
+
+
+def get_categories(column):
+    return column.cat.categories.tolist()
+
+
+class SummaryBuilder:
+    def __init__(self, df: pd.DataFrame, fuzzy_sets):
+        self.df = df
+        self.fuzzy_sets = fuzzy_sets
+
+    def set_dataframe(self, df: pd.DataFrame):
+        self.df = df
+
+    def set_fuzzy_sets(self, fuzzy_sets):
+        self.fuzzy_sets = fuzzy_sets
+
+    class ModifierGenerator:
+        current_modifier = Modifier(&#39;&#39;)
+        yielded_empty = False
+
+        def generate(self, iterations_left):
+            if not self.yielded_empty:
+                yield self.current_modifier
+                self.yielded_empty = True
+            if iterations_left == 0:
+                yield self.current_modifier
+                return
+            modifiers = dict_modifiers()
+
+            for modifier_name in modifiers:
+                modifier = modifiers[modifier_name]
+                tmp = self.current_modifier
+                self.current_modifier = self.current_modifier(modifier)
+                yield from self.generate(iterations_left - 1)
+                self.current_modifier = tmp
+            if self.current_modifier.modifier != default_modifier:
+                yield self.current_modifier
+
+    def list_summarizers(self, attribute, modifier_size=1):
+        for combined_modifier in self.ModifierGenerator().generate(
+                modifier_size):
+            for membership_function_name in self.fuzzy_sets[attribute].keys():
+                summarizer = Summarizer(
+                    self.fuzzy_sets[attribute][membership_function_name],
+                    combined_modifier,
+                    attribute)
+
+                yield summarizer
+
+    def get_summary_attr(self, attributes: List[str]) -&gt; SummarySet:
+        &#34;&#34;&#34;
+        Summaries based on some exactly attribute
+        :param attributes: column_names
+        :return: SummarySet
+        &#34;&#34;&#34;
+        summary_set = SummarySet()
+
+        for attribute in attributes:
+            for summarizer in self.list_summarizers(attribute):
+                qs = QuantifierSet.dict_quantifiers()
+
+                for quantifier in qs:
+                    quantifier_mf = qs[quantifier]
+
+                    truth = quantifier_mf(self.df[attribute].map(
+                        lambda x: summarizer(x)).sum() * 1.0 / len(self.df))
+                    summary = Summary(truth, quantifier_mf, summarizer)
+
+                    summary_set.add_summary(summary)
+                    # print(summary.get_statement())
+
+        return summary_set</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.get_categories"><code class="name flex">
+<span>def <span class="ident">get_categories</span></span>(<span>column)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_categories(column):
+    return column.cat.categories.tolist()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.Summarizer"><code class="flex name class">
+<span>class <span class="ident">Summarizer</span></span>
+<span>(</span><span>membership_function: <a title="CWiPy.MembershipFunction.MembershipFunction" href="../MembershipFunction.html#CWiPy.MembershipFunction.MembershipFunction">MembershipFunction</a>, modifier: <a title="CWiPy.Modifier.Modifier" href="../Modifier.html#CWiPy.Modifier.Modifier">Modifier</a>, attribute: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Summarizer(membership_function: CWiPy.MembershipFunction.MembershipFunction, modifier: CWiPy.Modifier.Modifier, attribute: str)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Summarizer:
+    membership_function: MembershipFunction
+    modifier: Modifier
+    attribute: str
+
+    def name(self):
+        return f&#39;{self.modifier.name} {self.membership_function.name} &#39; \
+               f&#39;{self.attribute}&#39;
+
+    def __call__(self, x):
+        return self.modifier(self.membership_function(x))</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.Summarizer.name"><code class="name flex">
+<span>def <span class="ident">name</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def name(self):
+    return f&#39;{self.modifier.name} {self.membership_function.name} &#39; \
+           f&#39;{self.attribute}&#39;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.Summary"><code class="flex name class">
+<span>class <span class="ident">Summary</span></span>
+<span>(</span><span>truth, quantifier, summarizer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Summary:
+    truth: float
+
+    quantifier: MembershipFunction
+    summarizer: Summarizer
+
+    def __init__(self, truth, quantifier, summarizer):
+        self.truth = truth
+        self.quantifier = quantifier
+        self.summarizer = summarizer
+
+    def get_statement(self):
+        &#34;&#34;&#34;Fetches rows from a Bigtable.
+
+        Retrieves rows pertaining to the given keys from the Table instance
+        represented by big_table.  Silly things may happen if
+        other_silly_variable is not None.
+
+        Args:
+            big_table: An open Bigtable Table instance.
+            keys: A sequence of strings representing the key of each table row
+                to fetch.
+            other_silly_variable: Another optional variable, that has a much
+                longer name than the other args, and which does nothing.
+
+        Returns:
+            A dict mapping keys to the corresponding table row data
+            fetched. Each row is represented as a tuple of strings. For
+            example:
+
+            ```{&#39;Serak&#39;: (&#39;Rigel VII&#39;, &#39;Preparer&#39;),
+             &#39;Zim&#39;: (&#39;Irk&#39;, &#39;Invader&#39;),
+             &#39;Lrrr&#39;: (&#39;Omicron Persei 8&#39;, &#39;Emperor&#39;)}```
+
+            If a key from the keys argument is missing from the dictionary,
+            then that row was not found in the table.
+
+        Raises:
+            IOError: An error occurred accessing the bigtable.Table object.
+        &#34;&#34;&#34;
+        return f&#39;{self.quantifier.name} of the records are &#39; \
+               f&#39;{self.summarizer.name()} with truth value = {self.truth}. &#39;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.Summary.get_statement"><code class="name flex">
+<span>def <span class="ident">get_statement</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fetches rows from a Bigtable.</p>
+<p>Retrieves rows pertaining to the given keys from the Table instance
+represented by big_table.
+Silly things may happen if
+other_silly_variable is not None.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>big_table</code></strong></dt>
+<dd>An open Bigtable Table instance.</dd>
+<dt><strong><code>keys</code></strong></dt>
+<dd>A sequence of strings representing the key of each table row
+to fetch.</dd>
+<dt><strong><code>other_silly_variable</code></strong></dt>
+<dd>Another optional variable, that has a much
+longer name than the other args, and which does nothing.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>A dict mapping keys to the corresponding table row data</code></dt>
+<dd>&nbsp;</dd>
+<dt><code>fetched. Each row is represented as a tuple</code> of <code>strings. For</code></dt>
+<dd>&nbsp;</dd>
+<dt><code>example:</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<p><code>{'Serak': ('Rigel VII', 'Preparer'),
+'Zim': ('Irk', 'Invader'),
+'Lrrr': ('Omicron Persei 8', 'Emperor')}</code></p>
+<dl>
+<dt><code>If a key from the keys argument is missing from the dictionary,</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<p>then that row was not found in the table.</p>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>IOError</code></dt>
+<dd>An error occurred accessing the bigtable.Table object.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_statement(self):
+    &#34;&#34;&#34;Fetches rows from a Bigtable.
+
+    Retrieves rows pertaining to the given keys from the Table instance
+    represented by big_table.  Silly things may happen if
+    other_silly_variable is not None.
+
+    Args:
+        big_table: An open Bigtable Table instance.
+        keys: A sequence of strings representing the key of each table row
+            to fetch.
+        other_silly_variable: Another optional variable, that has a much
+            longer name than the other args, and which does nothing.
+
+    Returns:
+        A dict mapping keys to the corresponding table row data
+        fetched. Each row is represented as a tuple of strings. For
+        example:
+
+        ```{&#39;Serak&#39;: (&#39;Rigel VII&#39;, &#39;Preparer&#39;),
+         &#39;Zim&#39;: (&#39;Irk&#39;, &#39;Invader&#39;),
+         &#39;Lrrr&#39;: (&#39;Omicron Persei 8&#39;, &#39;Emperor&#39;)}```
+
+        If a key from the keys argument is missing from the dictionary,
+        then that row was not found in the table.
+
+    Raises:
+        IOError: An error occurred accessing the bigtable.Table object.
+    &#34;&#34;&#34;
+    return f&#39;{self.quantifier.name} of the records are &#39; \
+           f&#39;{self.summarizer.name()} with truth value = {self.truth}. &#39;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.SummaryBuilder"><code class="flex name class">
+<span>class <span class="ident">SummaryBuilder</span></span>
+<span>(</span><span>df: pandas.core.frame.DataFrame, fuzzy_sets)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SummaryBuilder:
+    def __init__(self, df: pd.DataFrame, fuzzy_sets):
+        self.df = df
+        self.fuzzy_sets = fuzzy_sets
+
+    def set_dataframe(self, df: pd.DataFrame):
+        self.df = df
+
+    def set_fuzzy_sets(self, fuzzy_sets):
+        self.fuzzy_sets = fuzzy_sets
+
+    class ModifierGenerator:
+        current_modifier = Modifier(&#39;&#39;)
+        yielded_empty = False
+
+        def generate(self, iterations_left):
+            if not self.yielded_empty:
+                yield self.current_modifier
+                self.yielded_empty = True
+            if iterations_left == 0:
+                yield self.current_modifier
+                return
+            modifiers = dict_modifiers()
+
+            for modifier_name in modifiers:
+                modifier = modifiers[modifier_name]
+                tmp = self.current_modifier
+                self.current_modifier = self.current_modifier(modifier)
+                yield from self.generate(iterations_left - 1)
+                self.current_modifier = tmp
+            if self.current_modifier.modifier != default_modifier:
+                yield self.current_modifier
+
+    def list_summarizers(self, attribute, modifier_size=1):
+        for combined_modifier in self.ModifierGenerator().generate(
+                modifier_size):
+            for membership_function_name in self.fuzzy_sets[attribute].keys():
+                summarizer = Summarizer(
+                    self.fuzzy_sets[attribute][membership_function_name],
+                    combined_modifier,
+                    attribute)
+
+                yield summarizer
+
+    def get_summary_attr(self, attributes: List[str]) -&gt; SummarySet:
+        &#34;&#34;&#34;
+        Summaries based on some exactly attribute
+        :param attributes: column_names
+        :return: SummarySet
+        &#34;&#34;&#34;
+        summary_set = SummarySet()
+
+        for attribute in attributes:
+            for summarizer in self.list_summarizers(attribute):
+                qs = QuantifierSet.dict_quantifiers()
+
+                for quantifier in qs:
+                    quantifier_mf = qs[quantifier]
+
+                    truth = quantifier_mf(self.df[attribute].map(
+                        lambda x: summarizer(x)).sum() * 1.0 / len(self.df))
+                    summary = Summary(truth, quantifier_mf, summarizer)
+
+                    summary_set.add_summary(summary)
+                    # print(summary.get_statement())
+
+        return summary_set</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.SummaryBuilder.ModifierGenerator"><code class="name">var <span class="ident">ModifierGenerator</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.SummaryBuilder.get_summary_attr"><code class="name flex">
+<span>def <span class="ident">get_summary_attr</span></span>(<span>self, attributes: List[str]) -> <a title="CWiPy.summary.SummaryBuilder.SummarySet" href="#CWiPy.summary.SummaryBuilder.SummarySet">SummarySet</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Summaries based on some exactly attribute
+:param attributes: column_names
+:return: SummarySet</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_summary_attr(self, attributes: List[str]) -&gt; SummarySet:
+    &#34;&#34;&#34;
+    Summaries based on some exactly attribute
+    :param attributes: column_names
+    :return: SummarySet
+    &#34;&#34;&#34;
+    summary_set = SummarySet()
+
+    for attribute in attributes:
+        for summarizer in self.list_summarizers(attribute):
+            qs = QuantifierSet.dict_quantifiers()
+
+            for quantifier in qs:
+                quantifier_mf = qs[quantifier]
+
+                truth = quantifier_mf(self.df[attribute].map(
+                    lambda x: summarizer(x)).sum() * 1.0 / len(self.df))
+                summary = Summary(truth, quantifier_mf, summarizer)
+
+                summary_set.add_summary(summary)
+                # print(summary.get_statement())
+
+    return summary_set</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.SummaryBuilder.list_summarizers"><code class="name flex">
+<span>def <span class="ident">list_summarizers</span></span>(<span>self, attribute, modifier_size=1)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def list_summarizers(self, attribute, modifier_size=1):
+    for combined_modifier in self.ModifierGenerator().generate(
+            modifier_size):
+        for membership_function_name in self.fuzzy_sets[attribute].keys():
+            summarizer = Summarizer(
+                self.fuzzy_sets[attribute][membership_function_name],
+                combined_modifier,
+                attribute)
+
+            yield summarizer</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.SummaryBuilder.set_dataframe"><code class="name flex">
+<span>def <span class="ident">set_dataframe</span></span>(<span>self, df: pandas.core.frame.DataFrame)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_dataframe(self, df: pd.DataFrame):
+    self.df = df</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.SummaryBuilder.set_fuzzy_sets"><code class="name flex">
+<span>def <span class="ident">set_fuzzy_sets</span></span>(<span>self, fuzzy_sets)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_fuzzy_sets(self, fuzzy_sets):
+    self.fuzzy_sets = fuzzy_sets</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.SummarySet"><code class="flex name class">
+<span>class <span class="ident">SummarySet</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SummarySet:
+    summaries: List[Summary]
+
+    def __init__(self):
+        self.summaries = []
+
+    def add_summary(self, summary):
+        self.summaries.append(summary)
+
+    def get_statement(self, limit=0):
+        if limit == 0:
+            limit = len(self.summaries)
+        result = &#34;&#34;
+        for summary in sorted(self.summaries, key=lambda x: x.truth)[-limit:]:
+            result += summary.get_statement() + &#34;\n&#34;
+        return result</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="CWiPy.summary.SummaryBuilder.SummarySet.add_summary"><code class="name flex">
+<span>def <span class="ident">add_summary</span></span>(<span>self, summary)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_summary(self, summary):
+    self.summaries.append(summary)</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.summary.SummaryBuilder.SummarySet.get_statement"><code class="name flex">
+<span>def <span class="ident">get_statement</span></span>(<span>self, limit=0)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_statement(self, limit=0):
+    if limit == 0:
+        limit = len(self.summaries)
+    result = &#34;&#34;
+    for summary in sorted(self.summaries, key=lambda x: x.truth)[-limit:]:
+        result += summary.get_statement() + &#34;\n&#34;
+    return result</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="CWiPy.summary" href="index.html">CWiPy.summary</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="CWiPy.summary.SummaryBuilder.get_categories" href="#CWiPy.summary.SummaryBuilder.get_categories">get_categories</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="CWiPy.summary.SummaryBuilder.Summarizer" href="#CWiPy.summary.SummaryBuilder.Summarizer">Summarizer</a></code></h4>
+<ul class="">
+<li><code><a title="CWiPy.summary.SummaryBuilder.Summarizer.name" href="#CWiPy.summary.SummaryBuilder.Summarizer.name">name</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="CWiPy.summary.SummaryBuilder.Summary" href="#CWiPy.summary.SummaryBuilder.Summary">Summary</a></code></h4>
+<ul class="">
+<li><code><a title="CWiPy.summary.SummaryBuilder.Summary.get_statement" href="#CWiPy.summary.SummaryBuilder.Summary.get_statement">get_statement</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="CWiPy.summary.SummaryBuilder.SummaryBuilder" href="#CWiPy.summary.SummaryBuilder.SummaryBuilder">SummaryBuilder</a></code></h4>
+<ul class="">
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummaryBuilder.ModifierGenerator" href="#CWiPy.summary.SummaryBuilder.SummaryBuilder.ModifierGenerator">ModifierGenerator</a></code></li>
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummaryBuilder.get_summary_attr" href="#CWiPy.summary.SummaryBuilder.SummaryBuilder.get_summary_attr">get_summary_attr</a></code></li>
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummaryBuilder.list_summarizers" href="#CWiPy.summary.SummaryBuilder.SummaryBuilder.list_summarizers">list_summarizers</a></code></li>
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummaryBuilder.set_dataframe" href="#CWiPy.summary.SummaryBuilder.SummaryBuilder.set_dataframe">set_dataframe</a></code></li>
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummaryBuilder.set_fuzzy_sets" href="#CWiPy.summary.SummaryBuilder.SummaryBuilder.set_fuzzy_sets">set_fuzzy_sets</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="CWiPy.summary.SummaryBuilder.SummarySet" href="#CWiPy.summary.SummaryBuilder.SummarySet">SummarySet</a></code></h4>
+<ul class="">
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummarySet.add_summary" href="#CWiPy.summary.SummaryBuilder.SummarySet.add_summary">add_summary</a></code></li>
+<li><code><a title="CWiPy.summary.SummaryBuilder.SummarySet.get_statement" href="#CWiPy.summary.SummaryBuilder.SummarySet.get_statement">get_statement</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

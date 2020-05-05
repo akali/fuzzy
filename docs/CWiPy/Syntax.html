@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>CWiPy.Syntax API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>CWiPy.Syntax</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import json
+from copy import deepcopy
+
+import numpy as np
+import pandas as pd
+
+from CWiPy import settings
+from CWiPy.MembershipFunction import MembershipFunction
+from CWiPy.Modifier import dict_modifiers
+
+
+def get_synonyms(word):
+    &#34;&#34;&#34;
+    :param word:
+    :return: list of objects containing term and similarity from -100 to 100
+    :raises: IOException: when not found, you should load words first
+    &#34;&#34;&#34;
+
+    word = word.replace(&#39;-&#39;, &#39;_&#39;)
+
+    data_file = \
+        f&#34;{settings.BASE_DIR}/{settings.STATIC_DIR}/thesaurus/{word}.json&#34;
+
+    result = []
+
+    with open(data_file) as f:
+        thesaurus_data = json.load(f)
+        # print(thesaurus_data[&#39;data&#39;][&#39;definitionData&#39;][&#39;definitions&#39;])
+        for entry in thesaurus_data[&#34;data&#34;][&#34;definitionData&#34;][&#34;definitions&#34;]:
+            for synonym in entry[&#34;synonyms&#34;]:
+                result.append({
+                    &#39;term&#39;: synonym[&#39;term&#39;],
+                    &#39;similarity&#39;: int(synonym[&#39;similarity&#39;]),
+                })
+        f.close()
+
+    return result
+
+
+def get_modifiers_synonyms(limit=100):
+    &#34;&#34;&#34;
+    :param limit: similarity limit
+    :return: dict of synonym modifiers: {synonym: modifier}
+    &#34;&#34;&#34;
+    result = {}
+    for modifier in dict_modifiers().keys():
+        for synonym in get_synonyms(modifier):
+            if synonym[&#39;similarity&#39;] &lt; limit:
+                continue
+            term = synonym[&#39;term&#39;]
+            if term not in result:
+                result[term] = set()
+            result[term].add(modifier)
+    return result
+
+
+class SyntaxException(BaseException):
+    pass
+
+
+class FuzzyQuery:
+    def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None,
+                 modifiers_included=None, round_values=None):
+        if limit is None:
+            limit = 100
+        if alpha_cut is None:
+            alpha_cut = 0.5
+        if modifiers_included is None:
+            modifiers_included = True
+        if round_values is None:
+            round_values = False
+
+        self.fuzzy_query = fuzzy_query
+        self.fields = fields
+        self.limit = limit
+        self.alpha_cut = alpha_cut
+        self.round_values = round_values
+        self.modifiers_included = modifiers_included
+
+    def extract_crisp_parameters(self):
+        &#34;&#34;&#34;
+        Converts fuzzy_query to crisp query parameters.
+        Fuzzy expression structure:
+        [composite modifier] [summarizer] [field] [connector]
+        [composite modifier] [summarizer] [field] [connector]
+        [composite modifier] [summarizer] [field] [connector] ...
+        [composite modifier] [summarizer] [field]
+
+        example fuzzy_query: middle age and very high salary
+
+        [connector] = {and, or, but}
+
+        :param fuzzy_query: fuzzy query
+        :param fields: dict of querying numerical fields: {field_name,
+        {membership_function_name: membership_function}}
+        :param limit: similarity limit for synonyms
+        :param alpha_cut:
+        :return: dict[field, [lower bound, upper bound, connector]]
+        :raises: SyntaxException: syntax error
+        &#34;&#34;&#34;
+
+        EOQ_TOKEN = &#34;~~~END_TOKEN~~~&#34;
+
+        if self.fuzzy_query == &#34;&#34;:
+            raise SyntaxException(&#34;Empty query&#34;)
+
+        tokens = list(
+            filter(lambda x: len(x) &gt; 0, self.fuzzy_query.split(&#39; &#39;)))
+
+        tokens.append(EOQ_TOKEN)
+
+        modifiers_synonyms = get_modifiers_synonyms(self.limit)
+        modifiers = dict_modifiers()
+
+        connectors = [&#34;and&#34;, &#34;or&#34;, &#34;&#34;, &#34;but&#34;, EOQ_TOKEN]
+        connector_sql = {
+            &#34;and&#34;: &#34;and&#34;,
+            &#34;or&#34;: &#34;or&#34;,
+            &#34;but&#34;: &#34;and&#34;,
+            EOQ_TOKEN: &#34;&#34;,
+        }
+
+        expression = []
+
+        result = []
+
+        for token in tokens:
+            if token in connectors:
+                token = connector_sql[token]
+                if self.modifiers_included and len(expression) &lt; 2:
+                    raise SyntaxException(
+                        f&#34;Empty or incorrect expression {expression}&#34;)
+                original_expression = expression
+                expression.reverse()
+                if expression[0] not in self.fields.keys():
+                    raise SyntaxException(
+                        f&#34;Unknown field {expression[0]} in expression &#34;
+                        f&#34;{original_expression}&#34;)
+                field = expression.pop(0)
+
+                mf_name = expression[0]
+
+                if mf_name not in self.fields[field].keys():
+                    raise SyntaxException(
+                        f&#34;Unknown membership function {mf_name} in expression &#34;
+                        f&#34;{original_expression}&#34;)
+
+                mf: MembershipFunction = deepcopy(self.fields[field][mf_name])
+                expression.pop(0)
+
+                while len(expression) &gt; 0:
+                    if expression[0] not in modifiers and expression[0] \
+                            not in modifiers_synonyms:
+                        raise SyntaxException(
+                            f&#34;Unknown modifier {expression[0]} in expression &#34;
+                            f&#34;{original_expression}&#34;)
+
+                    if expression[0] in modifiers.keys():
+                        mf.set_modifier(modifiers[expression[0]](mf.modifier))
+                    else:
+                        mf.set_modifier(
+                            modifiers_synonyms[expression[0]][0](mf.modifier))
+                    expression.pop(0)
+
+                l, r = mf.extract_range(self.alpha_cut)
+                result.append([field, l, r, token])
+            else:
+                expression.append(token)
+
+        return result
+
+    def to_sql(self):
+        &#34;&#34;&#34;
+        :return: Constructed sql where clause from fuzzy_query
+        &#34;&#34;&#34;
+        crisp_query = &#34;&#34;
+        params = self.extract_crisp_parameters()
+        for (field, l, r, token) in params:
+            if self.round_values:
+                l, r = int(l), int(r)
+            crisp_query += f&#34; {l} &lt;= {field} and {field} &lt;= {r} {token} &#34;
+
+        return crisp_query
+
+    def matching(self, df: pd.DataFrame) -&gt; pd.Series:
+        &#34;&#34;&#34;
+        :param df: pandas DataFrame
+        :return: Series matching fuzzy_query
+        &#34;&#34;&#34;
+
+        params = self.extract_crisp_parameters()
+        result_series = pd.Series(np.ones(len(df), dtype=bool))
+
+        connector = &#34;&#34;
+
+        for (field, left, right, next_connector) in params:
+            if self.round_values:
+                left, right = int(left), int(right)
+
+            matching_series = (left &lt;= df[field]) &amp; (df[field] &lt;= right)
+
+            if connector == &#34;&#34;:
+                result_series = matching_series
+            elif connector == &#34;or&#34;:
+                result_series = result_series | matching_series
+            else:  # and
+                result_series = result_series &amp; matching_series
+
+            connector = next_connector
+
+        return result_series</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="CWiPy.Syntax.get_modifiers_synonyms"><code class="name flex">
+<span>def <span class="ident">get_modifiers_synonyms</span></span>(<span>limit=100)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param limit: similarity limit
+:return: dict of synonym modifiers: {synonym: modifier}</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_modifiers_synonyms(limit=100):
+    &#34;&#34;&#34;
+    :param limit: similarity limit
+    :return: dict of synonym modifiers: {synonym: modifier}
+    &#34;&#34;&#34;
+    result = {}
+    for modifier in dict_modifiers().keys():
+        for synonym in get_synonyms(modifier):
+            if synonym[&#39;similarity&#39;] &lt; limit:
+                continue
+            term = synonym[&#39;term&#39;]
+            if term not in result:
+                result[term] = set()
+            result[term].add(modifier)
+    return result</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.Syntax.get_synonyms"><code class="name flex">
+<span>def <span class="ident">get_synonyms</span></span>(<span>word)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param word:
+:return: list of objects containing term and similarity from -100 to 100
+:raises: IOException: when not found, you should load words first</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_synonyms(word):
+    &#34;&#34;&#34;
+    :param word:
+    :return: list of objects containing term and similarity from -100 to 100
+    :raises: IOException: when not found, you should load words first
+    &#34;&#34;&#34;
+
+    word = word.replace(&#39;-&#39;, &#39;_&#39;)
+
+    data_file = \
+        f&#34;{settings.BASE_DIR}/{settings.STATIC_DIR}/thesaurus/{word}.json&#34;
+
+    result = []
+
+    with open(data_file) as f:
+        thesaurus_data = json.load(f)
+        # print(thesaurus_data[&#39;data&#39;][&#39;definitionData&#39;][&#39;definitions&#39;])
+        for entry in thesaurus_data[&#34;data&#34;][&#34;definitionData&#34;][&#34;definitions&#34;]:
+            for synonym in entry[&#34;synonyms&#34;]:
+                result.append({
+                    &#39;term&#39;: synonym[&#39;term&#39;],
+                    &#39;similarity&#39;: int(synonym[&#39;similarity&#39;]),
+                })
+        f.close()
+
+    return result</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="CWiPy.Syntax.FuzzyQuery"><code class="flex name class">
+<span>class <span class="ident">FuzzyQuery</span></span>
+<span>(</span><span>fuzzy_query, fields, limit=None, alpha_cut=None, modifiers_included=None, round_values=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FuzzyQuery:
+    def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None,
+                 modifiers_included=None, round_values=None):
+        if limit is None:
+            limit = 100
+        if alpha_cut is None:
+            alpha_cut = 0.5
+        if modifiers_included is None:
+            modifiers_included = True
+        if round_values is None:
+            round_values = False
+
+        self.fuzzy_query = fuzzy_query
+        self.fields = fields
+        self.limit = limit
+        self.alpha_cut = alpha_cut
+        self.round_values = round_values
+        self.modifiers_included = modifiers_included
+
+    def extract_crisp_parameters(self):
+        &#34;&#34;&#34;
+        Converts fuzzy_query to crisp query parameters.
+        Fuzzy expression structure:
+        [composite modifier] [summarizer] [field] [connector]
+        [composite modifier] [summarizer] [field] [connector]
+        [composite modifier] [summarizer] [field] [connector] ...
+        [composite modifier] [summarizer] [field]
+
+        example fuzzy_query: middle age and very high salary
+
+        [connector] = {and, or, but}
+
+        :param fuzzy_query: fuzzy query
+        :param fields: dict of querying numerical fields: {field_name,
+        {membership_function_name: membership_function}}
+        :param limit: similarity limit for synonyms
+        :param alpha_cut:
+        :return: dict[field, [lower bound, upper bound, connector]]
+        :raises: SyntaxException: syntax error
+        &#34;&#34;&#34;
+
+        EOQ_TOKEN = &#34;~~~END_TOKEN~~~&#34;
+
+        if self.fuzzy_query == &#34;&#34;:
+            raise SyntaxException(&#34;Empty query&#34;)
+
+        tokens = list(
+            filter(lambda x: len(x) &gt; 0, self.fuzzy_query.split(&#39; &#39;)))
+
+        tokens.append(EOQ_TOKEN)
+
+        modifiers_synonyms = get_modifiers_synonyms(self.limit)
+        modifiers = dict_modifiers()
+
+        connectors = [&#34;and&#34;, &#34;or&#34;, &#34;&#34;, &#34;but&#34;, EOQ_TOKEN]
+        connector_sql = {
+            &#34;and&#34;: &#34;and&#34;,
+            &#34;or&#34;: &#34;or&#34;,
+            &#34;but&#34;: &#34;and&#34;,
+            EOQ_TOKEN: &#34;&#34;,
+        }
+
+        expression = []
+
+        result = []
+
+        for token in tokens:
+            if token in connectors:
+                token = connector_sql[token]
+                if self.modifiers_included and len(expression) &lt; 2:
+                    raise SyntaxException(
+                        f&#34;Empty or incorrect expression {expression}&#34;)
+                original_expression = expression
+                expression.reverse()
+                if expression[0] not in self.fields.keys():
+                    raise SyntaxException(
+                        f&#34;Unknown field {expression[0]} in expression &#34;
+                        f&#34;{original_expression}&#34;)
+                field = expression.pop(0)
+
+                mf_name = expression[0]
+
+                if mf_name not in self.fields[field].keys():
+                    raise SyntaxException(
+                        f&#34;Unknown membership function {mf_name} in expression &#34;
+                        f&#34;{original_expression}&#34;)
+
+                mf: MembershipFunction = deepcopy(self.fields[field][mf_name])
+                expression.pop(0)
+
+                while len(expression) &gt; 0:
+                    if expression[0] not in modifiers and expression[0] \
+                            not in modifiers_synonyms:
+                        raise SyntaxException(
+                            f&#34;Unknown modifier {expression[0]} in expression &#34;
+                            f&#34;{original_expression}&#34;)
+
+                    if expression[0] in modifiers.keys():
+                        mf.set_modifier(modifiers[expression[0]](mf.modifier))
+                    else:
+                        mf.set_modifier(
+                            modifiers_synonyms[expression[0]][0](mf.modifier))
+                    expression.pop(0)
+
+                l, r = mf.extract_range(self.alpha_cut)
+                result.append([field, l, r, token])
+            else:
+                expression.append(token)
+
+        return result
+
+    def to_sql(self):
+        &#34;&#34;&#34;
+        :return: Constructed sql where clause from fuzzy_query
+        &#34;&#34;&#34;
+        crisp_query = &#34;&#34;
+        params = self.extract_crisp_parameters()
+        for (field, l, r, token) in params:
+            if self.round_values:
+                l, r = int(l), int(r)
+            crisp_query += f&#34; {l} &lt;= {field} and {field} &lt;= {r} {token} &#34;
+
+        return crisp_query
+
+    def matching(self, df: pd.DataFrame) -&gt; pd.Series:
+        &#34;&#34;&#34;
+        :param df: pandas DataFrame
+        :return: Series matching fuzzy_query
+        &#34;&#34;&#34;
+
+        params = self.extract_crisp_parameters()
+        result_series = pd.Series(np.ones(len(df), dtype=bool))
+
+        connector = &#34;&#34;
+
+        for (field, left, right, next_connector) in params:
+            if self.round_values:
+                left, right = int(left), int(right)
+
+            matching_series = (left &lt;= df[field]) &amp; (df[field] &lt;= right)
+
+            if connector == &#34;&#34;:
+                result_series = matching_series
+            elif connector == &#34;or&#34;:
+                result_series = result_series | matching_series
+            else:  # and
+                result_series = result_series &amp; matching_series
+
+            connector = next_connector
+
+        return result_series</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="CWiPy.Syntax.FuzzyQuery.extract_crisp_parameters"><code class="name flex">
+<span>def <span class="ident">extract_crisp_parameters</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts fuzzy_query to crisp query parameters.
+Fuzzy expression structure:
+[composite modifier] [summarizer] [field] [connector]
+[composite modifier] [summarizer] [field] [connector]
+[composite modifier] [summarizer] [field] [connector] &hellip;
+[composite modifier] [summarizer] [field]</p>
+<p>example fuzzy_query: middle age and very high salary</p>
+<p>[connector] = {and, or, but}</p>
+<p>:param fuzzy_query: fuzzy query
+:param fields: dict of querying numerical fields: {field_name,
+{membership_function_name: membership_function}}
+:param limit: similarity limit for synonyms
+:param alpha_cut:
+:return: dict[field, [lower bound, upper bound, connector]]
+:raises: SyntaxException: syntax error</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_crisp_parameters(self):
+    &#34;&#34;&#34;
+    Converts fuzzy_query to crisp query parameters.
+    Fuzzy expression structure:
+    [composite modifier] [summarizer] [field] [connector]
+    [composite modifier] [summarizer] [field] [connector]
+    [composite modifier] [summarizer] [field] [connector] ...
+    [composite modifier] [summarizer] [field]
+
+    example fuzzy_query: middle age and very high salary
+
+    [connector] = {and, or, but}
+
+    :param fuzzy_query: fuzzy query
+    :param fields: dict of querying numerical fields: {field_name,
+    {membership_function_name: membership_function}}
+    :param limit: similarity limit for synonyms
+    :param alpha_cut:
+    :return: dict[field, [lower bound, upper bound, connector]]
+    :raises: SyntaxException: syntax error
+    &#34;&#34;&#34;
+
+    EOQ_TOKEN = &#34;~~~END_TOKEN~~~&#34;
+
+    if self.fuzzy_query == &#34;&#34;:
+        raise SyntaxException(&#34;Empty query&#34;)
+
+    tokens = list(
+        filter(lambda x: len(x) &gt; 0, self.fuzzy_query.split(&#39; &#39;)))
+
+    tokens.append(EOQ_TOKEN)
+
+    modifiers_synonyms = get_modifiers_synonyms(self.limit)
+    modifiers = dict_modifiers()
+
+    connectors = [&#34;and&#34;, &#34;or&#34;, &#34;&#34;, &#34;but&#34;, EOQ_TOKEN]
+    connector_sql = {
+        &#34;and&#34;: &#34;and&#34;,
+        &#34;or&#34;: &#34;or&#34;,
+        &#34;but&#34;: &#34;and&#34;,
+        EOQ_TOKEN: &#34;&#34;,
+    }
+
+    expression = []
+
+    result = []
+
+    for token in tokens:
+        if token in connectors:
+            token = connector_sql[token]
+            if self.modifiers_included and len(expression) &lt; 2:
+                raise SyntaxException(
+                    f&#34;Empty or incorrect expression {expression}&#34;)
+            original_expression = expression
+            expression.reverse()
+            if expression[0] not in self.fields.keys():
+                raise SyntaxException(
+                    f&#34;Unknown field {expression[0]} in expression &#34;
+                    f&#34;{original_expression}&#34;)
+            field = expression.pop(0)
+
+            mf_name = expression[0]
+
+            if mf_name not in self.fields[field].keys():
+                raise SyntaxException(
+                    f&#34;Unknown membership function {mf_name} in expression &#34;
+                    f&#34;{original_expression}&#34;)
+
+            mf: MembershipFunction = deepcopy(self.fields[field][mf_name])
+            expression.pop(0)
+
+            while len(expression) &gt; 0:
+                if expression[0] not in modifiers and expression[0] \
+                        not in modifiers_synonyms:
+                    raise SyntaxException(
+                        f&#34;Unknown modifier {expression[0]} in expression &#34;
+                        f&#34;{original_expression}&#34;)
+
+                if expression[0] in modifiers.keys():
+                    mf.set_modifier(modifiers[expression[0]](mf.modifier))
+                else:
+                    mf.set_modifier(
+                        modifiers_synonyms[expression[0]][0](mf.modifier))
+                expression.pop(0)
+
+            l, r = mf.extract_range(self.alpha_cut)
+            result.append([field, l, r, token])
+        else:
+            expression.append(token)
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.Syntax.FuzzyQuery.matching"><code class="name flex">
+<span>def <span class="ident">matching</span></span>(<span>self, df: pandas.core.frame.DataFrame) -> pandas.core.series.Series</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param df: pandas DataFrame
+:return: Series matching fuzzy_query</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def matching(self, df: pd.DataFrame) -&gt; pd.Series:
+    &#34;&#34;&#34;
+    :param df: pandas DataFrame
+    :return: Series matching fuzzy_query
+    &#34;&#34;&#34;
+
+    params = self.extract_crisp_parameters()
+    result_series = pd.Series(np.ones(len(df), dtype=bool))
+
+    connector = &#34;&#34;
+
+    for (field, left, right, next_connector) in params:
+        if self.round_values:
+            left, right = int(left), int(right)
+
+        matching_series = (left &lt;= df[field]) &amp; (df[field] &lt;= right)
+
+        if connector == &#34;&#34;:
+            result_series = matching_series
+        elif connector == &#34;or&#34;:
+            result_series = result_series | matching_series
+        else:  # and
+            result_series = result_series &amp; matching_series
+
+        connector = next_connector
+
+    return result_series</code></pre>
+</details>
+</dd>
+<dt id="CWiPy.Syntax.FuzzyQuery.to_sql"><code class="name flex">
+<span>def <span class="ident">to_sql</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:return: Constructed sql where clause from fuzzy_query</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_sql(self):
+    &#34;&#34;&#34;
+    :return: Constructed sql where clause from fuzzy_query
+    &#34;&#34;&#34;
+    crisp_query = &#34;&#34;
+    params = self.extract_crisp_parameters()
+    for (field, l, r, token) in params:
+        if self.round_values:
+            l, r = int(l), int(r)
+        crisp_query += f&#34; {l} &lt;= {field} and {field} &lt;= {r} {token} &#34;
+
+    return crisp_query</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="CWiPy.Syntax.SyntaxException"><code class="flex name class">
+<span>class <span class="ident">SyntaxException</span></span>
+<span>(</span><span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Common base class for all exceptions</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SyntaxException(BaseException):
+    pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.BaseException</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="CWiPy" href="index.html">CWiPy</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="CWiPy.Syntax.get_modifiers_synonyms" href="#CWiPy.Syntax.get_modifiers_synonyms">get_modifiers_synonyms</a></code></li>
+<li><code><a title="CWiPy.Syntax.get_synonyms" href="#CWiPy.Syntax.get_synonyms">get_synonyms</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="CWiPy.Syntax.FuzzyQuery" href="#CWiPy.Syntax.FuzzyQuery">FuzzyQuery</a></code></h4>
+<ul class="">
+<li><code><a title="CWiPy.Syntax.FuzzyQuery.extract_crisp_parameters" href="#CWiPy.Syntax.FuzzyQuery.extract_crisp_parameters">extract_crisp_parameters</a></code></li>
+<li><code><a title="CWiPy.Syntax.FuzzyQuery.matching" href="#CWiPy.Syntax.FuzzyQuery.matching">matching</a></code></li>
+<li><code><a title="CWiPy.Syntax.FuzzyQuery.to_sql" href="#CWiPy.Syntax.FuzzyQuery.to_sql">to_sql</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="CWiPy.Syntax.SyntaxException" href="#CWiPy.Syntax.SyntaxException">SyntaxException</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
