@@ -1,0 +1,3 @@
+"""
+CWiPy helper scripts
+"""

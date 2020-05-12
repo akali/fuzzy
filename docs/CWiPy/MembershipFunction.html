@@ -33,6 +33,9 @@ _EPS = 1E-9
 
 
 class MembershipFunction(Callable):
+    &#34;&#34;&#34;
+    Abstract MembershipFunction class
+    &#34;&#34;&#34;
     name: str
     func: Callable
     modifier: Modifier
@@ -73,11 +76,21 @@ class MembershipFunction(Callable):
 
 
 class TriangularMembershipFunction(MembershipFunction):
+    &#34;&#34;&#34;
+    Triangle shaped membership function class.
+    &#34;&#34;&#34;
     a: float
     b: float
     c: float
 
     def __init__(self, a, b, c, modifier=None):
+        &#34;&#34;&#34;
+        Args:
+            a: start point
+            b: mid point
+            c: end point
+            modifier: modifier applied to self membership function
+        &#34;&#34;&#34;
         super().__init__(modifier=modifier)
         self.a = a
         self.b = b
@@ -86,9 +99,15 @@ class TriangularMembershipFunction(MembershipFunction):
             raise IncorrectBoundException(&#39;Expected a &lt;= b &lt;= c&#39;)
 
     def includes(self, x) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks if x is included in this membership function.
+        &#34;&#34;&#34;
         return self.a &lt;= x &lt;= self.c
 
     def __call__(self, X):
+        &#34;&#34;&#34;
+        Calculates membership function in position X.
+        &#34;&#34;&#34;
         def _(x):
             if abs(self.b - x) &lt; _EPS:
                 return 1
@@ -101,6 +120,9 @@ class TriangularMembershipFunction(MembershipFunction):
         return self.modifier(_(X))
 
     def extract_range(self, alpha_cut) -&gt; (float, float):
+        &#34;&#34;&#34;
+            Returns the range where self(x) &gt;= alpha_cut.
+        &#34;&#34;&#34;
 
         normal = (self.a == self.b or self(self.a) == 0) \
                  and (self.b == self.c or self(self.c) == 0) \
@@ -151,6 +173,9 @@ class TriangularMembershipFunction(MembershipFunction):
         return right
 
     def set_modifier(self, modifier):
+        &#34;&#34;&#34;
+        Modifier setter.
+        &#34;&#34;&#34;
         if modifier is None:
             modifier = Modifier(&#39;&#39;, lambda x: x)
         self.modifier = modifier
@@ -166,6 +191,14 @@ class TrapezoidMembershipFunction(MembershipFunction):
     right: TriangularMembershipFunction
 
     def __init__(self, a, b, c, d, modifier=None):
+        &#34;&#34;&#34;
+        Args:
+            a: start point
+            b: first mid point
+            c: second mid point
+            d: end point
+            modifier: modifier applied to self membership funcion
+        &#34;&#34;&#34;
         super().__init__(modifier=modifier)
         self.a = a
         self.b = b
@@ -177,6 +210,9 @@ class TrapezoidMembershipFunction(MembershipFunction):
         self.right = TriangularMembershipFunction(a=self.c, b=self.c, c=self.d)
 
     def set_modifier(self, modifier):
+        &#34;&#34;&#34;
+        Modifier setter.
+        &#34;&#34;&#34;
         if modifier is None:
             modifier = Modifier(&#39;&#39;, lambda x: x)
         self.modifier = modifier
@@ -184,9 +220,15 @@ class TrapezoidMembershipFunction(MembershipFunction):
         self.right.set_modifier(modifier)
 
     def includes(self, x) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks if x is included in this membership function.
+        &#34;&#34;&#34;
         return self.a &lt;= x &lt;= self.d
 
     def __call__(self, x):
+        &#34;&#34;&#34;
+        Calculates membership function in position X.
+        &#34;&#34;&#34;
         h = self.modifier
         if self.b &lt;= x &lt;= self.c:
             return h(1)
@@ -197,6 +239,9 @@ class TrapezoidMembershipFunction(MembershipFunction):
         return h(0)
 
     def extract_range(self, alpha_cut) -&gt; (float, float):
+        &#34;&#34;&#34;
+            Returns the range where self(x) &gt;= alpha_cut.
+        &#34;&#34;&#34;
         l, _ = self.left.extract_range(alpha_cut)
         _, r = self.right.extract_range(alpha_cut)
         return l, r</code></pre>
@@ -216,25 +261,15 @@ class TrapezoidMembershipFunction(MembershipFunction):
 <span>(</span><span>*args, **kwds)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Abstract base class for generic types.</p>
-<p>A generic type is typically declared by inheriting from
-this class parameterized with one or more type variables.
-For example, a generic mapping type might be defined as::</p>
-<p>class Mapping(Generic[KT, VT]):
-def <strong>getitem</strong>(self, key: KT) -&gt; VT:
-&hellip;
-# Etc.</p>
-<p>This class can then be used as follows::</p>
-<p>def lookup_name(mapping: Mapping[KT, VT], key: KT, default: VT) -&gt; VT:
-try:
-return mapping[key]
-except KeyError:
-return default</p></div>
+<div class="desc"><p>Abstract MembershipFunction class</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class MembershipFunction(Callable):
+    &#34;&#34;&#34;
+    Abstract MembershipFunction class
+    &#34;&#34;&#34;
     name: str
     func: Callable
     modifier: Modifier
@@ -331,20 +366,20 @@ return default</p></div>
 <span>(</span><span>*args, **kwds)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Abstract base class for generic types.</p>
-<p>A generic type is typically declared by inheriting from
-this class parameterized with one or more type variables.
-For example, a generic mapping type might be defined as::</p>
-<p>class Mapping(Generic[KT, VT]):
-def <strong>getitem</strong>(self, key: KT) -&gt; VT:
-&hellip;
-# Etc.</p>
-<p>This class can then be used as follows::</p>
-<p>def lookup_name(mapping: Mapping[KT, VT], key: KT, default: VT) -&gt; VT:
-try:
-return mapping[key]
-except KeyError:
-return default</p></div>
+<div class="desc"><p>Abstract MembershipFunction class</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>a</code></strong></dt>
+<dd>start point</dd>
+<dt><strong><code>b</code></strong></dt>
+<dd>first mid point</dd>
+<dt><strong><code>c</code></strong></dt>
+<dd>second mid point</dd>
+<dt><strong><code>d</code></strong></dt>
+<dd>end point</dd>
+<dt><strong><code>modifier</code></strong></dt>
+<dd>modifier applied to self membership funcion</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -359,6 +394,14 @@ return default</p></div>
     right: TriangularMembershipFunction
 
     def __init__(self, a, b, c, d, modifier=None):
+        &#34;&#34;&#34;
+        Args:
+            a: start point
+            b: first mid point
+            c: second mid point
+            d: end point
+            modifier: modifier applied to self membership funcion
+        &#34;&#34;&#34;
         super().__init__(modifier=modifier)
         self.a = a
         self.b = b
@@ -370,6 +413,9 @@ return default</p></div>
         self.right = TriangularMembershipFunction(a=self.c, b=self.c, c=self.d)
 
     def set_modifier(self, modifier):
+        &#34;&#34;&#34;
+        Modifier setter.
+        &#34;&#34;&#34;
         if modifier is None:
             modifier = Modifier(&#39;&#39;, lambda x: x)
         self.modifier = modifier
@@ -377,9 +423,15 @@ return default</p></div>
         self.right.set_modifier(modifier)
 
     def includes(self, x) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks if x is included in this membership function.
+        &#34;&#34;&#34;
         return self.a &lt;= x &lt;= self.d
 
     def __call__(self, x):
+        &#34;&#34;&#34;
+        Calculates membership function in position X.
+        &#34;&#34;&#34;
         h = self.modifier
         if self.b &lt;= x &lt;= self.c:
             return h(1)
@@ -390,6 +442,9 @@ return default</p></div>
         return h(0)
 
     def extract_range(self, alpha_cut) -&gt; (float, float):
+        &#34;&#34;&#34;
+            Returns the range where self(x) &gt;= alpha_cut.
+        &#34;&#34;&#34;
         l, _ = self.left.extract_range(alpha_cut)
         _, r = self.right.extract_range(alpha_cut)
         return l, r</code></pre>
@@ -406,12 +461,15 @@ return default</p></div>
 <span>def <span class="ident">extract_range</span></span>(<span>self, alpha_cut) -> (<class 'float'>, <class 'float'>)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Returns the range where self(x) &gt;= alpha_cut.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def extract_range(self, alpha_cut) -&gt; (float, float):
+    &#34;&#34;&#34;
+        Returns the range where self(x) &gt;= alpha_cut.
+    &#34;&#34;&#34;
     l, _ = self.left.extract_range(alpha_cut)
     _, r = self.right.extract_range(alpha_cut)
     return l, r</code></pre>
@@ -421,12 +479,15 @@ return default</p></div>
 <span>def <span class="ident">includes</span></span>(<span>self, x) -> bool</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Checks if x is included in this membership function.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def includes(self, x) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks if x is included in this membership function.
+    &#34;&#34;&#34;
     return self.a &lt;= x &lt;= self.d</code></pre>
 </details>
 </dd>
@@ -434,12 +495,15 @@ return default</p></div>
 <span>def <span class="ident">set_modifier</span></span>(<span>self, modifier)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Modifier setter.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def set_modifier(self, modifier):
+    &#34;&#34;&#34;
+    Modifier setter.
+    &#34;&#34;&#34;
     if modifier is None:
         modifier = Modifier(&#39;&#39;, lambda x: x)
     self.modifier = modifier
@@ -454,30 +518,38 @@ return default</p></div>
 <span>(</span><span>*args, **kwds)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Abstract base class for generic types.</p>
-<p>A generic type is typically declared by inheriting from
-this class parameterized with one or more type variables.
-For example, a generic mapping type might be defined as::</p>
-<p>class Mapping(Generic[KT, VT]):
-def <strong>getitem</strong>(self, key: KT) -&gt; VT:
-&hellip;
-# Etc.</p>
-<p>This class can then be used as follows::</p>
-<p>def lookup_name(mapping: Mapping[KT, VT], key: KT, default: VT) -&gt; VT:
-try:
-return mapping[key]
-except KeyError:
-return default</p></div>
+<div class="desc"><p>Triangle shaped membership function class.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>a</code></strong></dt>
+<dd>start point</dd>
+<dt><strong><code>b</code></strong></dt>
+<dd>mid point</dd>
+<dt><strong><code>c</code></strong></dt>
+<dd>end point</dd>
+<dt><strong><code>modifier</code></strong></dt>
+<dd>modifier applied to self membership function</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class TriangularMembershipFunction(MembershipFunction):
+    &#34;&#34;&#34;
+    Triangle shaped membership function class.
+    &#34;&#34;&#34;
     a: float
     b: float
     c: float
 
     def __init__(self, a, b, c, modifier=None):
+        &#34;&#34;&#34;
+        Args:
+            a: start point
+            b: mid point
+            c: end point
+            modifier: modifier applied to self membership function
+        &#34;&#34;&#34;
         super().__init__(modifier=modifier)
         self.a = a
         self.b = b
@@ -486,9 +558,15 @@ return default</p></div>
             raise IncorrectBoundException(&#39;Expected a &lt;= b &lt;= c&#39;)
 
     def includes(self, x) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks if x is included in this membership function.
+        &#34;&#34;&#34;
         return self.a &lt;= x &lt;= self.c
 
     def __call__(self, X):
+        &#34;&#34;&#34;
+        Calculates membership function in position X.
+        &#34;&#34;&#34;
         def _(x):
             if abs(self.b - x) &lt; _EPS:
                 return 1
@@ -501,6 +579,9 @@ return default</p></div>
         return self.modifier(_(X))
 
     def extract_range(self, alpha_cut) -&gt; (float, float):
+        &#34;&#34;&#34;
+            Returns the range where self(x) &gt;= alpha_cut.
+        &#34;&#34;&#34;
 
         normal = (self.a == self.b or self(self.a) == 0) \
                  and (self.b == self.c or self(self.c) == 0) \
@@ -551,6 +632,9 @@ return default</p></div>
         return right
 
     def set_modifier(self, modifier):
+        &#34;&#34;&#34;
+        Modifier setter.
+        &#34;&#34;&#34;
         if modifier is None:
             modifier = Modifier(&#39;&#39;, lambda x: x)
         self.modifier = modifier</code></pre>
@@ -567,12 +651,15 @@ return default</p></div>
 <span>def <span class="ident">extract_range</span></span>(<span>self, alpha_cut) -> (<class 'float'>, <class 'float'>)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Returns the range where self(x) &gt;= alpha_cut.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def extract_range(self, alpha_cut) -&gt; (float, float):
+    &#34;&#34;&#34;
+        Returns the range where self(x) &gt;= alpha_cut.
+    &#34;&#34;&#34;
 
     normal = (self.a == self.b or self(self.a) == 0) \
              and (self.b == self.c or self(self.c) == 0) \
@@ -591,12 +678,15 @@ return default</p></div>
 <span>def <span class="ident">includes</span></span>(<span>self, x) -> bool</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Checks if x is included in this membership function.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def includes(self, x) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks if x is included in this membership function.
+    &#34;&#34;&#34;
     return self.a &lt;= x &lt;= self.c</code></pre>
 </details>
 </dd>
@@ -604,12 +694,15 @@ return default</p></div>
 <span>def <span class="ident">set_modifier</span></span>(<span>self, modifier)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Modifier setter.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def set_modifier(self, modifier):
+    &#34;&#34;&#34;
+    Modifier setter.
+    &#34;&#34;&#34;
     if modifier is None:
         modifier = Modifier(&#39;&#39;, lambda x: x)
     self.modifier = modifier</code></pre>

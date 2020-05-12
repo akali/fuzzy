@@ -7,6 +7,9 @@ _EPS = 1E-9
 
 
 class MembershipFunction(Callable):
+    """
+    Abstract MembershipFunction class
+    """
     name: str
     func: Callable
     modifier: Modifier
@@ -47,11 +50,21 @@ class MembershipFunction(Callable):
 
 
 class TriangularMembershipFunction(MembershipFunction):
+    """
+    Triangle shaped membership function class.
+    """
     a: float
     b: float
     c: float
 
     def __init__(self, a, b, c, modifier=None):
+        """
+        Args:
+            a: start point
+            b: mid point
+            c: end point
+            modifier: modifier applied to self membership function
+        """
         super().__init__(modifier=modifier)
         self.a = a
         self.b = b
@@ -60,9 +73,15 @@ class TriangularMembershipFunction(MembershipFunction):
             raise IncorrectBoundException('Expected a <= b <= c')
 
     def includes(self, x) -> bool:
+        """
+        Checks if x is included in this membership function.
+        """
         return self.a <= x <= self.c
 
     def __call__(self, X):
+        """
+        Calculates membership function in position X.
+        """
         def _(x):
             if abs(self.b - x) < _EPS:
                 return 1
@@ -75,6 +94,9 @@ class TriangularMembershipFunction(MembershipFunction):
         return self.modifier(_(X))
 
     def extract_range(self, alpha_cut) -> (float, float):
+        """
+            Returns the range where self(x) >= alpha_cut.
+        """
 
         normal = (self.a == self.b or self(self.a) == 0) \
                  and (self.b == self.c or self(self.c) == 0) \
@@ -125,6 +147,9 @@ class TriangularMembershipFunction(MembershipFunction):
         return right
 
     def set_modifier(self, modifier):
+        """
+        Modifier setter.
+        """
         if modifier is None:
             modifier = Modifier('', lambda x: x)
         self.modifier = modifier
@@ -140,6 +165,14 @@ class TrapezoidMembershipFunction(MembershipFunction):
     right: TriangularMembershipFunction
 
     def __init__(self, a, b, c, d, modifier=None):
+        """
+        Args:
+            a: start point
+            b: first mid point
+            c: second mid point
+            d: end point
+            modifier: modifier applied to self membership funcion
+        """
         super().__init__(modifier=modifier)
         self.a = a
         self.b = b
@@ -151,6 +184,9 @@ class TrapezoidMembershipFunction(MembershipFunction):
         self.right = TriangularMembershipFunction(a=self.c, b=self.c, c=self.d)
 
     def set_modifier(self, modifier):
+        """
+        Modifier setter.
+        """
         if modifier is None:
             modifier = Modifier('', lambda x: x)
         self.modifier = modifier
@@ -158,9 +194,15 @@ class TrapezoidMembershipFunction(MembershipFunction):
         self.right.set_modifier(modifier)
 
     def includes(self, x) -> bool:
+        """
+        Checks if x is included in this membership function.
+        """
         return self.a <= x <= self.d
 
     def __call__(self, x):
+        """
+        Calculates membership function in position X.
+        """
         h = self.modifier
         if self.b <= x <= self.c:
             return h(1)
@@ -171,6 +213,9 @@ class TrapezoidMembershipFunction(MembershipFunction):
         return h(0)
 
     def extract_range(self, alpha_cut) -> (float, float):
+        """
+            Returns the range where self(x) >= alpha_cut.
+        """
         l, _ = self.left.extract_range(alpha_cut)
         _, r = self.right.extract_range(alpha_cut)
         return l, r
