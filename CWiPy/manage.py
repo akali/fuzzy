@@ -4,7 +4,7 @@ import json
 import time
 
 from CWiPy import settings
-from CWiPy.scripts.load_synonyms_antonyms import get_thesaurus_data
+from .scripts.load_synonyms_antonyms import get_thesaurus_data
 
 
 def load_thesaurus():
