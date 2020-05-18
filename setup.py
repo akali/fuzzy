@@ -2,8 +2,8 @@ from distutils.core import setup
 
 setup(
     name='CWiPy',
-    packages=['CWiPy'],
-    version='0.5.3',
+    packages=['CWiPy', 'CWiPy.scripts', 'CWiPy.summary', 'CWiPy.static'],
+    version='0.5.4',
 
     include_package_data=True,
 
@@ -12,7 +12,7 @@ setup(
     author='Aisultan Kali',
     author_email='aisultan.kali@gmail.com',
     url='https://github.com/akali/fuzzy',
-    download_url='https://github.com/akali/fuzzy/archive/0.5.3.tar.gz',
+    download_url='https://github.com/akali/fuzzy/archive/0.5.4.tar.gz',
     keywords=['fuzzy', 'quantifier', 'very', 'expressive', 'CWiPy', 'modifier', 'hedge', 'query', 'database'],
     install_requires=[
         "pandas==1.0.3",
@@ -24,8 +24,5 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.8',
-    ],
-    scripts=[
-        "scripts",
     ]
 )
