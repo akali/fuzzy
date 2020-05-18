@@ -1,0 +1,97 @@
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e533c2e7841c8bd59db9e",
+      "entry": "not",
+      "type": "as-in",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "nor yet",
+          "pos": "adjective",
+          "synonyms": [
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "no more",
+              "targetTerm": "no more",
+              "targetSlug": "no%20more"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "not at all",
+              "targetTerm": "not at all",
+              "targetSlug": "not%20at%20all"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "not either",
+              "targetTerm": "not either",
+              "targetSlug": "not%20either"
+            }
+          ],
+          "antonyms": [],
+          "targetId": "25648",
+          "targetTerm": "neither"
+        },
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "negative",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "50",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "nix",
+              "targetTerm": "nix",
+              "targetSlug": "nix"
+            },
+            {
+              "similarity": "50",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "nay",
+              "targetTerm": "nay",
+              "targetSlug": "nay"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "never",
+              "targetTerm": "never",
+              "targetSlug": "never"
+            }
+          ],
+          "antonyms": [],
+          "targetId": "30002",
+          "targetTerm": "no"
+        }
+      ],
+      "slug": "not"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/N02/N0232300.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/N02/N0232300.mp3"
+      },
+      "spell": "not",
+      "ipa": "n\u0252t"
+    },
+    "confusables": [
+      "<a href=\"https://www.dictionary.com/browse/knot\" class=\"luna-xref\" data-linkid=\"nn1ov4\">knot</a> <span class=\"luna-form bold\">not</span>"
+    ],
+    "supplementaryNotes": [],
+    "etymology": [],
+    "exampleSentences": [],
+    "slugLuna": "not"
+  }
+}

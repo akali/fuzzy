@@ -41,12 +41,14 @@ class QuantifierSet:
 
     @staticmethod
     def dict_quantifiers():
-        result = {}
-        result['almost_none'] = QuantifierSet.almost_none()
-        result['few'] = QuantifierSet.few()
-        result['some'] = QuantifierSet.some()
-        result['many'] = QuantifierSet.many()
-        result['most'] = QuantifierSet.most()
+        """
+
+        Returns:
+            dictionary of quantifier name and quantifier itself
+        """
+        result = {'almost_none': QuantifierSet.almost_none(),
+                  'few': QuantifierSet.few(), 'some': QuantifierSet.some(),
+                  'many': QuantifierSet.many(), 'most': QuantifierSet.most()}
         return result
 
 

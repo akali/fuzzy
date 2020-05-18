@@ -1,0 +1,181 @@
+{
+  "data": {
+    "definitionData": {
+      "_id": "5c9e52e62e7841c8bd58692f",
+      "entry": "more or less",
+      "type": "normal",
+      "definitions": [
+        {
+          "isInformal": null,
+          "isVulgar": "0",
+          "definition": "approximately",
+          "thesRid": "12281",
+          "pos": "adverb",
+          "synonyms": [
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "about",
+              "targetTerm": "about",
+              "targetSlug": "about"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "almost",
+              "targetTerm": "almost",
+              "targetSlug": "almost"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "around",
+              "targetTerm": "around",
+              "targetSlug": "around"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "ballpark figure",
+              "targetTerm": "ballpark figure",
+              "targetSlug": "ballpark%20figure"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "circa",
+              "targetTerm": "circa",
+              "targetSlug": "circa"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "just about",
+              "targetTerm": "just about",
+              "targetSlug": "just%20about"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "relatively",
+              "targetTerm": "relatively",
+              "targetSlug": "relatively"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "roughly",
+              "targetTerm": "roughly",
+              "targetSlug": "roughly"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "bordering on",
+              "targetTerm": "bordering on",
+              "targetSlug": "bordering%20on"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "close to",
+              "targetTerm": "close to",
+              "targetSlug": "close%20to"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "in the ballpark",
+              "targetTerm": "in the ballpark",
+              "targetSlug": "in%20the%20ballpark"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "in the neighborhood of",
+              "targetTerm": "in the neighborhood of",
+              "targetSlug": "in%20the%20neighborhood%20of"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "in the vicinity of",
+              "targetTerm": "in the vicinity of",
+              "targetSlug": "in%20the%20vicinity%20of"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "not far from",
+              "targetTerm": "not far from",
+              "targetSlug": "not%20far%20from"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "not quite",
+              "targetTerm": "not quite",
+              "targetSlug": "not%20quite"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "on average",
+              "targetTerm": "on average",
+              "targetSlug": "on%20average"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "thereabouts",
+              "targetTerm": "thereabouts",
+              "targetSlug": "thereabouts"
+            },
+            {
+              "similarity": "10",
+              "isInformal": "0",
+              "isVulgar": null,
+              "term": "very close",
+              "targetTerm": "very close",
+              "targetSlug": "very%20close"
+            }
+          ],
+          "antonyms": []
+        }
+      ],
+      "slug": "more%20or%20less"
+    },
+    "pronunciation": {
+      "audio": {
+        "audio/ogg": "https://static.sfdict.com/audio/lunawav/M06/M0610000.ogg",
+        "audio/mpeg": "https://static.sfdict.com/audio/M06/M0610000.mp3"
+      },
+      "spell": "mawr, mohr",
+      "ipa": "m\u0254r, mo\u028ar"
+    },
+    "confusables": [
+      "<a href=\"https://www.dictionary.com/browse/moor\" class=\"luna-xref\" data-linkid=\"nn1ov4\">moor</a> <span class=\"luna-form bold\">more</span>"
+    ],
+    "supplementaryNotes": [],
+    "etymology": [],
+    "exampleSentences": [],
+    "slugLuna": "more--or--less"
+  }
+}

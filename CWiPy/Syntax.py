@@ -61,6 +61,18 @@ class SyntaxException(BaseException):
 class FuzzyQuery:
     def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None,
                  modifiers_included=None, round_values=None):
+        """
+        Args:
+            fuzzy_query: fuzzy query string
+            fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
+            limit: similarity limit for synonyms
+            alpha_cut: alpha cut applied for range filtering
+            modifiers_included: are modifiers included in query
+            round_values: round returning query values
+
+        Raises:
+            SyntaxException: on syntax error
+        """
         if limit is None:
             limit = 100
         if alpha_cut is None:
@@ -90,13 +102,8 @@ class FuzzyQuery:
 
         [connector] = {and, or, but}
 
-        :param fuzzy_query: fuzzy query
-        :param fields: dict of querying numerical fields: {field_name,
-        {membership_function_name: membership_function}}
-        :param limit: similarity limit for synonyms
-        :param alpha_cut:
-        :return: dict[field, [lower bound, upper bound, connector]]
-        :raises: SyntaxException: syntax error
+        Returns:
+            dict[field, [lower bound, upper bound, connector]]
         """
 
         EOQ_TOKEN = "~~~END_TOKEN~~~"
@@ -171,7 +178,9 @@ class FuzzyQuery:
 
     def to_sql(self):
         """
-        :return: Constructed sql where clause from fuzzy_query
+
+        Returns:
+            Constructed SQL where clause
         """
         crisp_query = ""
         params = self.extract_crisp_parameters()
@@ -184,8 +193,11 @@ class FuzzyQuery:
 
     def matching(self, df: pd.DataFrame) -> pd.Series:
         """
-        :param df: pandas DataFrame
-        :return: Series matching fuzzy_query
+        Args:
+            df: Querying pandas dataframe
+
+        Returns:
+            Series matching fuzzy query
         """
 
         params = self.extract_crisp_parameters()
