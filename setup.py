@@ -2,8 +2,9 @@ from distutils.core import setup
 
 setup(
     name='CWiPy',
-    packages=['CWiPy', 'CWiPy.scripts', 'CWiPy.summary', 'CWiPy.static'],
-    version='0.5.4',
+    packages=['CWiPy', 'CWiPy.scripts', 'CWiPy.summary', 'CWiPy.static',
+              'CWiPy.static.thesaurus'],
+    version='0.5.5',
 
     include_package_data=True,
 
@@ -12,8 +13,9 @@ setup(
     author='Aisultan Kali',
     author_email='aisultan.kali@gmail.com',
     url='https://github.com/akali/fuzzy',
-    download_url='https://github.com/akali/fuzzy/archive/0.5.4.tar.gz',
-    keywords=['fuzzy', 'quantifier', 'very', 'expressive', 'CWiPy', 'modifier', 'hedge', 'query', 'database'],
+    download_url='https://github.com/akali/fuzzy/archive/0.5.5.tar.gz',
+    keywords=['fuzzy', 'quantifier', 'very', 'expressive', 'CWiPy', 'modifier',
+              'hedge', 'query', 'database'],
     install_requires=[
         "pandas==1.0.3",
     ],
