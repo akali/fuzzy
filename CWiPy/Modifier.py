@@ -13,16 +13,43 @@ class Modifier:
     modifier: Callable = lambda _: _
 
     def __and__(self, other):
+        """
+        Applies and operation with rhs element
+
+        Args:
+            other: rhs element
+
+        Returns:
+            Modifier with changed modifier function
+        """
         return Modifier(f"{self.name} and {other.name}",
                         modifier=lambda x: min(self.modifier(x),
                                                other.modifier(x)))
 
     def __or__(self, other):
+        """
+        Applies or operation with rhs element
+
+        Args:
+            other: rhs element
+
+        Returns:
+            Modifier with changed modifier function
+        """
         return Modifier(f"{self.name} or {other.name}",
                         modifier=lambda x: max(self.modifier(x),
                                                other.modifier(x)))
 
     def __call__(self, other):
+        """
+
+        Args:
+            other: applies the modifier function if number,
+                constructs combined modifier otherwise
+
+        Returns:
+            number or modifier based on other arg type
+        """
         if isinstance(other, Modifier):
             name = f'{self.name} {other.name}'
             if self.name is None or len(self.name) == 0:
@@ -33,6 +60,13 @@ class Modifier:
         return self.modifier(other)
 
     def __init__(self, name, modifier: Callable = None):
+        """
+        Modifier class with name, modifier function
+
+        Args:
+            name: modifier name
+            modifier: modifier function
+        """
         self.name = name
         if modifier is None:
             modifier = default_modifier
@@ -40,10 +74,20 @@ class Modifier:
 
 
 def dict_modifiers():
+    """
+
+    Returns:
+        dict of name-modifier pairs
+    """
     return dict([(modifier.name, modifier) for modifier in list_modifiers()])
 
 
 def list_modifiers():
+    """
+
+    Returns:
+        list of modifiers
+    """
     x = Modifier("x", modifier=lambda x: x)
     plus = Modifier("plus", modifier=lambda x: math.pow(x, 1.25))
     # minus = Modifier("minus", modifier=lambda x: math.pow(x, 0.75))

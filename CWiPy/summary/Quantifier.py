@@ -2,33 +2,61 @@ import CWiPy.MembershipFunction as mf
 
 
 class QuantifierSet:
+    """
+    set of Quantifiers
+    """
 
     @staticmethod
     def almost_none() -> mf.MembershipFunction:
+        """
+
+        Returns:
+            mf.TrapezoidMembershipFunction
+        """
         almost_none = mf.TrapezoidMembershipFunction(0, 0, 0.05, 0.30)
         almost_none.name = 'almost none'
         return almost_none
 
     @staticmethod
     def few() -> mf.MembershipFunction:
+        """
+
+        Returns:
+            mf.TriangularMembershipFunction
+        """
         few = mf.TriangularMembershipFunction(0.05, 0.30, 0.50)
         few.name = 'few'
         return few
 
     @staticmethod
     def some() -> mf.MembershipFunction:
+        """
+
+        Returns:
+            mf.TriangularMembershipFunction
+        """
         some = mf.TriangularMembershipFunction(0.30, 0.50, 0.70)
         some.name = 'some'
         return some
 
     @staticmethod
     def many() -> mf.MembershipFunction:
+        """
+
+        Returns:
+            mf.TriangularMembershipFunction
+        """
         many = mf.TriangularMembershipFunction(0.50, 0.70, 0.90)
         many.name = 'many'
         return many
 
     @staticmethod
     def most() -> mf.MembershipFunction:
+        """
+
+        Returns:
+            mf.TrapezoidMembershipFunction
+        """
         most = mf.TrapezoidMembershipFunction(0.70, 0.90, 1, 1)
         most.name = 'most'
         return most

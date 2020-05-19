@@ -11,11 +11,16 @@ from CWiPy.Modifier import dict_modifiers
 
 def get_synonyms(word):
     """
-    :param word:
-    :return: list of objects containing term and similarity from -100 to 100
-    :raises: IOException: when not found, you should load words first
-    """
 
+    Args:
+        word:
+
+    Returns:
+        list of objects containing term and similarity from -100 to 100
+
+    Raises:
+        IOException: when not found, you should load words first
+    """
     word = word.replace('-', '_')
 
     data_file = \
@@ -39,8 +44,12 @@ def get_synonyms(word):
 
 def get_modifiers_synonyms(limit=100):
     """
-    :param limit: similarity limit
-    :return: dict of synonym modifiers: {synonym: modifier}
+
+    Args:
+        limit: similarity limit
+
+    Returns:
+        dict of synonym modifiers: {synonym: modifier}
     """
     result = {}
     for modifier in dict_modifiers().keys():
