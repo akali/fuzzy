@@ -28,33 +28,61 @@
 
 
 class QuantifierSet:
+    &#34;&#34;&#34;
+    set of Quantifiers
+    &#34;&#34;&#34;
 
     @staticmethod
     def almost_none() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TrapezoidMembershipFunction
+        &#34;&#34;&#34;
         almost_none = mf.TrapezoidMembershipFunction(0, 0, 0.05, 0.30)
         almost_none.name = &#39;almost none&#39;
         return almost_none
 
     @staticmethod
     def few() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TriangularMembershipFunction
+        &#34;&#34;&#34;
         few = mf.TriangularMembershipFunction(0.05, 0.30, 0.50)
         few.name = &#39;few&#39;
         return few
 
     @staticmethod
     def some() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TriangularMembershipFunction
+        &#34;&#34;&#34;
         some = mf.TriangularMembershipFunction(0.30, 0.50, 0.70)
         some.name = &#39;some&#39;
         return some
 
     @staticmethod
     def many() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TriangularMembershipFunction
+        &#34;&#34;&#34;
         many = mf.TriangularMembershipFunction(0.50, 0.70, 0.90)
         many.name = &#39;many&#39;
         return many
 
     @staticmethod
     def most() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TrapezoidMembershipFunction
+        &#34;&#34;&#34;
         most = mf.TrapezoidMembershipFunction(0.70, 0.90, 1, 1)
         most.name = &#39;most&#39;
         return most
@@ -67,12 +95,14 @@ class QuantifierSet:
 
     @staticmethod
     def dict_quantifiers():
-        result = {}
-        result[&#39;almost_none&#39;] = QuantifierSet.almost_none()
-        result[&#39;few&#39;] = QuantifierSet.few()
-        result[&#39;some&#39;] = QuantifierSet.some()
-        result[&#39;many&#39;] = QuantifierSet.many()
-        result[&#39;most&#39;] = QuantifierSet.most()
+        &#34;&#34;&#34;
+
+        Returns:
+            dictionary of quantifier name and quantifier itself
+        &#34;&#34;&#34;
+        result = {&#39;almost_none&#39;: QuantifierSet.almost_none(),
+                  &#39;few&#39;: QuantifierSet.few(), &#39;some&#39;: QuantifierSet.some(),
+                  &#39;many&#39;: QuantifierSet.many(), &#39;most&#39;: QuantifierSet.most()}
         return result
 
 
@@ -143,39 +173,67 @@ class QuantifierSetOnParams:
 <span>class <span class="ident">QuantifierSet</span></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>set of Quantifiers</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class QuantifierSet:
+    &#34;&#34;&#34;
+    set of Quantifiers
+    &#34;&#34;&#34;
 
     @staticmethod
     def almost_none() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TrapezoidMembershipFunction
+        &#34;&#34;&#34;
         almost_none = mf.TrapezoidMembershipFunction(0, 0, 0.05, 0.30)
         almost_none.name = &#39;almost none&#39;
         return almost_none
 
     @staticmethod
     def few() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TriangularMembershipFunction
+        &#34;&#34;&#34;
         few = mf.TriangularMembershipFunction(0.05, 0.30, 0.50)
         few.name = &#39;few&#39;
         return few
 
     @staticmethod
     def some() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TriangularMembershipFunction
+        &#34;&#34;&#34;
         some = mf.TriangularMembershipFunction(0.30, 0.50, 0.70)
         some.name = &#39;some&#39;
         return some
 
     @staticmethod
     def many() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TriangularMembershipFunction
+        &#34;&#34;&#34;
         many = mf.TriangularMembershipFunction(0.50, 0.70, 0.90)
         many.name = &#39;many&#39;
         return many
 
     @staticmethod
     def most() -&gt; mf.MembershipFunction:
+        &#34;&#34;&#34;
+
+        Returns:
+            mf.TrapezoidMembershipFunction
+        &#34;&#34;&#34;
         most = mf.TrapezoidMembershipFunction(0.70, 0.90, 1, 1)
         most.name = &#39;most&#39;
         return most
@@ -188,12 +246,14 @@ class QuantifierSetOnParams:
 
     @staticmethod
     def dict_quantifiers():
-        result = {}
-        result[&#39;almost_none&#39;] = QuantifierSet.almost_none()
-        result[&#39;few&#39;] = QuantifierSet.few()
-        result[&#39;some&#39;] = QuantifierSet.some()
-        result[&#39;many&#39;] = QuantifierSet.many()
-        result[&#39;most&#39;] = QuantifierSet.most()
+        &#34;&#34;&#34;
+
+        Returns:
+            dictionary of quantifier name and quantifier itself
+        &#34;&#34;&#34;
+        result = {&#39;almost_none&#39;: QuantifierSet.almost_none(),
+                  &#39;few&#39;: QuantifierSet.few(), &#39;some&#39;: QuantifierSet.some(),
+                  &#39;many&#39;: QuantifierSet.many(), &#39;most&#39;: QuantifierSet.most()}
         return result</code></pre>
 </details>
 <h3>Static methods</h3>
@@ -202,13 +262,22 @@ class QuantifierSetOnParams:
 <span>def <span class="ident">almost_none</span></span>(<span>) -> <a title="CWiPy.MembershipFunction.MembershipFunction" href="../MembershipFunction.html#CWiPy.MembershipFunction.MembershipFunction">MembershipFunction</a></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>mf.TrapezoidMembershipFunction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
 def almost_none() -&gt; mf.MembershipFunction:
+    &#34;&#34;&#34;
+
+    Returns:
+        mf.TrapezoidMembershipFunction
+    &#34;&#34;&#34;
     almost_none = mf.TrapezoidMembershipFunction(0, 0, 0.05, 0.30)
     almost_none.name = &#39;almost none&#39;
     return almost_none</code></pre>
@@ -218,19 +287,25 @@ def almost_none() -&gt; mf.MembershipFunction:
 <span>def <span class="ident">dict_quantifiers</span></span>(<span>)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dictionary</code> of <code>quantifier name and quantifier itself</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
 def dict_quantifiers():
-    result = {}
-    result[&#39;almost_none&#39;] = QuantifierSet.almost_none()
-    result[&#39;few&#39;] = QuantifierSet.few()
-    result[&#39;some&#39;] = QuantifierSet.some()
-    result[&#39;many&#39;] = QuantifierSet.many()
-    result[&#39;most&#39;] = QuantifierSet.most()
+    &#34;&#34;&#34;
+
+    Returns:
+        dictionary of quantifier name and quantifier itself
+    &#34;&#34;&#34;
+    result = {&#39;almost_none&#39;: QuantifierSet.almost_none(),
+              &#39;few&#39;: QuantifierSet.few(), &#39;some&#39;: QuantifierSet.some(),
+              &#39;many&#39;: QuantifierSet.many(), &#39;most&#39;: QuantifierSet.most()}
     return result</code></pre>
 </details>
 </dd>
@@ -238,13 +313,22 @@ def dict_quantifiers():
 <span>def <span class="ident">few</span></span>(<span>) -> <a title="CWiPy.MembershipFunction.MembershipFunction" href="../MembershipFunction.html#CWiPy.MembershipFunction.MembershipFunction">MembershipFunction</a></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>mf.TriangularMembershipFunction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
 def few() -&gt; mf.MembershipFunction:
+    &#34;&#34;&#34;
+
+    Returns:
+        mf.TriangularMembershipFunction
+    &#34;&#34;&#34;
     few = mf.TriangularMembershipFunction(0.05, 0.30, 0.50)
     few.name = &#39;few&#39;
     return few</code></pre>
@@ -270,13 +354,22 @@ def get_quantifiers():
 <span>def <span class="ident">many</span></span>(<span>) -> <a title="CWiPy.MembershipFunction.MembershipFunction" href="../MembershipFunction.html#CWiPy.MembershipFunction.MembershipFunction">MembershipFunction</a></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>mf.TriangularMembershipFunction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
 def many() -&gt; mf.MembershipFunction:
+    &#34;&#34;&#34;
+
+    Returns:
+        mf.TriangularMembershipFunction
+    &#34;&#34;&#34;
     many = mf.TriangularMembershipFunction(0.50, 0.70, 0.90)
     many.name = &#39;many&#39;
     return many</code></pre>
@@ -286,13 +379,22 @@ def many() -&gt; mf.MembershipFunction:
 <span>def <span class="ident">most</span></span>(<span>) -> <a title="CWiPy.MembershipFunction.MembershipFunction" href="../MembershipFunction.html#CWiPy.MembershipFunction.MembershipFunction">MembershipFunction</a></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>mf.TrapezoidMembershipFunction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
 def most() -&gt; mf.MembershipFunction:
+    &#34;&#34;&#34;
+
+    Returns:
+        mf.TrapezoidMembershipFunction
+    &#34;&#34;&#34;
     most = mf.TrapezoidMembershipFunction(0.70, 0.90, 1, 1)
     most.name = &#39;most&#39;
     return most</code></pre>
@@ -302,13 +404,22 @@ def most() -&gt; mf.MembershipFunction:
 <span>def <span class="ident">some</span></span>(<span>) -> <a title="CWiPy.MembershipFunction.MembershipFunction" href="../MembershipFunction.html#CWiPy.MembershipFunction.MembershipFunction">MembershipFunction</a></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>mf.TriangularMembershipFunction</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@staticmethod
 def some() -&gt; mf.MembershipFunction:
+    &#34;&#34;&#34;
+
+    Returns:
+        mf.TriangularMembershipFunction
+    &#34;&#34;&#34;
     some = mf.TriangularMembershipFunction(0.30, 0.50, 0.70)
     some.name = &#39;some&#39;
     return some</code></pre>
@@ -499,6 +610,12 @@ few, some, many and some
 </section>
 </article>
 <nav id="sidebar">
+<header>
+<a class="homelink" rel="home" title="CWiPy" href="#">
+<img src="https://niphyrue.sirv.com/logo.jpg"
+alt="" />
+</a>
+</header>
 <h1>Index</h1>
 <div class="toc">
 <ul></ul>

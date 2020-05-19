@@ -8,6 +8,10 @@ from .scripts.load_synonyms_antonyms import get_thesaurus_data
 
 
 def load_thesaurus():
+    """
+    Loads synonyms/antonyms for linguistic hedges(modifiers)
+    puts jsons to static/thesaurus/{word}.json
+    """
     words = ["somewhat", "very",
              "extremely",
              "quite",

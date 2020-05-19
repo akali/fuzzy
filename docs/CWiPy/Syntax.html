@@ -37,11 +37,16 @@ from CWiPy.Modifier import dict_modifiers
 
 def get_synonyms(word):
     &#34;&#34;&#34;
-    :param word:
-    :return: list of objects containing term and similarity from -100 to 100
-    :raises: IOException: when not found, you should load words first
-    &#34;&#34;&#34;
 
+    Args:
+        word:
+
+    Returns:
+        list of objects containing term and similarity from -100 to 100
+
+    Raises:
+        IOException: when not found, you should load words first
+    &#34;&#34;&#34;
     word = word.replace(&#39;-&#39;, &#39;_&#39;)
 
     data_file = \
@@ -65,8 +70,12 @@ def get_synonyms(word):
 
 def get_modifiers_synonyms(limit=100):
     &#34;&#34;&#34;
-    :param limit: similarity limit
-    :return: dict of synonym modifiers: {synonym: modifier}
+
+    Args:
+        limit: similarity limit
+
+    Returns:
+        dict of synonym modifiers: {synonym: modifier}
     &#34;&#34;&#34;
     result = {}
     for modifier in dict_modifiers().keys():
@@ -87,6 +96,18 @@ class SyntaxException(BaseException):
 class FuzzyQuery:
     def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None,
                  modifiers_included=None, round_values=None):
+        &#34;&#34;&#34;
+        Args:
+            fuzzy_query: fuzzy query string
+            fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
+            limit: similarity limit for synonyms
+            alpha_cut: alpha cut applied for range filtering
+            modifiers_included: are modifiers included in query
+            round_values: round returning query values
+
+        Raises:
+            SyntaxException: on syntax error
+        &#34;&#34;&#34;
         if limit is None:
             limit = 100
         if alpha_cut is None:
@@ -116,13 +137,8 @@ class FuzzyQuery:
 
         [connector] = {and, or, but}
 
-        :param fuzzy_query: fuzzy query
-        :param fields: dict of querying numerical fields: {field_name,
-        {membership_function_name: membership_function}}
-        :param limit: similarity limit for synonyms
-        :param alpha_cut:
-        :return: dict[field, [lower bound, upper bound, connector]]
-        :raises: SyntaxException: syntax error
+        Returns:
+            dict[field, [lower bound, upper bound, connector]]
         &#34;&#34;&#34;
 
         EOQ_TOKEN = &#34;~~~END_TOKEN~~~&#34;
@@ -197,7 +213,9 @@ class FuzzyQuery:
 
     def to_sql(self):
         &#34;&#34;&#34;
-        :return: Constructed sql where clause from fuzzy_query
+
+        Returns:
+            Constructed SQL where clause
         &#34;&#34;&#34;
         crisp_query = &#34;&#34;
         params = self.extract_crisp_parameters()
@@ -210,8 +228,11 @@ class FuzzyQuery:
 
     def matching(self, df: pd.DataFrame) -&gt; pd.Series:
         &#34;&#34;&#34;
-        :param df: pandas DataFrame
-        :return: Series matching fuzzy_query
+        Args:
+            df: Querying pandas dataframe
+
+        Returns:
+            Series matching fuzzy query
         &#34;&#34;&#34;
 
         params = self.extract_crisp_parameters()
@@ -248,16 +269,28 @@ class FuzzyQuery:
 <span>def <span class="ident">get_modifiers_synonyms</span></span>(<span>limit=100)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>:param limit: similarity limit
-:return: dict of synonym modifiers: {synonym: modifier}</p></div>
+<div class="desc"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>limit</code></strong></dt>
+<dd>similarity limit</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code> of <code>synonym modifiers</code></dt>
+<dd>{synonym: modifier}</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_modifiers_synonyms(limit=100):
     &#34;&#34;&#34;
-    :param limit: similarity limit
-    :return: dict of synonym modifiers: {synonym: modifier}
+
+    Args:
+        limit: similarity limit
+
+    Returns:
+        dict of synonym modifiers: {synonym: modifier}
     &#34;&#34;&#34;
     result = {}
     for modifier in dict_modifiers().keys():
@@ -275,20 +308,34 @@ class FuzzyQuery:
 <span>def <span class="ident">get_synonyms</span></span>(<span>word)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>:param word:
-:return: list of objects containing term and similarity from -100 to 100
-:raises: IOException: when not found, you should load words first</p></div>
+<div class="desc"><h2 id="args">Args</h2>
+<p>word:</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code> of <code>objects containing term and similarity from -100 to 100</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>IOException</code></dt>
+<dd>when not found, you should load words first</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_synonyms(word):
     &#34;&#34;&#34;
-    :param word:
-    :return: list of objects containing term and similarity from -100 to 100
-    :raises: IOException: when not found, you should load words first
-    &#34;&#34;&#34;
 
+    Args:
+        word:
+
+    Returns:
+        list of objects containing term and similarity from -100 to 100
+
+    Raises:
+        IOException: when not found, you should load words first
+    &#34;&#34;&#34;
     word = word.replace(&#39;-&#39;, &#39;_&#39;)
 
     data_file = \
@@ -320,7 +367,26 @@ class FuzzyQuery:
 <span>(</span><span>fuzzy_query, fields, limit=None, alpha_cut=None, modifiers_included=None, round_values=None)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>fuzzy_query</code></strong></dt>
+<dd>fuzzy query string</dd>
+<dt><strong><code>fields</code></strong></dt>
+<dd>dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}</dd>
+<dt><strong><code>limit</code></strong></dt>
+<dd>similarity limit for synonyms</dd>
+<dt><strong><code>alpha_cut</code></strong></dt>
+<dd>alpha cut applied for range filtering</dd>
+<dt><strong><code>modifiers_included</code></strong></dt>
+<dd>are modifiers included in query</dd>
+<dt><strong><code>round_values</code></strong></dt>
+<dd>round returning query values</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code><a title="CWiPy.Syntax.SyntaxException" href="#CWiPy.Syntax.SyntaxException">SyntaxException</a></code></dt>
+<dd>on syntax error</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -328,6 +394,18 @@ class FuzzyQuery:
 <pre><code class="python">class FuzzyQuery:
     def __init__(self, fuzzy_query, fields, limit=None, alpha_cut=None,
                  modifiers_included=None, round_values=None):
+        &#34;&#34;&#34;
+        Args:
+            fuzzy_query: fuzzy query string
+            fields: dict of querying numerical fields: {field_name, {membership_function_name: membership_function}}
+            limit: similarity limit for synonyms
+            alpha_cut: alpha cut applied for range filtering
+            modifiers_included: are modifiers included in query
+            round_values: round returning query values
+
+        Raises:
+            SyntaxException: on syntax error
+        &#34;&#34;&#34;
         if limit is None:
             limit = 100
         if alpha_cut is None:
@@ -357,13 +435,8 @@ class FuzzyQuery:
 
         [connector] = {and, or, but}
 
-        :param fuzzy_query: fuzzy query
-        :param fields: dict of querying numerical fields: {field_name,
-        {membership_function_name: membership_function}}
-        :param limit: similarity limit for synonyms
-        :param alpha_cut:
-        :return: dict[field, [lower bound, upper bound, connector]]
-        :raises: SyntaxException: syntax error
+        Returns:
+            dict[field, [lower bound, upper bound, connector]]
         &#34;&#34;&#34;
 
         EOQ_TOKEN = &#34;~~~END_TOKEN~~~&#34;
@@ -438,7 +511,9 @@ class FuzzyQuery:
 
     def to_sql(self):
         &#34;&#34;&#34;
-        :return: Constructed sql where clause from fuzzy_query
+
+        Returns:
+            Constructed SQL where clause
         &#34;&#34;&#34;
         crisp_query = &#34;&#34;
         params = self.extract_crisp_parameters()
@@ -451,8 +526,11 @@ class FuzzyQuery:
 
     def matching(self, df: pd.DataFrame) -&gt; pd.Series:
         &#34;&#34;&#34;
-        :param df: pandas DataFrame
-        :return: Series matching fuzzy_query
+        Args:
+            df: Querying pandas dataframe
+
+        Returns:
+            Series matching fuzzy query
         &#34;&#34;&#34;
 
         params = self.extract_crisp_parameters()
@@ -491,13 +569,11 @@ Fuzzy expression structure:
 [composite modifier] [summarizer] [field]</p>
 <p>example fuzzy_query: middle age and very high salary</p>
 <p>[connector] = {and, or, but}</p>
-<p>:param fuzzy_query: fuzzy query
-:param fields: dict of querying numerical fields: {field_name,
-{membership_function_name: membership_function}}
-:param limit: similarity limit for synonyms
-:param alpha_cut:
-:return: dict[field, [lower bound, upper bound, connector]]
-:raises: SyntaxException: syntax error</p></div>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict[field, [lower bound, upper bound, connector]]</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -515,13 +591,8 @@ Fuzzy expression structure:
 
     [connector] = {and, or, but}
 
-    :param fuzzy_query: fuzzy query
-    :param fields: dict of querying numerical fields: {field_name,
-    {membership_function_name: membership_function}}
-    :param limit: similarity limit for synonyms
-    :param alpha_cut:
-    :return: dict[field, [lower bound, upper bound, connector]]
-    :raises: SyntaxException: syntax error
+    Returns:
+        dict[field, [lower bound, upper bound, connector]]
     &#34;&#34;&#34;
 
     EOQ_TOKEN = &#34;~~~END_TOKEN~~~&#34;
@@ -599,16 +670,27 @@ Fuzzy expression structure:
 <span>def <span class="ident">matching</span></span>(<span>self, df: pandas.core.frame.DataFrame) -> pandas.core.series.Series</span>
 </code></dt>
 <dd>
-<div class="desc"><p>:param df: pandas DataFrame
-:return: Series matching fuzzy_query</p></div>
+<div class="desc"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df</code></strong></dt>
+<dd>Querying pandas dataframe</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Series matching fuzzy query</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def matching(self, df: pd.DataFrame) -&gt; pd.Series:
     &#34;&#34;&#34;
-    :param df: pandas DataFrame
-    :return: Series matching fuzzy_query
+    Args:
+        df: Querying pandas dataframe
+
+    Returns:
+        Series matching fuzzy query
     &#34;&#34;&#34;
 
     params = self.extract_crisp_parameters()
@@ -638,14 +720,20 @@ Fuzzy expression structure:
 <span>def <span class="ident">to_sql</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>:return: Constructed sql where clause from fuzzy_query</p></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Constructed SQL where clause</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def to_sql(self):
     &#34;&#34;&#34;
-    :return: Constructed sql where clause from fuzzy_query
+
+    Returns:
+        Constructed SQL where clause
     &#34;&#34;&#34;
     crisp_query = &#34;&#34;
     params = self.extract_crisp_parameters()
@@ -681,6 +769,12 @@ Fuzzy expression structure:
 </section>
 </article>
 <nav id="sidebar">
+<header>
+<a class="homelink" rel="home" title="CWiPy" href="#">
+<img src="https://niphyrue.sirv.com/logo.jpg"
+alt="" />
+</a>
+</header>
 <h1>Index</h1>
 <div class="toc">
 <ul></ul>

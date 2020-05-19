@@ -10,11 +10,20 @@ from CWiPy.summary.Quantifier import QuantifierSet
 
 @dataclass
 class Summarizer:
+    """
+    Combined summarizer class containing membership function, modifier,
+    and attribute name
+    """
     membership_function: MembershipFunction
     modifier: Modifier
     attribute: str
 
     def name(self):
+        """
+
+        Returns:
+
+        """
         return f'{self.modifier.name} {self.membership_function.name} ' \
                f'{self.attribute}'
 
@@ -23,6 +32,9 @@ class Summarizer:
 
 
 class Summary:
+    """
+    Data class for summary
+    """
     truth: float
 
     quantifier: MembershipFunction
@@ -34,34 +46,6 @@ class Summary:
         self.summarizer = summarizer
 
     def get_statement(self):
-        """Fetches rows from a Bigtable.
-
-        Retrieves rows pertaining to the given keys from the Table instance
-        represented by big_table.  Silly things may happen if
-        other_silly_variable is not None.
-
-        Args:
-            big_table: An open Bigtable Table instance.
-            keys: A sequence of strings representing the key of each table row
-                to fetch.
-            other_silly_variable: Another optional variable, that has a much
-                longer name than the other args, and which does nothing.
-
-        Returns:
-            A dict mapping keys to the corresponding table row data
-            fetched. Each row is represented as a tuple of strings. For
-            example:
-
-            ```{'Serak': ('Rigel VII', 'Preparer'),
-             'Zim': ('Irk', 'Invader'),
-             'Lrrr': ('Omicron Persei 8', 'Emperor')}```
-
-            If a key from the keys argument is missing from the dictionary,
-            then that row was not found in the table.
-
-        Raises:
-            IOError: An error occurred accessing the bigtable.Table object.
-        """
         return f'{self.quantifier.name} of the records are ' \
                f'{self.summarizer.name()} with truth value = {self.truth}. '
 
@@ -89,6 +73,9 @@ def get_categories(column):
 
 
 class SummaryBuilder:
+    """
+        Zadeh's database summary generation method.
+    """
     def __init__(self, df: pd.DataFrame, fuzzy_sets):
         self.df = df
         self.fuzzy_sets = fuzzy_sets
@@ -104,6 +91,15 @@ class SummaryBuilder:
         yielded_empty = False
 
         def generate(self, iterations_left):
+            """
+
+            Args:
+                iterations_left: number of hedges in combined modifier
+
+            Yields:
+                combined modifier
+
+            """
             if not self.yielded_empty:
                 yield self.current_modifier
                 self.yielded_empty = True

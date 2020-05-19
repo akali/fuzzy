@@ -30,10 +30,14 @@ import json
 import time
 
 from CWiPy import settings
-from CWiPy.scripts.load_synonyms_antonyms import get_thesaurus_data
+from .scripts.load_synonyms_antonyms import get_thesaurus_data
 
 
 def load_thesaurus():
+    &#34;&#34;&#34;
+    Loads synonyms/antonyms for linguistic hedges(modifiers)
+    puts jsons to static/thesaurus/{word}.json
+    &#34;&#34;&#34;
     words = [&#34;somewhat&#34;, &#34;very&#34;,
              &#34;extremely&#34;,
              &#34;quite&#34;,
@@ -78,12 +82,17 @@ if __name__ == &#39;__main__&#39;:
 <span>def <span class="ident">load_thesaurus</span></span>(<span>)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Loads synonyms/antonyms for linguistic hedges(modifiers)
+puts jsons to static/thesaurus/{word}.json</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def load_thesaurus():
+    &#34;&#34;&#34;
+    Loads synonyms/antonyms for linguistic hedges(modifiers)
+    puts jsons to static/thesaurus/{word}.json
+    &#34;&#34;&#34;
     words = [&#34;somewhat&#34;, &#34;very&#34;,
              &#34;extremely&#34;,
              &#34;quite&#34;,
@@ -126,6 +135,12 @@ if __name__ == &#39;__main__&#39;:
 </section>
 </article>
 <nav id="sidebar">
+<header>
+<a class="homelink" rel="home" title="CWiPy" href="#">
+<img src="https://niphyrue.sirv.com/logo.jpg"
+alt="" />
+</a>
+</header>
 <h1>Index</h1>
 <div class="toc">
 <ul></ul>

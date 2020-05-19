@@ -9,6 +9,14 @@ URL = "https://tuna.thesaurus.com/pageData/{}"
 
 
 def get_thesaurus_data(word):
+    """
+    Fetches data from Thesaurus.com
+    Args:
+        word: word argument
+
+    Returns:
+        json request data for the word
+    """
     url_word = word
     url_word = url_word.replace('_', '%20')
 
