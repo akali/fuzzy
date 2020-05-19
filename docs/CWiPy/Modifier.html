@@ -39,16 +39,43 @@ class Modifier:
     modifier: Callable = lambda _: _
 
     def __and__(self, other):
+        &#34;&#34;&#34;
+        Applies and operation with rhs element
+
+        Args:
+            other: rhs element
+
+        Returns:
+            Modifier with changed modifier function
+        &#34;&#34;&#34;
         return Modifier(f&#34;{self.name} and {other.name}&#34;,
                         modifier=lambda x: min(self.modifier(x),
                                                other.modifier(x)))
 
     def __or__(self, other):
+        &#34;&#34;&#34;
+        Applies or operation with rhs element
+
+        Args:
+            other: rhs element
+
+        Returns:
+            Modifier with changed modifier function
+        &#34;&#34;&#34;
         return Modifier(f&#34;{self.name} or {other.name}&#34;,
                         modifier=lambda x: max(self.modifier(x),
                                                other.modifier(x)))
 
     def __call__(self, other):
+        &#34;&#34;&#34;
+
+        Args:
+            other: applies the modifier function if number,
+                constructs combined modifier otherwise
+
+        Returns:
+            number or modifier based on other arg type
+        &#34;&#34;&#34;
         if isinstance(other, Modifier):
             name = f&#39;{self.name} {other.name}&#39;
             if self.name is None or len(self.name) == 0:
@@ -59,6 +86,13 @@ class Modifier:
         return self.modifier(other)
 
     def __init__(self, name, modifier: Callable = None):
+        &#34;&#34;&#34;
+        Modifier class with name, modifier function
+
+        Args:
+            name: modifier name
+            modifier: modifier function
+        &#34;&#34;&#34;
         self.name = name
         if modifier is None:
             modifier = default_modifier
@@ -66,10 +100,20 @@ class Modifier:
 
 
 def dict_modifiers():
+    &#34;&#34;&#34;
+
+    Returns:
+        dict of name-modifier pairs
+    &#34;&#34;&#34;
     return dict([(modifier.name, modifier) for modifier in list_modifiers()])
 
 
 def list_modifiers():
+    &#34;&#34;&#34;
+
+    Returns:
+        list of modifiers
+    &#34;&#34;&#34;
     x = Modifier(&#34;x&#34;, modifier=lambda x: x)
     plus = Modifier(&#34;plus&#34;, modifier=lambda x: math.pow(x, 1.25))
     # minus = Modifier(&#34;minus&#34;, modifier=lambda x: math.pow(x, 0.75))
@@ -122,12 +166,21 @@ def list_modifiers():
 <span>def <span class="ident">dict_modifiers</span></span>(<span>)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code> of <code>name-modifier pairs</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def dict_modifiers():
+    &#34;&#34;&#34;
+
+    Returns:
+        dict of name-modifier pairs
+    &#34;&#34;&#34;
     return dict([(modifier.name, modifier) for modifier in list_modifiers()])</code></pre>
 </details>
 </dd>
@@ -135,12 +188,21 @@ def list_modifiers():
 <span>def <span class="ident">list_modifiers</span></span>(<span>)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code> of <code>modifiers</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def list_modifiers():
+    &#34;&#34;&#34;
+
+    Returns:
+        list of modifiers
+    &#34;&#34;&#34;
     x = Modifier(&#34;x&#34;, modifier=lambda x: x)
     plus = Modifier(&#34;plus&#34;, modifier=lambda x: math.pow(x, 1.25))
     # minus = Modifier(&#34;minus&#34;, modifier=lambda x: math.pow(x, 0.75))
@@ -179,7 +241,15 @@ def list_modifiers():
 <span>(</span><span>name, modifier: Callable = None)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Modifier(name, modifier: Callable = None)</p></div>
+<div class="desc"><p>Modifier(name, modifier: Callable = None)</p>
+<p>Modifier class with name, modifier function</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong></dt>
+<dd>modifier name</dd>
+<dt><strong><code>modifier</code></strong></dt>
+<dd>modifier function</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -189,16 +259,43 @@ def list_modifiers():
     modifier: Callable = lambda _: _
 
     def __and__(self, other):
+        &#34;&#34;&#34;
+        Applies and operation with rhs element
+
+        Args:
+            other: rhs element
+
+        Returns:
+            Modifier with changed modifier function
+        &#34;&#34;&#34;
         return Modifier(f&#34;{self.name} and {other.name}&#34;,
                         modifier=lambda x: min(self.modifier(x),
                                                other.modifier(x)))
 
     def __or__(self, other):
+        &#34;&#34;&#34;
+        Applies or operation with rhs element
+
+        Args:
+            other: rhs element
+
+        Returns:
+            Modifier with changed modifier function
+        &#34;&#34;&#34;
         return Modifier(f&#34;{self.name} or {other.name}&#34;,
                         modifier=lambda x: max(self.modifier(x),
                                                other.modifier(x)))
 
     def __call__(self, other):
+        &#34;&#34;&#34;
+
+        Args:
+            other: applies the modifier function if number,
+                constructs combined modifier otherwise
+
+        Returns:
+            number or modifier based on other arg type
+        &#34;&#34;&#34;
         if isinstance(other, Modifier):
             name = f&#39;{self.name} {other.name}&#39;
             if self.name is None or len(self.name) == 0:
@@ -209,6 +306,13 @@ def list_modifiers():
         return self.modifier(other)
 
     def __init__(self, name, modifier: Callable = None):
+        &#34;&#34;&#34;
+        Modifier class with name, modifier function
+
+        Args:
+            name: modifier name
+            modifier: modifier function
+        &#34;&#34;&#34;
         self.name = name
         if modifier is None:
             modifier = default_modifier
